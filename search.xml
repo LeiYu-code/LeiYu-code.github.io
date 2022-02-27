@@ -4,7 +4,7 @@
     <title>GitHub+Hexo搭建个人网站详细教程</title>
     <url>/2022/02/25/GitHub-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="GitHub-Hexo-搭建个人网站详细教程"><a href="#GitHub-Hexo-搭建个人网站详细教程" class="headerlink" title="GitHub+Hexo 搭建个人网站详细教程"></a>GitHub+Hexo 搭建个人网站详细教程</h1><p><img src="https://pica.zhimg.com/v2-d4c1239e75c02e8482c22017a6c8d407_1440w.jpg?source=172ae18b" alt="https://pica.zhimg.com/v2-d4c1239e75c02e8482c22017a6c8d407_1440w.jpg?source=172ae18b"></p>
-<h3 id="GitHub-Hexo-搭建个人网站详细教程-1"><a href="#GitHub-Hexo-搭建个人网站详细教程-1" class="headerlink" title="**GitHub+Hexo 搭建个人网站详细教程"></a>**GitHub+Hexo 搭建个人网站详细教程</h3><h4 id="雷宇-http-leiyu-code-github-io"><a href="#雷宇-http-leiyu-code-github-io" class="headerlink" title="[雷宇]http://leiyu-code.github.io"></a>[雷宇]<a href="http://leiyu-code.github.io/">http://leiyu-code.github.io</a></h4><p><strong>前言：</strong></p>
+<h4 id="雷宇-http-leiyu-code-github-io"><a href="#雷宇-http-leiyu-code-github-io" class="headerlink" title="[雷宇]http://leiyu-code.github.io"></a>[雷宇]<a href="http://leiyu-code.github.io/">http://leiyu-code.github.io</a></h4><p><strong>前言：</strong></p>
 <p>随着互联网浪潮的翻腾，国内外涌现出越来越多优秀的社交网站让用户分享信息更加便捷。然后，如果你是一个不甘寂寞的程序猿（媛），是否也想要搭建一个属于自己的个人网站，如果你曾经或者现在正有这样的想法，请跟随这篇文章发挥你的Geek精神，让你快速拥有自己的博客网站，写文章记录生活，享受这种从0到1的过程。</p>
 <p><a href="https://www.zhihu.com/question/29755481">你见过的最棒的个人博客界面是什么样的？</a></p>
 <h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo ?"></a><strong>什么是Hexo ?</strong></h2><p><img src="https://pic2.zhimg.com/80/v2-6890485c84748900d9dae824b7f7cbb1_720w.jpg" alt="https://pic2.zhimg.com/80/v2-6890485c84748900d9dae824b7f7cbb1_720w.jpg"></p>
@@ -48,10 +48,10 @@
 <p><img src="https://pic4.zhimg.com/80/v2-d1e47103ec1aa8675f68688c5d63bd27_720w.jpg" alt="https://pic4.zhimg.com/80/v2-d1e47103ec1aa8675f68688c5d63bd27_720w.jpg"></p>
 <p>打开<a href="https://link.zhihu.com/?target=https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
 <p><img src="https://pic1.zhimg.com/80/v2-72a3f22c080e99343c3cc4aabce10e3c_720w.jpg" alt="https://pic1.zhimg.com/80/v2-72a3f22c080e99343c3cc4aabce10e3c_720w.jpg"></p>
-<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。在Git Bash中检测GitHub公钥设置是否成功，输入 ssh  <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#46;&#x63;&#111;&#109;</a> ：</p>
+<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。在Git Bash中检测GitHub公钥设置是否成功，输入 ssh  <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a> ：</p>
 <p><img src="https://pic3.zhimg.com/80/v2-da481ffa686410becd4186c656b4ebd6_720w.jpg" alt="https://pic3.zhimg.com/80/v2-da481ffa686410becd4186c656b4ebd6_720w.jpg"></p>
 <p>如上则说明成功。这里之所以设置GitHub密钥原因是，通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。</p>
-<p>第一次连接ssh必须要用 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>第一次连接ssh必须要用 ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p><strong>安装Node.js</strong></p>
 <p>Hexo基于Node.js，Node.js下载地址：<a href="https://link.zhihu.com/?target=https://nodejs.org/en/download/">Download | Node.js</a> 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v :</p>
 <p><img src="https://pic1.zhimg.com/80/v2-76ea38e9545e606f975781e47933b010_720w.jpg" alt="https://pic1.zhimg.com/80/v2-76ea38e9545e606f975781e47933b010_720w.jpg"></p>
@@ -218,7 +218,7 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>GitHub Hexo</tag>
+        <tag>Github;Hexo;git</tag>
       </tags>
   </entry>
 </search>

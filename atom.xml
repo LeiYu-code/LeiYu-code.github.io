@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-05T03:20:42.818Z</updated>
+  <updated>2022-03-05T03:31:47.787Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo常用命令</title>
+    <link href="http://example.com/2022/03/05/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2022/03/05/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-03-05T03:30:01.000Z</published>
+    <updated>2022-03-05T03:31:47.787Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简写指令"><a href="#简写指令" class="headerlink" title="简写指令:"></a>简写指令:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的第一篇文章&quot;`       等价于        `hexo new &quot;我的第一篇文章&quot;`  还等价于       `hexo new post &quot;我的第一篇文章&quot;`    </span><br><span class="line"> `hexo p` 等价于 `hexo publish`</span><br><span class="line"> `hexo g` 等价于 `hexo generate`  </span><br><span class="line"> `hexo s`等价于 `hexo server`     </span><br><span class="line"> `hexo d` 等价于 `hexo deploy`</span><br><span class="line"> `hexo deploy -g`  等价于 `hexo deploy --generate`</span><br><span class="line"> `hexo generate -d`等价于`hexo generate --deploy</span><br></pre></td></tr></table></figure><p><strong>注: hexo  clean 没有 简写,  git –version 没有简写</strong></p><span id="more"></span><h2 id="指令说明"><a href="#指令说明" class="headerlink" title="指令说明:"></a>指令说明:</h2><p><code>hexo server</code>        #Hexo 会监视文件变动并自动更新，除修改<strong>站点配置文件</strong>外,无须重启服务器,直接刷新网页即可生效。<br> <code>hexo server -s</code> #以静态模式启动<br> <code>hexo server -p 5000</code> #更改访问端口   (默认端口为4000，’ctrl + c’关闭server)<br> <code>hexo server -i IP地址</code> #自定义 IP<br> <code>hexo clean</code> #清除缓存  ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹<br> <code>hexo g</code> #生成静态网页  (执行 <code>$ hexo g</code>后会在站点根目录下生成public文件夹, hexo会将”&#x2F;blog&#x2F;source&#x2F;“   下面的.md后缀的文件编译为.html后缀的文件,存放在”&#x2F;blog&#x2F;public&#x2F; “   路径下)<br> <code>hexo d</code> #将本地数据部署到远端服务器(如github)<br> <code>hexo init 文件夹名称</code> #初始化XX文件夹名称<br> <code>npm update hexo -g</code>#升级<br> <code>npm install hexo -g</code>#安装<br> <code>node-v</code>          #查看node.js版本号<br> <code>npm -v</code>        #查看npm版本号<br> <code>git --version</code>  #查看git版本号<br> <code>hexo -v</code>      #查看hexo版本号</p><p><code>hexo publish [layout] &lt;title&gt;</code>   #通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹,如:<code>$ hexo publish [layout] &lt;title&gt;</code>,草稿默认是不会显示在页面中的，可在执行时加上 <code>--draft</code> 参数，或是把 <code>render_drafts</code> 参数设为 <code>true</code>来预览草稿。</p><p><code>hexo new aaa &quot;bbb&quot;</code>  # 新建一篇文章,文章名称和标题分别为bbb.md 和 bbb.   文章采用aaa布局,  此时会在站点根目录下的—-&gt;source—–&gt;_post文件夹下生成bbb.md文件,  bbb.md文件的顶部(—–分割线上方区域,也称作Front matter区),生成</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">layout : aaa`</span><br><span class="line"> `title:`</span><br><span class="line"> `date:</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;简写指令&quot;&gt;&lt;a href=&quot;#简写指令&quot; class=&quot;headerlink&quot; title=&quot;简写指令:&quot;&gt;&lt;/a&gt;简写指令:&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo n &amp;quot;我的第一篇文章&amp;quot;`       等价于        `hexo new &amp;quot;我的第一篇文章&amp;quot;`  还等价于       `hexo new post &amp;quot;我的第一篇文章&amp;quot;`    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `hexo p` 等价于 `hexo publish`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `hexo g` 等价于 `hexo generate`  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `hexo s`等价于 `hexo server`     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `hexo d` 等价于 `hexo deploy`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `hexo deploy -g`  等价于 `hexo deploy --generate`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `hexo generate -d`等价于`hexo generate --deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;注: hexo  clean 没有 简写,  git –version 没有简写&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>linux常用命令</title>

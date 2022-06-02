@@ -1,6 +1,785 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令</title>
+    <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<ul>
+<li>长格式与短格式</li>
+</ul>
+<p><em><strong>在Linux系统中的命令参数有长短格式之分，长格式和长格式之间不能合并，长格式和短格式之间也不能合并，但短格式和短格式之间是可以合并的，合并后仅保留一个减号（-）即可。另外ps命令可允许参数不加减号（-），因此可直接写成ps aux的样子</strong></em></p>
+<ul>
+<li>强大好用的shell</li>
+</ul>
+<p><a href="https://www.linuxprobe.com/wp-content/uploads/2020/05/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%A1%AC%E4%BB%B6-1.jpg"><img src="https://www.linuxprobe.com/wp-content/uploads/2020/05/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%A1%AC%E4%BB%B6-1.jpg" alt="第2章 新手必须掌握的Linux命令第2章 新手必须掌握的Linux命令"></a></p>
+<p>Base解释器（Bourne-Again SHell)</p>
+<p>用户通过服务程序来与电脑对话</p>
+<hr>
+<span id="more"></span>
+
+<ul>
+<li>执行命令的必备知识</li>
+</ul>
+<p>常见的Linux命令的格式：</p>
+<p><strong>命令名称 [命令参数] [命令对象]</strong></p>
+<p>命令参数的长格式与短格式</p>
+<table>
+<thead>
+<tr>
+<th align="left">长格式</th>
+<th align="left">man –help</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">短格式</td>
+<td align="left">man -h</td>
+</tr>
+</tbody></table>
+<p><em><strong>命令名称、命令参数与命令对象之间要用空格进行分隔，且字母严格区分大小写</strong></em></p>
+<hr>
+<ul>
+<li>man命令的常用操作按键及其作用</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">按键</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">空格键</td>
+<td align="left">向下翻一页</td>
+</tr>
+<tr>
+<td align="left">PaGe down</td>
+<td align="left">向下翻一页</td>
+</tr>
+<tr>
+<td align="left">PaGe up</td>
+<td align="left">向上翻一页</td>
+</tr>
+<tr>
+<td align="left">home</td>
+<td align="left">直接前往首页</td>
+</tr>
+<tr>
+<td align="left">end</td>
+<td align="left">直接前往尾页</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">从上至下搜索某个关键词，如“&#x2F;linux”</td>
+</tr>
+<tr>
+<td align="left">?</td>
+<td align="left">从下至上搜索某个关键词，如“?linux”</td>
+</tr>
+<tr>
+<td align="left">n</td>
+<td align="left">定位到下一个搜索到的关键词</td>
+</tr>
+<tr>
+<td align="left">N</td>
+<td align="left">定位到上一个搜索到的关键词</td>
+</tr>
+<tr>
+<td align="left">q</td>
+<td align="left">退出帮助文档</td>
+</tr>
+</tbody></table>
+<ul>
+<li>man命令中帮助信息的结构以及意义</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">结构名称</th>
+<th align="left">代表意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">NAME</td>
+<td align="left">命令的名称</td>
+</tr>
+<tr>
+<td align="left">SYNOPSIS</td>
+<td align="left">参数的大致使用方法</td>
+</tr>
+<tr>
+<td align="left">DESCRIPTION</td>
+<td align="left">介绍说明</td>
+</tr>
+<tr>
+<td align="left">EXAMPLES</td>
+<td align="left">演示（附带简单说明）</td>
+</tr>
+<tr>
+<td align="left">OVERVIEW</td>
+<td align="left">概述</td>
+</tr>
+<tr>
+<td align="left">DEFAULTS</td>
+<td align="left">默认的功能</td>
+</tr>
+<tr>
+<td align="left">OPTIONS</td>
+<td align="left">具体的可用选项（带介绍）</td>
+</tr>
+<tr>
+<td align="left">ENVIRONMENT</td>
+<td align="left">环境变量</td>
+</tr>
+<tr>
+<td align="left">FILES</td>
+<td align="left">用到的文件</td>
+</tr>
+<tr>
+<td align="left">SEE ALSO</td>
+<td align="left">相关的资料</td>
+</tr>
+<tr>
+<td align="left">HISTORY</td>
+<td align="left">维护历史与联系方式</td>
+</tr>
+</tbody></table>
+<ul>
+<li>额外的4个快捷键&#x2F;组合键小技巧</li>
+</ul>
+<p><em><strong>TAB键 补全命令</strong></em></p>
+<p><em><strong>ctrl+c组合键</strong></em> 终止当前的进程</p>
+<p><em><strong>ctrl+d组合键 键盘输入结束</strong></em></p>
+<p><em><strong>ctrl+l组合键 清屏</strong></em></p>
+<hr>
+<ul>
+<li>常用系统工作命令</li>
+</ul>
+<p><strong>echo命令</strong></p>
+<p>echo [字符串] [$变量]</p>
+<p><strong>date命令</strong></p>
+<p>date [+指定的格式]</p>
+<p>date命令中的参数及其作用</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">%S</td>
+<td align="left">秒（00～59）</td>
+</tr>
+<tr>
+<td align="left">%M</td>
+<td align="left">分钟（00～59）</td>
+</tr>
+<tr>
+<td align="left">%H</td>
+<td align="left">小时（00～23）</td>
+</tr>
+<tr>
+<td align="left">%I</td>
+<td align="left">小时（00～12）</td>
+</tr>
+<tr>
+<td align="left">%m</td>
+<td align="left">月份（1~12）</td>
+</tr>
+<tr>
+<td align="left">%p</td>
+<td align="left">显示出AM或PM</td>
+</tr>
+<tr>
+<td align="left">%a</td>
+<td align="left">缩写的工作日名称（例如：Sun）</td>
+</tr>
+<tr>
+<td align="left">%A</td>
+<td align="left">完整的工作日名称（例如：Sunday）</td>
+</tr>
+<tr>
+<td align="left">%b</td>
+<td align="left">缩写的月份名称（例如：Jan）</td>
+</tr>
+<tr>
+<td align="left">%B</td>
+<td align="left">完整的月份名称（例如：January）</td>
+</tr>
+<tr>
+<td align="left">%q</td>
+<td align="left">季度（1~4）</td>
+</tr>
+<tr>
+<td align="left">%y</td>
+<td align="left">简写年份（例如：20）</td>
+</tr>
+<tr>
+<td align="left">%Y</td>
+<td align="left">完整年份（例如：2020）</td>
+</tr>
+<tr>
+<td align="left">%d</td>
+<td align="left">本月中的第几天</td>
+</tr>
+<tr>
+<td align="left">%j</td>
+<td align="left">今年中的第几天</td>
+</tr>
+<tr>
+<td align="left">%n</td>
+<td align="left">换行符（相当于按下回车键）</td>
+</tr>
+<tr>
+<td align="left">%t</td>
+<td align="left">跳格（相当于按下Tab键）</td>
+</tr>
+</tbody></table>
+<p><strong>timedatectl命令</strong></p>
+<p>timedatectl [参数]</p>
+<p>timedatectl命令中的参数以及作用</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">status</td>
+<td align="left">显示状态信息</td>
+</tr>
+<tr>
+<td align="left">list-timezones</td>
+<td align="left">列出已知时区</td>
+</tr>
+<tr>
+<td align="left">set-time</td>
+<td align="left">设置系统时间</td>
+</tr>
+<tr>
+<td align="left">set-timezone</td>
+<td align="left">设置生效时区</td>
+</tr>
+</tbody></table>
+<p><strong>reboot命令</strong></p>
+<p>重启系统命令</p>
+<p><strong>poweroff命令</strong></p>
+<p>关闭系统命令</p>
+<p><strong>wget命令</strong></p>
+<p>wget [参数] 网址</p>
+<p>wget命令中的参数以及作用</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-b</td>
+<td align="left">后台下载模式</td>
+</tr>
+<tr>
+<td align="left">-P</td>
+<td align="left">下载到指定目录</td>
+</tr>
+<tr>
+<td align="left">-t</td>
+<td align="left">最大尝试次数</td>
+</tr>
+<tr>
+<td align="left">-c</td>
+<td align="left">断点续传</td>
+</tr>
+<tr>
+<td align="left">-p</td>
+<td align="left">下载页面内所有资源，包括图片、视频等</td>
+</tr>
+<tr>
+<td align="left">-r</td>
+<td align="left">递归下载</td>
+</tr>
+</tbody></table>
+<p><strong>ps命令</strong></p>
+<p>ps [参数]</p>
+<p>ps命令中的参数以及作用</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-a</td>
+<td align="left">显示所有进程（包括其他用户的进程）</td>
+</tr>
+<tr>
+<td align="left">-u</td>
+<td align="left">用户以及其他详细信息</td>
+</tr>
+<tr>
+<td align="left">-x</td>
+<td align="left">显示没有控制终端的进程</td>
+</tr>
+</tbody></table>
+<p>常见进程状态及进程补充形式</p>
+<blockquote>
+<p><strong>R（运行）</strong>：进程正在运行或在运行队列中等待。</p>
+<p><strong>S（中断）</strong>：进程处于休眠中，当某个条件形成后或者接收到信号时，则脱离该 状态。</p>
+<p><strong>D（不可中断）</strong>：进程不响应系统异步信号，即便用kill命令也不能将其中断。</p>
+<p><strong>Z（僵死）</strong>：进程已经终止，但进程描述符依然存在, 直到父进程调用wait4()系统函数后将进程释放。</p>
+<p><strong>T（停止）</strong>：进程收到停止信号后停止运行。</p>
+</blockquote>
+<p>除了上面5种常见的进程状态，还有可能是高优先级（&lt;）、低优先级（N）、被锁进内存（L）、包含子进程（s）以及多线程（l）这5种补充形式。</p>
+<ul>
+<li>pstree命令</li>
+</ul>
+<p>以树状图的形式展示进程之间的关系</p>
+<ul>
+<li>top命令</li>
+</ul>
+<p>动态地监视进程活动及系统负载等信息</p>
+<p><a href="https://www.linuxprobe.com/wp-content/uploads/2020/05/top%E5%91%BD%E4%BB%A4-1024x648.png"><img src="https://www.linuxprobe.com/wp-content/uploads/2020/05/top%E5%91%BD%E4%BB%A4-1024x648.png" alt="第2章 新手必须掌握的Linux命令第2章 新手必须掌握的Linux命令"></a></p>
+<p>top命令执行结果的前5行为系统整体的统计信息，其所代表的含义如下。</p>
+<blockquote>
+<p>第1行：系统时间、运行时间、登录终端数、系统负载（3个数值分别为1分钟、5分钟、15分钟内的平均值，数值越小意味着负载越低）。</p>
+<p>第2行：进程总数、运行中的进程数、睡眠中的进程数、停止的进程数、僵死的进程数。</p>
+<p>第3行：用户占用资源百分比、系统内核占用资源百分比、改变过优先级的进程资源百分比、空闲的资源百分比等。其中数据均为CPU数据并以百分比格式显示，例如“99.9 id”意味着有99.9%的CPU处理器资源处于空闲。</p>
+<p>第4行：物理内存总量、内存空闲量、内存使用量、作为内核缓存的内存量。</p>
+<p>第5行：虚拟内存总量、虚拟内存空闲量、虚拟内存使用量、已被提前加载的内存量。</p>
+</blockquote>
+<p><strong>nice命令</strong></p>
+<p>调整进程的优先级</p>
+<p>nice优先级数字 服务名称</p>
+<p><strong>pidof命令</strong></p>
+<p>查询某个指定服务进程的PID号码值</p>
+<p>pidof [参数] 服务名称</p>
+<p><strong>kill命令</strong></p>
+<p>终止某个指定PID值的服务进程</p>
+<p>kill [参数] 进程的PID</p>
+<p><strong>killall命令</strong></p>
+<p>killall [参数] 服务名称</p>
+<p>终止某个指定名称的服务所对应的全部进程</p>
+]]></content>
+      <categories>
+        <category>studynote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux就该这么学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习 第1章 动手部署一台Linux操作系统</title>
+    <url>/2022/06/02/%E5%AD%A6%E4%B9%A0-%E7%AC%AC1%E7%AB%A0-%E5%8A%A8%E6%89%8B%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><strong>工欲善其事，必先利其器</strong></p>
+<ul>
+<li>注意：配置的系统环境最好和老师的系统环境一致</li>
+</ul>
+<p><em><strong>随书配套的软件资源可通过：(<a href="https://www.linuxprobe.com/tools/">https://www.linuxprobe.com/tools/</a>) 下载。</strong></em></p>
+<p><strong>VmwareWorkStation 16 ——虚拟机软件（必需）</strong>：</p>
+<p>这是一款功能强大的桌面虚拟计算机软件，能够让用户在单一主机同时运行多个不同的操作系统；同时支持实时快照、虚拟网络、拖曳文件以及PXE等强悍功能。</p>
+<p><strong>RedHatEnterpriseLinux [RHEL] 8 ——<a href="https://www.linuxprobe.com/">红帽</a>操作系统（必需）：</strong></p>
+<p>由开源软件及全球服务型系统开发商<a href="https://www.linuxprobe.com/">红帽</a>公司出品，是一款相当稳定、出色的Linux操作系统。</p>
+<hr>
+<p>安装过程：略</p>
+<span id="more"></span>
+
+<p><a href="https://www.linuxprobe.com/basic-learning-01.html">第1章 动手部署一台Linux操作系统 | 《Linux就该这么学》 (linuxprobe.com)</a></p>
+<ul>
+<li>在虚拟机里安装Linux时一定不要直接安装Linux系统，而是要选择稍后安装Linux系统</li>
+<li>CPU需要支持VT（Virtualization Technology，虚拟化技术）</li>
+</ul>
+<p><a href="https://www.linuxprobe.com/wp-content/uploads/2020/05/BIOS.png"><img src="https://www.linuxprobe.com/wp-content/uploads/2020/05/BIOS.png" alt="第1章 动手部署一台Linux操作系统第1章 动手部署一台Linux操作系统"></a></p>
+<ul>
+<li><em><strong>虚拟机的网络模式</strong></em></li>
+</ul>
+<p>VMware Workstation这款虚拟机软件为用户提供了3种可选的网络模式，分别为“使用桥接网络”“使用网络地址转换（NAT）”与“使用仅主机模式网络”。</p>
+<blockquote>
+<p><strong>使用桥接网络</strong>：相当于在物理机与虚拟机网卡之间架设了一座桥梁，从而可以通过物理主机的网卡访问外网。</p>
+<p><strong>使用网络地址转换（NAT）</strong>：让VM虚拟机的网络服务发挥路由器的作用，使得通过虚拟机软件模拟的主机可以通过物理主机访问外网；在物理机中对应的物理网卡是VMnet8。</p>
+<p><strong>使用仅主机模式网络</strong>：仅让虚拟机的系统与物理主机通信，不能访问外网；在物理机中对应的物理网卡是VMnet1。</p>
+</blockquote>
+<ul>
+<li><strong>linux中软件的安装方式</strong></li>
+</ul>
+<p>RPM 常用的RPM软件包命令</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">rpm -ivh filename.rpm</td>
+<td align="left">安装软件</td>
+</tr>
+<tr>
+<td align="left">rpm -Uvh filename.rpm</td>
+<td align="left">升级软件</td>
+</tr>
+<tr>
+<td align="left">rpm -e filename.rpm</td>
+<td align="left">卸载软件</td>
+</tr>
+<tr>
+<td align="left">rpm -qpi filename.rpm</td>
+<td align="left">查询软件描述信息</td>
+</tr>
+<tr>
+<td align="left">rpm -qpl filename.rpm</td>
+<td align="left">列出软件文件信息</td>
+</tr>
+<tr>
+<td align="left">rpm -qf filename</td>
+<td align="left">查询文件属于哪个RPM</td>
+</tr>
+</tbody></table>
+<p>Yum 常见的Yum命令</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">yum repolist all</td>
+<td align="left">列出所有仓库</td>
+</tr>
+<tr>
+<td align="left">yum list all</td>
+<td align="left">列出仓库中所有软件包</td>
+</tr>
+<tr>
+<td align="left">yum info 软件包名称</td>
+<td align="left">查看软件包信息</td>
+</tr>
+<tr>
+<td align="left">yum install 软件包名称</td>
+<td align="left">安装软件包</td>
+</tr>
+<tr>
+<td align="left">yum reinstall 软件包名称</td>
+<td align="left">重新安装软件包</td>
+</tr>
+<tr>
+<td align="left">yum update 软件包名称</td>
+<td align="left">升级软件包</td>
+</tr>
+<tr>
+<td align="left">yum remove 软件包名称</td>
+<td align="left">移除软件包</td>
+</tr>
+<tr>
+<td align="left">yum clean all</td>
+<td align="left">清除所有仓库缓存</td>
+</tr>
+<tr>
+<td align="left">yum check-update</td>
+<td align="left">检查可更新的软件包</td>
+</tr>
+<tr>
+<td align="left">yum grouplist</td>
+<td align="left">查看系统中已经安装的软件包组</td>
+</tr>
+<tr>
+<td align="left">yum groupinstall 软件包组</td>
+<td align="left">安装指定的软件包组</td>
+</tr>
+<tr>
+<td align="left">yum groupremove 软件包组</td>
+<td align="left">移除指定的软件包组</td>
+</tr>
+<tr>
+<td align="left">yum groupinfo 软件包组</td>
+<td align="left">查询指定的软件包组信息</td>
+</tr>
+</tbody></table>
+<p><em><strong>dnf install软件包名称</strong></em></p>
+<hr>
+<ul>
+<li>老旧版本的初始化及服务的区别</li>
+</ul>
+<p>Linux系统在启动时要进行大量的初始化工作，比如挂载文件系统和交换分区、启动各类进程服务等，这些都可以看作是一个一个的单元（unit），systemd用目标（target）代替了System V init中运行级别的概念，这两者的区别如表1-3所示。</p>
+<p>表1-3 systemd与System V init的区别以及作用</p>
+<table>
+<thead>
+<tr>
+<th align="left">System V init运行级别</th>
+<th align="left">systemd目标名称</th>
+<th align="left">systemd 目标作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0</td>
+<td align="left">poweroff.target</td>
+<td align="left">关机</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">rescue.target</td>
+<td align="left">单用户模式</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">multi-user.target</td>
+<td align="left">多用户的文本界面</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">multi-user.target</td>
+<td align="left">多用户的文本界面</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">multi-user.target</td>
+<td align="left">多用户的文本界面</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">graphical.target</td>
+<td align="left">多用户的图形界面</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">reboot.target</td>
+<td align="left">重启</td>
+</tr>
+<tr>
+<td align="left">emergency</td>
+<td align="left">emergency.target</td>
+<td align="left">救援模式</td>
+</tr>
+</tbody></table>
+<p>如果想要将系统默认的运行目标修改为“多用户的文本界面”模式，可直接用ln命令把多用户模式目标文件链接到&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target</span><br></pre></td></tr></table></figure>
+
+<p>如果有读者之前学习过RHEL 5&#x2F;6系统，或者已经习惯使用service、chkconfig等命令来管理系统服务，那么现在就比较郁闷了，因为在RHEL 7&#x2F;8系统中是使用systemctl命令来管理服务的。表1-4和表1-5所示为新老版本系统的对比，您可以先大致了解一下，后续章节中会经常用到它们。</p>
+<p>表1-4 服务的启动、重启、停止、重载、查看状态等常用命令</p>
+<table>
+<thead>
+<tr>
+<th align="left">老系统命令</th>
+<th align="left">新系统命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">service foo start</td>
+<td align="left">systemctl start httpd</td>
+<td align="left">启动服务</td>
+</tr>
+<tr>
+<td align="left">service foo restart</td>
+<td align="left">systemctl restart httpd</td>
+<td align="left">重启服务</td>
+</tr>
+<tr>
+<td align="left">service foo stop</td>
+<td align="left">systemctl stop httpd</td>
+<td align="left">停止服务</td>
+</tr>
+<tr>
+<td align="left">service foo reload</td>
+<td align="left">systemctl reload httpd</td>
+<td align="left">重新加载配置文件（不终止服务）</td>
+</tr>
+<tr>
+<td align="left">service foo status</td>
+<td align="left">systemctl status httpd</td>
+<td align="left">查看服务状态</td>
+</tr>
+</tbody></table>
+<p>表1-5 服务开机启动、不启动、查看各级别下服务启动状态等常用命令</p>
+<table>
+<thead>
+<tr>
+<th align="left">老系统命令</th>
+<th align="left">新系统命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">chkconfig foo on</td>
+<td align="left">systemctl enable httpd</td>
+<td align="left">开机自动启动</td>
+</tr>
+<tr>
+<td align="left">chkconfig foo off</td>
+<td align="left">systemctl disable httpd</td>
+<td align="left">开机不自动启动</td>
+</tr>
+<tr>
+<td align="left">chkconfig foo</td>
+<td align="left">systemctl is-enabled httpd</td>
+<td align="left">查看特定服务是否为开机自启动</td>
+</tr>
+<tr>
+<td align="left">chkconfig –list</td>
+<td align="left">systemctl list-unit-files –type&#x3D;httpd</td>
+<td align="left">查看各个级别下服务的启动与禁用情况</td>
+</tr>
+</tbody></table>
+<hr>
+<ul>
+<li>重置Linux系统的root密码</li>
+</ul>
+<p>重启Linux系统主机并出现引导界面时，按下键盘上的e键进入内核编辑界面，如图1-50所示。</p>
+<p>Linux系统的引导界面</p>
+<p>在linux参数这行的最后面追加rd.break参数，然后按下Ctrl + X组合键运行修改过的内核程序，如图1-51所示。</p>
+<p>大约30秒过后，系统会进入紧急救援模式，如图1-52所示。</p>
+<p>Linux系统的紧急救援模式</p>
+<p>然后依次输入以下命令，再连续按下两次Ctrl + D组合键盘来退出并重启。等待系统再次重启完毕后便可以使用新密码登录Linux系统。这一系列命令的执行效果如图1-53所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mount -o remount,rw /sysroot</span><br><span class="line">chroot /sysroot</span><br><span class="line">passwd</span><br><span class="line">touch /.autorelabel</span><br></pre></td></tr></table></figure>
+
+<p>重置Linux系统的管理员密码</p>
+]]></content>
+      <categories>
+        <category>studynote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux就该这么学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔记-第2章-新手必须掌握的Linux命令-系统状态检测命令</title>
+    <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><strong>本节讲解与网卡网络、系统内核、系统负载、内存使用情况、当前启用终端数量、历史登录记录、命令执行记录以及救援诊断等相关命令的使用方法。</strong></p>
+<span id="more"></span>
+
+<ul>
+<li><p><strong>ifconfig</strong></p>
+<p>ifconfig [参数] [网络设备]</p>
+<p>用于获取网卡配置与网络状态等信息，英文全称为“interface config”</p>
+</li>
+<li><p><strong>uname</strong></p>
+<p>uname [-a]</p>
+<p>用于查看系统内核版本与系统架构等信息</p>
+</li>
+<li><p><strong>uptime</strong>    </p>
+<p>用于查看系统的负载信息</p>
+<p>建议负载值保持在1，生产环境中不能超过5</p>
+</li>
+<li><p><strong>free</strong></p>
+<p>free [-h]</p>
+<p>用于显示当前系统中内存的使用量信息</p>
+</li>
+<li><p><strong>who</strong></p>
+<p>用于查看当前登入主机的用户终端信息</p>
+</li>
+<li><p><strong>last</strong></p>
+<p>用于查看当前登入主机的用户终端信息</p>
+</li>
+<li><p><strong>ping</strong></p>
+<p>ping [参数] 主机地址</p>
+<p>用于测试主机之间的网络连通性</p>
+<p>表2-11                         ping命令中的参数以及作用</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c</td>
+<td>总共发送次数</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>指定网卡名称</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>每次间隔时间（秒）</td>
+</tr>
+<tr>
+<td>-W</td>
+<td>最长等待时间（秒）</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>tracepath</strong></p>
+<p>tracepath [参数] 域名</p>
+<p>用于显示数据包到达目的主机时途中经过的所有路由信息</p>
+</li>
+<li><p><strong>netstat</strong></p>
+<p>netstat [参数]</p>
+<p>用于显示如网络连接、路由表、接口状态等的网络相关信息，英文全称为“network status”</p>
+<p>表2-12                         netstat命令中的参数以及作用</p>
+<table>
+<thead>
+<tr>
+<th>-a</th>
+<th>显示所有连接中的Socket</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td>显示正在使用的Socket信息</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>显示TCP协议的连接状态</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>显示UDP协议的连接状态</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>使用IP地址，不使用域名</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>仅列出正在监听的服务状态</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>显示网卡列表信息</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>显示路由表信息</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>history</strong></p>
+<p>history [-c]</p>
+<p>用于显示执行过的命令历史</p>
+<p><em><strong>tec:可以自定义&#x2F;etc&#x2F;profile文件中的HISTSIZE变量值，即自定义存储多少条执行过的历史命令</strong></em></p>
+<p><em><strong>历史命令会被保存到用户家目录中的.bash_history文件中。Linux系统中以点（.）开头的文件均代表隐藏文件，这些文件大多数为系统服务文件，可以用cat命令查看其文件内容：</strong></em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# cat ~/.bash_history</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>要清空当前用户在本机上执行的Linux命令历史记录信息，可执行如下命令：</strong></em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# history -c</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>sosreport</p>
+<p>收集系统配置及架构信息并输出诊断文档</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>studynote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux就该这么学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>笔记 Linux就该这么学-第零章 为什么要学习Linux</title>
     <url>/2022/05/23/%E7%AC%94%E8%AE%B0-Linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6-%E7%AC%AC%E9%9B%B6%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Linux/</url>
     <content><![CDATA[<h3 id="前言-为什么要学习Linux"><a href="#前言-为什么要学习Linux" class="headerlink" title="前言 为什么要学习Linux"></a>前言 为什么要学习Linux</h3><ul>

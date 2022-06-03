@@ -365,8 +365,7 @@
 
       
         
-          
-            <p>工作目录指的是用户当前在系统中所处的位置</p>
+          <p>工作目录指的是用户当前在系统中所处的位置</p>
 <ul>
 <li><strong>pwd</strong></li>
 </ul>
@@ -386,36 +385,13 @@
 <li><p><strong>find</strong></p>
 <p>find [查找范围] 寻找条件</p>
 <p>用于按照指定条件来查找文件所对应的位置</p>
-<p>表2-13                       find命令中的参数以及作用</p>
-<p><a target="_blank" rel="noopener" href="https://www.notion.so/efc77fcd65ce467e845b159fb947fffa">Untitled</a></p>
-<p>这里需要重点讲解-exec参数的重要作用。这个参数用于把find命令搜索到的结果交由紧随其后的命令作进一步处理。它十分类似于第3章将要讲解的管道符技术，并且由于find命令对参数有特殊要求，因此虽然exec是长格式形式，但它的前面依然只需要一个减号（-）。</p>
-<p>根据文件系统层次标准（Filesystem Hierarchy Standard）协议，Linux系统中的配置文件会保存到&#x2F;etc目录中（详见第6章）。如果要想获取该目录中所有以host开头的文件列表，可以执行如下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# find /etc -name &quot;host*&quot; -print</span><br><span class="line">/etc/host.conf</span><br><span class="line">/etc/hosts</span><br><span class="line">/etc/hosts.allow</span><br><span class="line">/etc/hosts.deny</span><br><span class="line">/etc/avahi/hosts</span><br><span class="line">/etc/hostname</span><br></pre></td></tr></table></figure>
-
-<p>如果要在整个系统中搜索权限中包括SUID权限的所有文件（详见第5章），只需使用-4000即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# find / -perm -4000 -print</span><br><span class="line">/usr/bin/fusermount</span><br><span class="line">/usr/bin/chage</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/umount</span><br><span class="line">/usr/bin/mount</span><br><span class="line">/usr/bin/su</span><br><span class="line">/usr/bin/pkexec</span><br><span class="line">/usr/bin/crontab</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">………………省略部分输出信息………………</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>进阶实验：</p>
-<p>在整个文件系统中找出所有归属于linuxprobe用户的文件并复制到&#x2F;root&#x2F;findresults目录中。该实验的重点是“-exec {} ;”参数，其中的{}表示find命令搜索出的每一个文件，并且命令的结尾必须是“;”。完成该实验的具体命令如下：</p>
-<p>[root@linuxprobe ~]# find &#x2F; -user linuxprobe -exec cp -a {} &#x2F;root&#x2F;findresults&#x2F; ;</p>
-</blockquote>
-</li>
-<li><p><strong>locate</strong></p>
-<p>locate文件名称</p>
-<p>用于按照名称快速搜索文件所对应的位置，作用是找一些常见的且又知道大概名称的文件</p>
-</li>
-<li><p><strong>whereis</strong></p>
-<p>whereis命令名称</p>
-<p>用于按照名称快速搜索二进制程序（命令）、源代码以及帮助文件所对应的位置</p>
-</li>
-<li><p><strong>which</strong></p>
-<p>which命令名称</p>
-<p>按照指定名称快速搜索二进制程序（命令）所对应的位置</p>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/06/03/%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84linux%E5%91%BD%E4%BB%A4-%E6%9F%A5%E6%89%BE%E5%AE%9A%E4%BD%8D%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

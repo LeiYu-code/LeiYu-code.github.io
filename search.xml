@@ -1,6 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>笔记-第二章新手必须掌握的linux命令-查找定位文件命令</title>
+    <url>/2022/06/03/%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84linux%E5%91%BD%E4%BB%A4-%E6%9F%A5%E6%89%BE%E5%AE%9A%E4%BD%8D%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>工作目录指的是用户当前在系统中所处的位置</p>
+<ul>
+<li><strong>pwd</strong></li>
+</ul>
+<p>用于显示用户当前所处的工作目录，英文全称为“print working directory”</p>
+<ul>
+<li><p><strong>cd</strong></p>
+<p>cd [参数] [目录]</p>
+<p>用于切换当前的工作路径</p>
+</li>
+<li><p><strong>ls</strong></p>
+<p>ls [参数] [文件名称]</p>
+<p>用于显示目录中的文件信息</p>
+</li>
+<li><p><strong>tree</strong></p>
+<p>用于以树状图的形式列出目录内容及结构</p>
+</li>
+<li><p><strong>find</strong></p>
+<p>find [查找范围] 寻找条件</p>
+<p>用于按照指定条件来查找文件所对应的位置</p>
+<p>表2-13                       find命令中的参数以及作用</p>
+<p><a href="https://www.notion.so/efc77fcd65ce467e845b159fb947fffa">Untitled</a></p>
+<p>这里需要重点讲解-exec参数的重要作用。这个参数用于把find命令搜索到的结果交由紧随其后的命令作进一步处理。它十分类似于第3章将要讲解的管道符技术，并且由于find命令对参数有特殊要求，因此虽然exec是长格式形式，但它的前面依然只需要一个减号（-）。</p>
+<p>根据文件系统层次标准（Filesystem Hierarchy Standard）协议，Linux系统中的配置文件会保存到&#x2F;etc目录中（详见第6章）。如果要想获取该目录中所有以host开头的文件列表，可以执行如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# find /etc -name &quot;host*&quot; -print</span><br><span class="line">/etc/host.conf</span><br><span class="line">/etc/hosts</span><br><span class="line">/etc/hosts.allow</span><br><span class="line">/etc/hosts.deny</span><br><span class="line">/etc/avahi/hosts</span><br><span class="line">/etc/hostname</span><br></pre></td></tr></table></figure>
+
+<p>如果要在整个系统中搜索权限中包括SUID权限的所有文件（详见第5章），只需使用-4000即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# find / -perm -4000 -print</span><br><span class="line">/usr/bin/fusermount</span><br><span class="line">/usr/bin/chage</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/umount</span><br><span class="line">/usr/bin/mount</span><br><span class="line">/usr/bin/su</span><br><span class="line">/usr/bin/pkexec</span><br><span class="line">/usr/bin/crontab</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">………………省略部分输出信息………………</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>进阶实验：</p>
+<p>在整个文件系统中找出所有归属于linuxprobe用户的文件并复制到&#x2F;root&#x2F;findresults目录中。该实验的重点是“-exec {} ;”参数，其中的{}表示find命令搜索出的每一个文件，并且命令的结尾必须是“;”。完成该实验的具体命令如下：</p>
+<p>[root@linuxprobe ~]# find &#x2F; -user linuxprobe -exec cp -a {} &#x2F;root&#x2F;findresults&#x2F; ;</p>
+</blockquote>
+</li>
+<li><p><strong>locate</strong></p>
+<p>locate文件名称</p>
+<p>用于按照名称快速搜索文件所对应的位置，作用是找一些常见的且又知道大概名称的文件</p>
+</li>
+<li><p><strong>whereis</strong></p>
+<p>whereis命令名称</p>
+<p>用于按照名称快速搜索二进制程序（命令）、源代码以及帮助文件所对应的位置</p>
+</li>
+<li><p><strong>which</strong></p>
+<p>which命令名称</p>
+<p>按照指定名称快速搜索二进制程序（命令）所对应的位置</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>studynote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux就该这么学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件-notion笔记软件</title>
+    <url>/2022/06/02/%E8%BD%AF%E4%BB%B6-notion%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="Notion，一款强大到改变我人生的软件"><a href="#Notion，一款强大到改变我人生的软件" class="headerlink" title="Notion，一款强大到改变我人生的软件"></a>Notion，一款强大到改变我人生的软件</h1><blockquote>
+<p>A unified &amp; collaborative workspace for your notes, wikis, and tasks. 将笔记、知识库和任务管理无缝整合的协作平台</p>
+</blockquote>
+<p>01.png</p>
+<p>熟悉我的人都知道，我是一名重度处女座整理癖，不论是现实生活还是网络世界，我最受不了杂乱无章，所以我会尽我所能的将所有的东西分门别类，安置的井井有条。</p>
+<p>生活中的物品还好说，只要摆放整齐，定期断舍离就可以保证不凌乱。但是电子设备中的文件本就是由一个个无序的字符串组成，规模庞大、纷繁复杂。在今天这个信息大爆炸的时代，我们每天都要接收各种各样的新闻、资讯，在这中间有的时候浏览到好的内容，想保存下来等随后有时间再查看，但是它们多半的命运都是扔到收藏夹里吃灰。然后自己骗自己，马了等于看了。</p>
+<p>如果你也像我一样，是个爱好广泛且好奇心比较强烈的学习者，那么一款好的笔记型应用，绝对是提高生产力的路上不可或缺的好帮手。我曾经在茫茫海洋中苦苦寻觅，希望可以找到一个帮助我提升专注力、提高学习效率的软件，因为我意识到如果我没有办法及时的对新内容进行筛选、转化，将信息增长的速度抵消掉，那么我终究有一天要被堆积如山的信息所淹没。</p>
+<p>为了不让这种可怕的事情发生，我几乎把市面上所有的应用都尝试了个遍，印象笔记、有道云笔记、OneNote、为知笔记、Bear、语雀…虽然有一些能解决我的基本需求，但是始终感觉不是很得心应手，痛点依然很痛。并且它们的功能太过分散，有一些只能解决我的某一部分特定需求，所以我常常需要在很多软件中来回切换，有的时候光是整理这些文件、把他们分门别类就耗费了我大量的精力和时间，在这种情况下很难真正的吸收知识、提高学习效率。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_3_20201212025501697.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_3_20201212025501697.png"></p>
+<p>02.png</p>
+<p>直到后来我遇见了Notion，它真正的实现了All in One，解决了我一直以来的痛点，好用到我想以身相许（请把公屏打在般配上）。<strong>从此以后，我的天空，星星都亮了。</strong></p>
+<p>Notion是一款及其出色的软件，它的中文翻译是「概念」。这不是一款年代悠久的软件，从2016年问世之初到现在也不过才短短的四年时间。跟那些笔记应用届的前辈们相比，它只能算一个初出茅庐的小鲜肉。其实单纯的说它是一款笔记型应用是不准确的。它拥有非常丰富的使用场景，可以说是一个集项目管理、任务管理以及知识库于一身的在线团队协作工具。早些时候有朋友给我推荐过它，但是苦于它的上手成本太高，并且是全英文软件，服务器在国外，所以当时在国内的时候打开速度你懂的，畏难心理让我过早地放弃了，于是就没有花太多的时间去深入的了解它，第一次的相遇就这么遗憾地擦肩而过。</p>
+<p>在进入新公司之后，我们所有的工作文档都保存在Notion上，所以我必须要逼自己开始学习如何去使用它，在这个过程中，我渐渐发现了它的魔力，并且在这个过程中被它深深的迷住了。在经过了一个星期的摸索之后，我发现我的生活再也离不开它了，于是我又花了一个星期的时间，把我前小半辈子所有的资料都迁移到了Notion上面，等到这个大工程完成之后，看着它，我竟然发出了此生无憾的感慨，糟糕，这就是心动的感觉。</p>
+<h2 id="一切皆对象"><a href="#一切皆对象" class="headerlink" title="一切皆对象"></a><strong>一切皆对象</strong></h2><p>在javascript中有一个思想：’一切皆对象’，Notion将这个理念很好的应用在软件中，使用者拥有极高的自由度，可以根据自己的实际需求去定制、去改造，打造适合自己的专属知识库。同时它强大的在线协作功能完美的实现了团队需求，不仅可以编辑文档，同时还支持项目管理、Todo list、日程表、计划清单、音&#x2F;视频播放器…它几乎满足了我对于一个笔记型应用的所有想象，甚至我没想到的地方它也做到了。</p>
+<h2 id="Markdown富文本"><a href="#Markdown富文本" class="headerlink" title="Markdown富文本"></a><strong>Markdown富文本</strong></h2><p>其中尤其让我欲罢不能的是它对于Markdown语法的支持，因为被Word和Pages杂乱无章的排版搞的心烦意乱，所以Markdown编辑器Typora一直是我的写作首选。印象笔记和有道云笔记虽然都支持Markdown语法，但是他们都不能直接编辑富文本，只能分成两个屏幕，左边是编辑器，右边是显示效果，由于图片展位等问题经常位置不同步，在软件中的编辑体验糟糕至极，所以我通常是将编辑好的文档直接导入。</p>
+<p>而在Notion中，所有的内容直接在编辑器内以富文本显示，不仅让我们可以轻松的使用Markdown语法编辑文字，同时还可以与Notion提供的各种排版、布局方式配合使用，帮助我们排除一切干扰，心无旁骛的专注于写作本身，大大提高了输入效率。它还可以识别几十种代码，通过不同颜色的高亮显示，让代码即清晰易读又整洁美观，对程序员的友好度已经到了’令人发指’的地步。再加上几乎相差无几的快捷方式神助攻，真正实现了所见即所得，让习惯于使用Markdown语法的用户几乎不需要花费太多的学习成本，就可以无缝切换到Notion中。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a><strong>基本概念</strong></h2><p>接下来介绍几个Notion中的基本概念，它打破了传统的笔记软件中对于内容的组合方式，以一种革命性的理念颠覆了我们过往对于笔记型应用的认知。</p>
+<h3 id="Block（模块）"><a href="#Block（模块）" class="headerlink" title="Block（模块）"></a><strong>Block（模块）</strong></h3><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_4_20201212025502103.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_4_20201212025502103.gif"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2484592-88054287f90f9cd6.gif?imageMogr2/auto-orient/strip" alt="04.gif"></p>
+<p>Notion中的基本对象为Block（模块），它可以是任何形式：表格、文本、网页、代码块、图片、视频、文件或者直接是一个Page（页面），目前Notion中支持的Block类型有23种。</p>
+<p>而且Block的操作方式极其简单快捷，直接使用鼠标按住拖拽，就可以随意重新排列它们的位置，免去了繁琐的复制粘贴困扰。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_5_2020121202550356.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_5_2020121202550356.gif"></p>
+<p>05.gif</p>
+<p>使用拖拽或者Tab键缩进就可以直接定义两段内容的父子级关系，在选中父级的时候它下面对应的所有子级都会被一同选中，页面结构简单清晰，完全可以取代幕布之类的大纲软件。同时使用Toggle List还可以将不需要的内容暂时收起，节省页面空间，让你的思绪更加连贯。</p>
+<p>这些内容丰富的Block就像是乐高积木一样，不同的排列组合可以带来不同的可能性。不仅大大降低了排版布局的操作成本，而且给用户带来了强大的操纵感和驾驭感。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_6_20201212025504525.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_6_20201212025504525.gif"></p>
+<p>06.gif</p>
+<p>有了Notion中的checkbox，基本上就可以抛弃市面上的Todo类App了，我会将每周需要做的事都列在一个Page中，因为Notion拥有非常自由的分栏功能，所以我可以按照自己的个人习惯来布局整个页面，用我最熟悉的方式将我每天的日程进行量化，这样也方便我后期回顾查阅。</p>
+<h3 id="Page（页面）"><a href="#Page（页面）" class="headerlink" title="Page（页面）"></a><strong>Page（页面）</strong></h3><p>当我们在记笔记的时候，它们往往并不是独立的知识块，常常需要与其他的文件相互联系、旁征博引，一起构建一个完整的知识体系。使用其他笔记型软件的时候，遇到这种情况就会感觉非常糟心。</p>
+<p>而Notion彻底改变了这种局面，在它的理念中，一个笔记就是一个Page，它其实类似于收藏夹的功能。不同的Page之间可以相互嵌套，这种俄罗斯套娃般的无限层级就像一根无形的线，将所有有联系的部分紧紧的拴在一起，形成一个完整而又丰富的知识库。习惯用康奈尔笔记法的同学可以直接使用Notion提供的模版，根据自己的实际需求自定义分栏和层级即可。</p>
+<p>同时因为Notion支持直接复制网址嵌入视频，搭配分栏功能，就可以在一个软件中，左边播放教学视频，同时在右边记笔记。而且还可以随时调整左右屏幕的占比。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_7_20201212025505884.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_7_20201212025505884.gif"></p>
+<p>08.gif</p>
+<p>目前支持比较好的是Youtube这类国外视频网站，不过对于国内Bilibili这种主流的视频网站，也有网友编写的教程，教你如何在笔记中插入视频。如果是本地视频，直接拖拽上传即可。这样当回顾复习的时候，只要打开一个Page，里面所有相关的文字资料、笔记、视频、音频等一切相关的内容就全都涵盖了，妈妈真的再也不用担心我的学习。</p>
+<h3 id="Database（数据库）"><a href="#Database（数据库）" class="headerlink" title="Database（数据库）"></a><strong>Database（数据库）</strong></h3><p>Notion的数据库是一个非常强大的板块，它提供了五种不同的展示方式：Table、Board、calendar、List、Gallery，分别对应各种不同的使用场景。同时它支持在这五种展示方式中互相切换，搭配它提供的Filter（过滤）功能，可以按照不同属性生成最适合的展示效果。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_8_20201212025507134.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_8_20201212025507134.gif"></p>
+<p>09-Reading list.gif</p>
+<p>这里用我每日的阅读列表举例，Database的第一栏是标签栏，可以自定义属性，例如我定义的是：Type（文章类型）、Name（文章名称）、Status（阅读状态）、Score&#x2F;5（文章等级），根据不同的属性我可以快速地检索到不同类型的文章，因为我每天看的东西多且杂，这个功能帮我很好的整理归档阅读资料，方便我日后检索和查找。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_9_20201212025508728.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_9_20201212025508728.gif"></p>
+<p>10.gif</p>
+<p>因为阅读过的文章已经有一定印象，所以我习惯于把状态为Finished的文章用List的形式展示，Ready to Start的文章用Gallery的形式来展示，这样可以让我在阅读之前更加直观的了解到文章内容。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_10_20201212025509792.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_10_20201212025509792.gif"></p>
+<p>11-剪藏.gif</p>
+<p>这样做的好处就是可以将散乱在各处的资料做一个统一分类整理，因为我关注的内容比较多，平时主要浏览的平台也比较杂，除了微信、微博这种主流的社交媒体，还会关注一些诸如少数派、Medium、36氪这些优质网站，遇到一些好的内容当下来不及看就想着先收藏下来，等稍后有时间再仔细阅读。但是一个软件一个软件去查又太麻烦，而且常常收藏之后就忘记了，Notion提供的浏览器插件Web Clipper就很好地帮助我解决了这个问题，平时浏览网站时，遇到好文章只需要点击一下，就可以轻松的保存在你指定的文件夹中，因为表格中有阅读状态属性标记，所以也可以监督自己，将这些Database中的文章及时阅读。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_11_20201212025510995.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_11_20201212025510995.png"></p>
+<p>其中Notion的Grade Calculator模版简直是一款完美的成绩计算器，因为国外学校的成绩是按照百分比计算总分，它可以设置不同学科的不同占比，同时还可以设置因为晚交而产生的扣分，搭配checkbox设置包含与排除当前学科（未被勾选的学科不计算入总成绩），当我们将所有学科信息输入之后自动会得出结果。它的强大之处就在于将所有的信息集合成一个整体，在Database中你可以上传这门学科的论文、笔记、成绩以及导师反馈，整个学期只用一张表格就可以通通搞定，免去我们查找文件的麻烦。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_12_20201212025512118.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_12_20201212025512118.png"></p>
+<p>13.png</p>
+<p>Database中的基本板块还是Page，可以根据Page中内容的不同，构建不同的数据库。下面总结一下不同的展示方式适用的不同场景：</p>
+<p><strong>Table：用户研究列表、课堂笔记、求职记录、成绩计算器、记账单、课程表、课程计划、习惯追踪、竞品分析、公司报表</strong></p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_13_20201212025512869.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_13_20201212025512869.png"></p>
+<p>14.png</p>
+<p>Table因为支持自定义丰富的Properties（属性），并且还有计算功能加持，所以特别适合学习和工作等需要处理大量数据等场景，通过合理设置Filter，可以帮我们极大提升按需检索的速度。</p>
+<p><strong>List View：会议记录、阅读清单、日记本、产品问答、读书笔记</strong></p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_14_20201212025513869.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_14_20201212025513869.png"></p>
+<p>15.png</p>
+<p>List View相比Table页面更加简洁干净，没有那么多复杂的条条框框，但是它可以很清晰直观的将重要信息展示出来，也可以按照需要设置属性和过滤器，所以比较适合清单类型的内容。</p>
+<p><strong>Gallery：设计资源、阅读清单、团队成员介绍</strong></p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_15_2020121202551540.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_15_2020121202551540.png"></p>
+<p>16.png</p>
+<p>Gallery的特点就是可以展示缩略图，比较适合以图片为主的内容，例如设计团队需要根据不同的封面区分内容。</p>
+<p><strong>Calendar：旅行计划、论文进度表、值日表</strong></p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_16_2020121202551672.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_16_2020121202551672.png"></p>
+<p>17.png</p>
+<p>Calendar可以让我们直观的看到时间节点，你可以设置时间为某一天，也可以通过添加起止时间来横跨某一个时间段，比较适合有时间跨度的计划类内容。</p>
+<p><strong>Board：项目管理、销售管理、旅行清单</strong></p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_17_20201212025516822.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_17_20201212025516822.gif"></p>
+<p>18-kanban.gif</p>
+<p>习惯于Trello这样项目管理工具的同学对于看板功能肯定不陌生，我们可以按照不同功能将页面划分成不同的栏，在对应的每一栏下面添加卡片。因为Board的卡片支持拖拽，所以我平时除了会用它管理工作进度，同时还将它作为一个规划旅行清单的工具，每打卡完一个目的地就把它放到已去过的一栏，这样可以清晰的显示整个旅行进程。</p>
+<h2 id="查看历史版本"><a href="#查看历史版本" class="headerlink" title="查看历史版本"></a>查看历史版本</h2><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_18_20201212025518259.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_18_20201212025518259.gif"></p>
+<p>19-History.gif</p>
+<p>Notion和Figma一样支持回看历史版本，所以及时文件修改之后反悔了也不用担心，Notion可以轻轻松松帮你时光倒流，回退到你之前的历史版本。这一点跟开发中的Git管理有异曲同工之妙，Notion让我们知道世界上真的有后悔药存在。但是这个功能在免费版本中不支持，需要升级到Personal Pro才可以。</p>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a><strong>兼容性</strong></h2><p>在小型智能设备高速发展的今天，我们对于手机的依赖甚至某些时候都超过了电脑，随着办公场景的移动性越来越强，更多的便携设备开始取代笨重的台式机，成为当代人的生产力工具。为了紧跟时代的潮流，软件也需要考虑多平台协作兼容，最理想的状态就是可以让用户存储的资料可以在各个设备之间顺畅切换，无缝衔接。</p>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_19_20201212025519353.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_19_20201212025519353.png"></p>
+<p>20.png</p>
+<p>Notion在兼容性方面可以说做到了极致，它不仅支持Web端在线访问，同时提供Window、Mac系统本地安装包，Android和IOS系统的手机用户也可以放心使用。可以说只要有网络覆盖的地方，就可以无缝切换，全平台通吃。而且只要你在任何一个设备上修改了内容，其余的所有平台都会实时同步，在web端你甚至都不用刷新网页，Notion真正实现了多端同步。</p>
+<p>但是对应的有一个很大的问题就是，因为Notion的文档存储在云端，所以读取速度很大程度上取决于服务器的速度，我在国外使用的时候没有感觉到有明显的延迟，打开和导出的速度都很快。但是据国内用户的使用反馈，目前看来对于大陆区的用户还是不太友好。</p>
+<h2 id="模版广场"><a href="#模版广场" class="headerlink" title="模版广场"></a><strong>模版广场</strong></h2><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_20_20201212025520119.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_20_20201212025520119.gif"></p>
+<p>21-template.gif</p>
+<p>为了方便新手入门，Notion为大家提供了上百种现成的模版，并且根据不同职业需求做了分类，帮助大家轻松面对工作学习、求职应聘、休闲娱乐、居家生活的各种场景。如果觉得官方提供的用得还不过瘾，可以去网站上的Template Gallery自行挖掘探索，上面有各种网友自己DIY的模版。</p>
+<p>Notion就像是一块无限的画布，大家可以在上面肆意的挥洒自己的想象力，最后可能会产生令人意想不到的效果。</p>
+<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a><strong>语言</strong></h2><p>Notion目前有英文版和韩语版两个版本，Notion表示韩国是除美国外国外最大的市场，今年韩国用户数量同比增长了 263%。根据 App Annie 的数据，Notion 排在美韩后的几个主要市场，依次是巴西、俄罗斯和英国，而中国在这个排名中处于相对靠后的位置（这可能和一些人想的不同）。但是因为Notion在Web端也可以访问，所以担心语言问题的小伙伴可以使用Google浏览器的翻译助手，我测试了一下基本翻译的比较准确。</p>
+<p>同时我们国内有志愿者成立了Notion中文社区，正在翻译Notion的官方文档，社区里面也有非常丰富的资料，感兴趣的同学可以加入社区，大家一起交流讨论Notion的使用心得。</p>
+<h2 id="价格"><a href="#价格" class="headerlink" title="价格"></a><strong>价格</strong></h2><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_21_20201212025521401.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_21_20201212025521401.png"></p>
+<p>22.png</p>
+<p>最后来说一下大家最关心的定价方面，目前个人使用的话是免费的，但是上传文件的空间只有5M，之前限制可以使用1000个Block，更新升级之后个人免费版本也可以无限嵌套Block，Notion真的是一款非常良心的软件了，如果对于文件存储空间没有需求的用户，其实免费版本就完全够用了。使用教育邮箱注册的同学还可以直接升级到Pro，之后就可以无限上传文件，简直不能再香了。</p>
+<hr>
+<p>我平时的主要存储工具就是移动硬盘、百度网盘和本地磁盘。</p>
+<ul>
+<li>移动硬盘用于备份比较重要的资料、照片视频等；</li>
+<li>百度网盘用于存放学习资料、视频教程、手机照片视频备份等；</li>
+<li>本地磁盘用于存放目前在做的工作文件和需要经常查看的文件；</li>
+</ul>
+<p>现在有了Notion的无限上传空间，同时加上它强大的全平台兼容性，正好完美的填补了我之前存储工具的一块空白，用它来收藏我每日的灵光乍现、记录一些随笔感想再合适不过了，它帮我打破了时间和空间的限制，随时随地，不论是什么设备，打开软件就能写作，真真切切的感受到了科技为我们的生活带来的改变。</p>
+<p>Notion在自由度和有序之间找到了一个很好的平衡点，它即为用户提供了灵活的操控性，同时又保证了内容的可读性和视觉美观，最终让所有的东西以最简单直接的方式呈现出来。帮助用户节省整理排版布局的时间，同时让我们的注意力回归创作本身。</p>
+<p>虽然它目前还有一些不足和缺陷，但是我们已经能看到这款年轻的软件所展露出的无限潜力和魅力。因为太过于喜欢这款软件的设计，于是去他们的官网查看创始团队的资料，观看他们团队成员录制的视频，在了解了他们越来越多的故事后，我变成了一个彻头彻尾的脑残粉。</p>
+<p>23-notionoffice.jpg</p>
+<blockquote>
+<p>The romantic goal is: Can we make tools that allow people to use computers like a new medium? Can we give that to non-programmers? This topic is getting popular again. It was really popular in the 90s, but somehow people forgot that idea for a couple of decades.</p>
+</blockquote>
+<p>Notion 的创始人Ivan赵出生于中国，之后去了加拿大。他是一名开发者同时也是一名设计师，从小学的时候就开始学习编程，后来大学的时候迷上了摄影，培养了良好的审美观。一开始的Notion版本还不是很稳定，他跟co-founder搬去了日本京都，将代码重构了一遍，才诞生了现在这个版本。他的美好愿景就是降低技术成本，让不会编程的人们也能用上专业的生产力工具。</p>
+<p>虽然Notion赢得了大批用户的追逐，获得了5千万美金的投资，现在市值20亿美金，是硅谷炙手可热的明星创业公司，但是在他们取得如此瞩目的成绩之后并没有急于扩充团队，马上将自己的野心放诸于全球市场，而是专注于产品的提升和改进上，保证团队的敏捷和高效，让每一名员工的个人能力得到最大化的发挥。同时注意倾听用户的声音，每一次的升级和迭代都能为我们带来很大的惊喜。</p>
+<p>自从开始使用Notion以来，就一直抑制不住想为它写点什么的冲动，对它的喜爱之情如果不赶紧倾泻出来的话我怕自己会憋坏。这么好的产品，其实一开始就迫不及待的想要分享给大家，之所以等到现在，是因为它的功能实在是太强大了，每当我觉得自己已经完全掌握它的时候，它总会给我带来新的惊喜。</p>
+<p>没有遇到Notion之前，所有的信息、资料就像一团没有思绪的乱麻，将我紧紧的包裹其中，我苦苦挣扎却不得其法。其实我已经是个非常注重整理的人了，但是在面对它们的时候我还是觉得无从下手。毫不夸张地说，自从开始使用Notion，我感觉自己的生活都减负了，一下子感觉轻松了许多。同时它也像一个无形的监视者，清空代办事项时的快感激励着我不停的前进，它让我的生活变得充实且忙碌。</p>
+<p>现在，它对于我来说，已经不仅仅只是一个简单的记笔记的地方。在这里我会记录每天的所思所感，规划自己的成长计划，制定每日的任务清单，整理各种学习资料，它记录了我的喜怒哀乐、成长进步。同时它还帮助我把事物的逻辑理顺，让我在思考的时候思维更加清晰缜密，行动时更加高效快捷，并且它还帮助我找到了人生方向。</p>
+<p>工具的本质是帮助人们提升做事的效率，如果在这个过程中还可以帮助用户进一步思考、改善思维方式，那么我想这样的产品已经不仅仅是用「优秀」可以来形容的了。我的人生目标，就是希望自己有一天，也能做出一款像Notion一样，真正改变人们生活的产品，而且是一种积极的改变，我希望它可以让人们的生活更加美好。</p>
+<p><strong>说出来会被嘲笑的梦想，才有实现的价值。</strong></p>
+<p>虽然外面的世界变化很快，人们每天都在为了不同的人生目标奔波劳碌，有的人追名有的人逐利。为了实现自己的目标，人们开发出各种各样的软件，有的希望占用用户更多的时间和注意力，有的希望掏空用户的钱包和银行卡，但是这些都不能打扰我内心的节奏，纵使这个过程可能孤独无比，只要拥有了坚定淡泊的心智，我相信我也可以从容应对接下来的人生旅途。</p>
+<p>就像Notion一样，<strong>不模仿别人，不重复自己。</strong></p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+        <tag>Knowledgehub</tag>
+        <tag>mission mangerg</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令</title>
     <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

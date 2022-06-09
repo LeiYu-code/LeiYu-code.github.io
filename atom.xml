@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-03T14:19:53.749Z</updated>
+  <updated>2022-06-09T13:38:47.885Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件-Simple DNSCrypt</title>
+    <link href="http://example.com/2022/06/09/%E8%BD%AF%E4%BB%B6-Simple-DNSCrypt/"/>
+    <id>http://example.com/2022/06/09/%E8%BD%AF%E4%BB%B6-Simple-DNSCrypt/</id>
+    <published>2022-06-09T13:35:04.000Z</published>
+    <updated>2022-06-09T13:38:47.885Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows"><a href="#保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows" class="headerlink" title="保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows]"></a>保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows]</h1><p><a href="https://www.appinn.com/simple-dnscrypt/">Simple DNSCrypt</a> 是一款简单易用的 DNS 流量加密工具，它能够让中间人或者第三方无法窥视到你的 DNS 流量，从而保护网络安全，个人隐私。</p><p><img src="https://img3.appinn.net/images/201803/2018-03-04-1-19-23.jpg!o" alt="Simple DNSCrypt - 保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows] 1"></p><p>注意，需要打开图片上的 DNSCrypt 服务，并选择网卡，才能开始使用 DNSCrypt 协议。</p><p>DNS 流量加密，使用了DNSCrypt 协议，你可以想像成 HTTPS 一样，只不过这次加密的是 DNS 流量，这样就可以保护网络安全，防止钓鱼网站等诸多问题。</p><blockquote><p>DNSCrypt 是一种认证 DNS 客户端和 DNS 解析器之间通信的协议。它可以防止 DNS 欺骗，使用加密签名验证来自所选 DNS 解析器的响应，并确保没有被篡改。</p></blockquote><p>Simple DNSCrypt 其实是基于 <a href="https://github.com/jedisct1/dnscrypt-proxy">DNSCrypt Proxy</a> 的一款易于使用的工具，而后者可以在其他平台上使用。</p><p>Simple DNSCrypt 默认已经内置了不少支持 DNSCrypt 的服务器，只需要开启服务，就会自动选择，</p><p><img src="https://img3.appinn.net/images/201803/2018-03-04-1-21-28.jpg!o" alt="Simple DNSCrypt - 保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows] 2"></p><p>并且，Simple DNSCrypt 还有其他一些功能，比如 DNS 缓存、阻止 IPv6、强制使用 TCP 流量等功能，还能让局域网里的其他设备使用（将设备 DNS 设置为运行 Simple DNSCrypt 的电脑 IP 即可）</p><p>然后，你的 DNS 将回归正常，但注意，一些 CDN 可能会受影响，比如某些视频网站。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows&quot;&gt;&lt;a href=&quot;#保护网络安全，一键使用-DNSCrypt-加密</summary>
+      
+    
+    
+    
+    <category term="software" scheme="http://example.com/categories/software/"/>
+    
+    
+    <category term="dns" scheme="http://example.com/tags/dns/"/>
+    
+  </entry>
   
   <entry>
     <title>转载-内网arp欺骗与dns欺骗</title>

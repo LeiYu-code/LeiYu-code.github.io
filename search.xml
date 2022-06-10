@@ -3,7 +3,9 @@
   <entry>
     <title>软件-Simple DNSCrypt</title>
     <url>/2022/06/09/%E8%BD%AF%E4%BB%B6-Simple-DNSCrypt/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows"><a href="#保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows" class="headerlink" title="保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows]"></a>保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows]</h1><p><a href="https://www.appinn.com/simple-dnscrypt/">Simple DNSCrypt</a> 是一款简单易用的 DNS 流量加密工具，它能够让中间人或者第三方无法窥视到你的 DNS 流量，从而保护网络安全，个人隐私。</p>
+    <content><![CDATA[<h1 id="保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows"><a href="#保护网络安全，一键使用-DNSCrypt-加密-DNS-流量-Windows" class="headerlink" title="保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows]"></a>保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows]</h1><p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.appinn.com/simple-dnscrypt/">Simple DNSCrypt</a> 是一款简单易用的 DNS 流量加密工具，它能够让中间人或者第三方无法窥视到你的 DNS 流量，从而保护网络安全，个人隐私。</p>
 <p><img src="https://img3.appinn.net/images/201803/2018-03-04-1-19-23.jpg!o" alt="Simple DNSCrypt - 保护网络安全，一键使用 DNSCrypt 加密 DNS 流量 [Windows] 1"></p>
 <p>注意，需要打开图片上的 DNSCrypt 服务，并选择网卡，才能开始使用 DNSCrypt 协议。</p>
 <span id="more"></span>
@@ -34,6 +36,8 @@
 <p><strong>一.实验目的</strong></p>
 <p>DNS欺骗即域名信息欺骗是最常见的DNS安全问题。域名系统(Domain Name System,DNS)是一个将Domain Name和IP Address进行互相映射的Distributed Database。DNS是网络应用的基础设施，它的安全性对于互联网的安全有着举足轻重的影响。但是由于DNS Protocol在自身设计方面存在缺陷，安全保护和认证机制不健全，造成DNS自身存在较多安全隐患，导致其很容易遭受攻击。很多专家就DNS Protocol的安全缺陷提出了很多技术解决方案。例如IETF提出的域名系统安全协议(Domain Name System Security,DNSSEC)，其目标就在于解决这些安全隐患。这个Protocol增加了安全认证项目，增强了Protocol自身的安全功能。但是新增加的安全机制需要占用更多的系统和网络资源，同时要升级Database和System Manggament Software,这些基于DNSSEC协议的软件还不成熟，距离普及应用还有较长时间。目前，常见的措施是定期升级DNS软件和加强相关的安全配置，禁用不安全的端口等。以下对以侦听为基础的DNS ID欺骗(DNS ID spoofing)进行了探讨，并提出了相关的防护解决方案。通过练习掌握工具的使用，理解实施过程，掌握防范措施。</p>
 <p>上面理论性的东西可以选择性忽略，都是这下面的原理就要详细了解了，不然看着下面的操作步骤可能会很迷…</p>
+<span id="more"></span>
+
 <p><strong>二.实验原理</strong></p>
 <blockquote>
 <p>因为局域网DNS欺骗需要ARP欺骗的配合 所以我这里简单解释一下arp欺骗的原理：有一个欺骗者（主机A）说自己是网关，骗将受害者（主机B）发给真正网关的数据转发给主机A，然后数据经由主机A后再发送给真正的网关，而后主机A又告诉网关它就是主机B（欺骗了网关），骗将本来应该发给B的数据发给主机A（欺骗者），然后由A转发给主机B。&#x2F;&#x2F;就是相当于把主机A当成中间人，把主机B与网关的所有通讯全部要经过主机A，这样子，主机A就可以对主机B的数据信息随意修改然后在转发给网关从而达到了欺骗的效果</p>
@@ -185,7 +189,9 @@
   <entry>
     <title>软件-notion笔记软件</title>
     <url>/2022/06/02/%E8%BD%AF%E4%BB%B6-notion%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</url>
-    <content><![CDATA[<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" alt="img"></p>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" alt="img"></p>
 <p>A unified &amp; collaborative workspace for your notes, wikis, and tasks. 将笔记、知识库和任务管理无缝整合的协作平台</p>
 <p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png" alt="img"></p>
 <p>01.png</p>

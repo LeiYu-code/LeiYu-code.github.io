@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-10T12:22:50.724Z</updated>
+  <updated>2022-06-11T09:18:59.627Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记-新手必须掌握的Linux命令-文件目录管理命令</title>
+    <link href="http://example.com/2022/06/11/%E7%AC%94%E8%AE%B0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2022/06/11/%E7%AC%94%E8%AE%B0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-06-11T09:12:19.000Z</published>
+    <updated>2022-06-11T09:18:59.627Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>touch命令</strong></p><p>touch [参数] 文件名称</p><p>用于创建空白文件或设置文件的时间</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-a</td><td>仅修改“读取时间”（atime）</td></tr><tr><td>-m</td><td>仅修改“修改时间”（mtime）</td></tr><tr><td>-d</td><td>同时修改atime与mtime</td></tr></tbody></table><p><strong>mkdir命令</strong></p><p>cp [参数] 源文件名称 目标文件名称</p><p>用于复制文件或目录，英文全称为“copy”</p><p>如果目标文件是目录，则会把源文件复制到该目录中；</p><p>如果目标文件也是普通文件，则会询问是否要覆盖它；</p><p>如果目标文件不存在，则执行正常的复制操作。</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-p</td><td>保留原始文件的属性</td></tr><tr><td>-d</td><td>若对象为“链接文件”，则保留该“链接文件”的属性</td></tr><tr><td>-r</td><td>递归持续复制（用于目录）</td></tr><tr><td>-i</td><td>若目标文件存在则询问是否覆盖</td></tr><tr><td>-a</td><td>相当于-pdr（p、d、r为上述参数）</td></tr></tbody></table><p><strong>mv命令</strong></p><p>rm [参数] 文件  名称</p><p>用于删除文件或目录，英文全称为“remove”</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-f</td><td>强制执行</td></tr><tr><td>-i</td><td>删除前询问</td></tr><tr><td>-r</td><td>删除目录</td></tr><tr><td>-v</td><td>显示过程</td></tr></tbody></table><p><strong>dd命令</strong></p><p>dd if&#x3D;参数值of&#x3D;参数值count&#x3D;参数值bs&#x3D;参数值</p><p>用于按照指定大小和个数的数据块来复制文件或转换文件</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>if</td><td>输入的文件名称</td></tr><tr><td>of</td><td>输出的文件名称</td></tr><tr><td>bs</td><td>设置每个“块”的大小</td></tr><tr><td>count</td><td>设置要复制“块”的个数</td></tr></tbody></table><p><strong>file命令</strong></p><p>file文件名称</p><p>用于查看文件的类型</p><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a><strong>Tips</strong></h3><p>在Windows系统中打开文件时，一般是通过用户双击鼠标完成的，系统会自行判断用户双击的文件是什么类型，因此需要有后缀进行区别。而Linux系统则是根据用户执行的命令来调用文件，例如执行cat命令查看文本，执行bash命令执行脚本等，所以也就不需要强制让用户给文件设置后缀了。</p><p><strong>tar命令</strong></p><p>tar参数 文件名称</p><p>用于对文件进行打包压缩或解压</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-c</td><td>创建压缩文件</td></tr><tr><td>-x</td><td>解开压缩文件</td></tr><tr><td>-t</td><td>查看压缩包内有哪些文件</td></tr><tr><td>-z</td><td>用Gzip压缩或解压</td></tr><tr><td>-j</td><td>用bzip2压缩或解压</td></tr><tr><td>-v</td><td>显示压缩或解压的过程</td></tr><tr><td>-f</td><td>目标文件名</td></tr><tr><td>-p</td><td>保留原始的权限与属性</td></tr><tr><td>-P</td><td>使用绝对路径来压缩</td></tr><tr><td>-C</td><td>指定解压到的目录</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记-第2章-新手必须掌握的Linux命令-文本文件编辑命令</title>
+    <link href="http://example.com/2022/06/11/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2022/06/11/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-06-11T08:43:22.000Z</published>
+    <updated>2022-06-11T09:09:31.033Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="linuxcool.com">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>在Linux系统中，一切都是文件，对服务程序进行配置自然也就是编辑程序的配置文件，一定要熟练地查询系统或服务的配置文件</strong></p><p><strong>cat命令</strong></p><p>cat [参数] 文件名称</p><p>用于查看纯文本文件（内容较少的），英文全称为“concatenate”</p><p>cat命令后面追加一个-n参数，可以显示行号</p><p><strong>more命令</strong></p><p>more [参数] 文件名称</p><p>用于查看纯文本文件（内容较多的）</p><p><strong>head命令</strong></p><p>head [参数] 文件名称</p><p>令用于查看纯文本文件的前<em>N</em>行</p><p><strong>tail命令</strong></p><p>tail [参数] 文件名称</p><p>用于查看纯文本文件的后<em>N</em>行或持续刷新文件的最新内容</p><p>-n参数    查询文本文件的最后N行</p><p>-f参数     查询最新的文件内容，持续刷新的文件内容</p><p><strong>tr命令</strong></p><p>tr [原始字符] [目标字符]</p><p>用于替换文本内容中的字符</p><p><strong>wc命令</strong></p><p>wc [参数] 文件名称</p><p>用于统计指定文本文件的行数、字数或字节数，英文全称为“word counts”</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-l</td><td>只显示行数</td></tr><tr><td>-w</td><td>只显示单词数</td></tr><tr><td>-c</td><td>只显示字节数</td></tr></tbody></table><p><strong>stat命令</strong></p><p>stat文件名称</p><p>查看文件的具体存储细节和时间等信息，英文全称为“status”</p><p><em><strong>小知识  文件有一个修改时间。其实，除了修改时间之外，Linux系统中的文件包含3种时间状态，分别是Access Time（内容最后一次被访问的时间，简称为Atime），Modify Time（内容最后一次被修改的时间，简称为Mtime）以及Change Time（文件属性最后一次被修改的时间，简称为Ctime）。</strong></em></p><p><strong>grep命令</strong></p><p>grep [参数] 文件名称</p><p>用于按行提取文本内容</p><p>-n参数用来显示搜索到的信息的行号；</p><p>-v参数用于反选信息（即没有包含关键词的所有信息行）。</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-b</td><td>将可执行文件(binary)当作文本文件（text）来搜索</td></tr><tr><td>-c</td><td>仅显示找到的行数</td></tr><tr><td>-i</td><td>忽略大小写</td></tr><tr><td>-n</td><td>显示行号</td></tr><tr><td>-v</td><td>反向选择——仅列出没有“关键词”的行。</td></tr></tbody></table><p><em><strong>小知识：在Linux系统中，&#x2F;etc&#x2F;passwd文件保存着所有的用户信息，而一旦用户的登录终端被设置成&#x2F;sbin&#x2F;nologin，则不再允许登录系统</strong></em></p><p><strong>cut命令</strong></p><p>cut [参数] 文件名称</p><p>用于按“列”提取文本内容</p><p><strong>diff命令</strong></p><p>diff [参数] 文件名称A 文件名称B”</p><p>用于比较多个文件之间内容的差异，英文全称为“different”</p><p><strong>uniq命令</strong></p><p>uniq [参数] 文件名称</p><p>用于去除文本中连续的重复行，英文全称为“unique“</p><p><strong>sort命令</strong></p><p>sort [参数] 文件名称</p><p>用于对文本内容进行再排序</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-f</td><td>忽略大小写</td></tr><tr><td>-b</td><td>忽略缩进与空格</td></tr><tr><td>-n</td><td>以数值型排序</td></tr><tr><td>-r</td><td>反向排序</td></tr><tr><td>-u</td><td>去除重复行</td></tr><tr><td>-t</td><td>指定间隔符</td></tr><tr><td>-k</td><td>设置字段范围</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>软件-Simple DNSCrypt</title>

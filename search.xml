@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令</title>
-    <url>/2022/06/24/%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>笔记-第二章新手必须掌握的Linux命令-文件目录管理命令</title>
-    <url>/2022/06/24/%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>转载-内网arp欺骗与dns欺骗</title>
     <url>/2022/06/03/%E8%BD%AC%E8%BD%BD-%E5%86%85%E7%BD%91arp%E6%AC%BA%E9%AA%97%E4%B8%8Edns%E6%AC%BA%E9%AA%97/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
@@ -19,6 +9,8 @@
 <p><strong>一.实验目的</strong></p>
 <p>DNS欺骗即域名信息欺骗是最常见的DNS安全问题。域名系统(Domain Name System,DNS)是一个将Domain Name和IP Address进行互相映射的Distributed Database。DNS是网络应用的基础设施，它的安全性对于互联网的安全有着举足轻重的影响。但是由于DNS Protocol在自身设计方面存在缺陷，安全保护和认证机制不健全，造成DNS自身存在较多安全隐患，导致其很容易遭受攻击。很多专家就DNS Protocol的安全缺陷提出了很多技术解决方案。例如IETF提出的域名系统安全协议(Domain Name System Security,DNSSEC)，其目标就在于解决这些安全隐患。这个Protocol增加了安全认证项目，增强了Protocol自身的安全功能。但是新增加的安全机制需要占用更多的系统和网络资源，同时要升级Database和System Manggament Software,这些基于DNSSEC协议的软件还不成熟，距离普及应用还有较长时间。目前，常见的措施是定期升级DNS软件和加强相关的安全配置，禁用不安全的端口等。以下对以侦听为基础的DNS ID欺骗(DNS ID spoofing)进行了探讨，并提出了相关的防护解决方案。通过练习掌握工具的使用，理解实施过程，掌握防范措施。</p>
 <p>上面理论性的东西可以选择性忽略，都是这下面的原理就要详细了解了，不然看着下面的操作步骤可能会很迷…</p>
+<span id="more"></span>
+
 <p><strong>二.实验原理</strong></p>
 <blockquote>
 <p>因为局域网DNS欺骗需要ARP欺骗的配合 所以我这里简单解释一下arp欺骗的原理：有一个欺骗者（主机A）说自己是网关，骗将受害者（主机B）发给真正网关的数据转发给主机A，然后数据经由主机A后再发送给真正的网关，而后主机A又告诉网关它就是主机B（欺骗了网关），骗将本来应该发给B的数据发给主机A（欺骗者），然后由A转发给主机B。&#x2F;&#x2F;就是相当于把主机A当成中间人，把主机B与网关的所有通讯全部要经过主机A，这样子，主机A就可以对主机B的数据信息随意修改然后在转发给网关从而达到了欺骗的效果</p>
@@ -109,7 +101,7 @@
   </entry>
   <entry>
     <title>笔记-第二章新手必须掌握的linux命令-查找定位文件命令</title>
-    <url>/2022/06/03/%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84linux%E5%91%BD%E4%BB%A4-%E6%9F%A5%E6%89%BE%E5%AE%9A%E4%BD%8D%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/</url>
+    <url>/2022/06/03/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84linux%E5%91%BD%E4%BB%A4-%E6%9F%A5%E6%89%BE%E5%AE%9A%E4%BD%8D%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>工作目录指的是用户当前在系统中所处的位置</p>
 <ul>
 <li><strong>pwd</strong></li>
@@ -664,7 +656,7 @@
   </entry>
   <entry>
     <title>学习 第1章 动手部署一台Linux操作系统</title>
-    <url>/2022/06/02/%E5%AD%A6%E4%B9%A0-%E7%AC%AC1%E7%AB%A0-%E5%8A%A8%E6%89%8B%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E7%AB%A0-%E5%8A%A8%E6%89%8B%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><strong>工欲善其事，必先利其器</strong></p>
 <ul>
 <li>注意：配置的系统环境最好和老师的系统环境一致</li>
@@ -1070,8 +1062,108 @@
       </tags>
   </entry>
   <entry>
+    <title>笔记-第二章新手必须掌握的Linux命令-文件目录管理命令</title>
+    <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><strong>1．touch 命令</strong> </p>
+<p>touch 命令用于创建空白文件或设置文件的时间，格式为“touch [选项] [文件]”。 </p>
+<p><strong>mkdir 命令</strong> </p>
+<p>mkdir 命令用于创建空白的目录，格式为“mkdir [选项] 目录”。 在 Linux 系统中，文件夹是常见的文件类型之一。除了能创建单个空白目录外，mkdir 命令还可以结合-p 参数来递归创建出具有嵌套叠层关系的文件目录。</p>
+<p><strong>3．cp 命令</strong> </p>
+<p>cp 命令用于复制文件或目录，格式为“cp [选项] 源文件 目标文件”。 大家对文件复制操作应该不陌生，在 Linux 系统中，复制操作具体分为 3 种情况： </p>
+<p><strong>4．mv 命令</strong> </p>
+<p>mv 命令用于剪切文件或将文件重命名，格式为“mv [选项] 源文件 [目标路径|目标文件名]” 。</p>
+<p> 剪切操作不同于复制操作，因为它会默认把源文件删除掉，只保留剪切后的文件。如果 在同一个目录中对一个文件进行剪切操作，其实也就是对其进行重命名：</p>
+<p><strong>5．rm 命令</strong> </p>
+<p>rm 命令用于删除文件或目录，格式为“rm [选项] 文件”。 在 Linux 系统中删除文件时，系统会默认向您询问是否要执行删除操作，如果不想总是 看到这种反复的确认信息，可在 rm 命令后跟上-f 参数来强制删除。另外，想要删除一个目录， 需要在 rm 命令后面一个-r 参数才可以，</p>
+<p><strong>6. dd 命令</strong> </p>
+<p>dd 命令用于按照指定大小和个数的数据块来复制文件或转换文件，格式为“dd [参数]” 。 </p>
+<p>但在 Linux 系统中可以直接 使用 dd 命令来压制出光盘镜像文件，将它编程一个可立即使用的 iso 镜像：</p>
+<p>[root@liruilong liruilong]# dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;560_file count&#x3D;1 bs&#x3D;60M</p>
+<p>1+0 records in</p>
+<p>1+0 records out</p>
+<p>62914560 bytes (63 MB) copied, 0.106262 s, 592 MB&#x2F;s</p>
+<p>[root@liruilong liruilong]# ls</p>
+<p>560_file liruilong.html lirui.txt</p>
+<p>[root@liruilong liruilong]# dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;Demo.iso</p>
+<p>下面举一个吃货的例子进行 解释。假设小明的饭量（即需求）是一个固定的值，用来盛饭的勺子的大小即 bs 块大小， 而用勺子盛饭的次数即 count 块个数。小明要想吃饱（满足需求），则需要在勺子大小（bs 块大小）与用勺子盛饭的次数（count 块个数）之间进行平衡。勺子越大，用勺子盛饭的次数 就越少。有上可见，bs 与 count 都是用来指定容量的大小，只要能满足需求，可随意组合搭 配方式。</p>
+<p><strong>7．file 命令</strong> </p>
+<p>file 命令用于查看文件的类型，格式为“file 文件名”。 在 Linux 系统中，由于文本、目录、设备等所有这些一切都统称为文件</p>
+<p>[root@liruilong liruilong]# file 60_file</p>
+<p>60_file: data</p>
+<p>[root@liruilong liruilong]# file Demo.iso</p>
+<p>Demo.iso: data</p>
+<p>[root@liruilong liruilong]# file lirui.txt</p>
+<p>lirui.txt: UTF-8 Unicode text, with very long lines</p>
+<p>[root@liruilong liruilong]#</p>
+]]></content>
+      <categories>
+        <category>studynote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux就该这么学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令</title>
+    <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p> <strong>1．cat 命令</strong> </p>
+<p>cat 命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。 Linux 系统中有多个用于查看文本内容的命令，每个命令都有自己的特点，比如这个 cat 命令就是用于查看内容较少的纯文本文件的。cat 这个命令也很好记，</p>
+<p><strong>2．more 命令</strong> </p>
+<p>more 命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。 </p>
+<p><strong>3．head 命令</strong> </p>
+<p>head 命令用于查看纯文本文档的前 N 行，格式为“head [选项] [文件]”。 </p>
+<span id="more"></span>
+
+<p>[root@liruilong ~]# head nohup.out</p>
+<p>.  ____     _      __ _ _</p>
+<p>&#x2F;\ &#x2F; __<em>‘</em> __ _ <em>(</em>)_ __ __ _ \ \ \ \</p>
+<p>( ( )___ | ‘_ | ‘<em>| | ‘</em> / _&#96; | \ \ \ \</p>
+<p>\&#x2F; __<em>)| |</em>)| | | | | || (_| | ) ) ) )</p>
+<p>‘ |<em><em><strong>| .</strong>|</em>| |<em>|</em>| |</em>__, | &#x2F; &#x2F; &#x2F; &#x2F;</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;|<em>|&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;|</em>_<em>&#x2F;&#x3D;&#x2F;</em>&#x2F;<em>&#x2F;</em>&#x2F;</p>
+<p>:: Spring Boot ::    (v2.2.2.RELEASE)</p>
+<p>2020-02-29 22:25:39.873 INFO 20912 — [      main] com.liruilong.hros.HrosApplication    : Starting HrosApplication v0.0.1-SNAPSHOT on liruilong with PID 20912 (&#x2F;root&#x2F;hros-0.0.1-SNAPSHOT.jar started by root in &#x2F;root)</p>
+<p>[root@liruilong ~]# tail nohup.out</p>
+<p>2020-07-05 21:13:17.014 INFO 6470 — [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 212 total, 1 closed abnormally (1 connect failure, 0 send limit, 28 transport error)], stompSubProtocol[processed CONNECT(210)-CONNECTED(210)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size &#x3D; 0, active threads &#x3D; 0, queued tasks &#x3D; 0, completed tasks &#x3D; 1929], outboundChannel[pool size &#x3D; 0, active threads &#x3D; 0, queued tasks &#x3D; 0, completed tasks &#x3D; 460], sockJsScheduler[pool size &#x3D; 1, active threads &#x3D; 1, queued tasks &#x3D; 1, completed tasks &#x3D; 1946024]</p>
+<p><strong>4．tail 命令</strong> </p>
+<p>tail 命令用于查看纯文本文档的后 N 行或持续刷新内容，格式为“tail [选项] [文件]”。 只需要执行“tail -n 20 文件名”命令</p>
+<p>tail 命令强悍的功能是可以持续刷新一个文件的内容，当想要实时 查看新日志文件时，这特别有用，此时的命令格式为“tail -f 文件名”： </p>
+<p><strong>5．tr 命令</strong> </p>
+<p>tr 命令用于替换文本文件中的字符，格式为“tr [原始字符] [目标字符]”。 </p>
+<p><strong>6．wc 命令</strong> </p>
+<p>wc 命令用于统计指定文本的行数、字数、字节数，格式为“wc [参数] 文本”。 </p>
+<p><strong>7．stat 命令</strong> </p>
+<p>stat 命令用于查看文件的具体存储信息和时间等信息，格式为“stat 文件名称”。 </p>
+<p>[root@liruilong ~]# stat nohup.out</p>
+<p>File: ‘nohup.out’</p>
+<p>Size: 612547045    Blocks: 1196392  IO Block: 4096  regular file</p>
+<p>Device: fd01h&#x2F;64769d  Inode: 132546   Links: 1</p>
+<p>Access: (0600&#x2F;-rw——-) Uid: (  0&#x2F;  root)  Gid: (  0&#x2F;  root)</p>
+<p>Access: 2020-10-11 08:49:04.564740893 +0800</p>
+<p>Modify: 2020-07-05 21:54:05.297348682 +0800</p>
+<p>Change: 2020-07-05 21:54:05.297348682 +0800</p>
+<p>Birth: -</p>
+<p><strong>8．cut 命令</strong> </p>
+<p>cut 命令用于按“列”提取文本字符，格式为“cut [参数] 文本”。</p>
+<p> <strong>9．diff 命令</strong> </p>
+<p>diff 命令用于比较多个文本文件的差异，格式为“diff [参数] 文件”。 </p>
+<p>在使用 diff 命令时，不仅可以使用–brief 参数来确认两个文件是否不同，还可以使用-c 参数来详细比较出多个文件的差异之处，这绝对是判断文件是否被篡改的有力神器。例如， 先使用 cat 命令分别查看 diff_A.txt 和 diff_B.txt 文件的内容，然后进行比较：</p>
+]]></content>
+      <categories>
+        <category>studynote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux就该这么学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>笔记 Linux就该这么学-第零章 为什么要学习Linux</title>
-    <url>/2022/05/23/%E7%AC%94%E8%AE%B0-Linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6-%E7%AC%AC%E9%9B%B6%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Linux/</url>
+    <url>/2022/05/23/%E7%AC%94%E8%AE%B0-Linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6-%E7%AC%AC0%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Linux/</url>
     <content><![CDATA[<h3 id="前言-为什么要学习Linux"><a href="#前言-为什么要学习Linux" class="headerlink" title="前言 为什么要学习Linux"></a>前言 为什么要学习Linux</h3><ul>
 <li>养成在学习、工作、生活中得到快乐的习惯</li>
 </ul>

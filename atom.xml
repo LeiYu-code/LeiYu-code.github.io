@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-17T08:05:07.685Z</updated>
+  <updated>2023-03-01T09:01:18.399Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>企业中怎样设置共享打印机</title>
+    <link href="http://example.com/2023/03/01/%E4%BC%81%E4%B8%9A%E4%B8%AD%E6%80%8E%E6%A0%B7%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/"/>
+    <id>http://example.com/2023/03/01/%E4%BC%81%E4%B8%9A%E4%B8%AD%E6%80%8E%E6%A0%B7%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/</id>
+    <published>2023-03-01T11:45:06.000Z</published>
+    <updated>2023-03-01T09:01:18.399Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>这次带大家了解一下在企业中怎么共享打印机，步䯅分为：</strong></p><p><strong>1、打开windos系统共享</strong></p><p><strong>2、安装打印服务器驱动程序</strong></p><p><strong>3、共享打印机</strong></p><p><strong>4、打印机客户端连接打印机</strong></p><p><strong>5、32位操作系统和64位操作系统怎样互相连接共享打印机</strong></p><p><strong>6、带网络接口的打印机的设置及连接</strong></p><p><em><strong>总结：企业中最好选择带网络端口的打印机，设置和维护都很方便</strong></em></p><span id="more"></span><p><strong>打开windows系统共享</strong></p><p>自动开启windows服务中的server服务和print spooler服务</p><p>有时候打印有问题，就需要重启print spooler服务</p><p><a href="https://imgse.com/i/ppiYFjf"><img src="https://s1.ax1x.com/2023/03/01/ppiYFjf.png" alt="ppiYFjf.png"></a><br><a href="https://imgse.com/i/ppiYAu8"><img src="https://s1.ax1x.com/2023/03/01/ppiYAu8.png" alt="ppiYAu8.png"></a></p><p>利用网友们编写好的打印机共享工具一键开启打印机共享，服务端电脑<em><strong>没有密码的运行简单共享，有密码的运行有密码的共享</strong></em>重启电脑后系统的设置就好了</p><p><a href="https://imgse.com/i/ppitMIH"><img src="https://s1.ax1x.com/2023/03/01/ppitMIH.png" alt="ppitMIH.png"></a></p><p><strong>安装打印机驱动及共享打印机</strong></p><p>把数据线连接上电脑</p><p>下载一个驱动管家或者直接下载对应的打印机驱动安装好就可以连上电脑了。</p><p>下面着重讲如何共享打印机。</p><p>1.我们先找到要共享的打印机，我们按（win+i）<strong>打开Windows设置，在设备里面</strong>选择打印机**。如果是win7系统直接在控制面板里面选择**设备和打印机即可。</p><p><a href="https://imgse.com/i/ppiNJh9"><img src="https://s1.ax1x.com/2023/03/01/ppiNJh9.png" alt="ppiNJh9.png"></a></p><p>2.打开打印机之后，安装好的打印机就会在下面列表出现，<strong>win7</strong>系或者<strong>xp</strong>系统截图如下：</p><p><a href="https://imgse.com/i/ppiNU6x"><img src="https://s1.ax1x.com/2023/03/01/ppiNU6x.png" alt="ppiNU6x.png"></a></p><p><strong>win10</strong>或<strong>win11</strong>系统截图如下，无论哪种界面都大同小异，<strong>win10</strong>系统我没有连接打印机所以看不到，但方法一致：</p><p><a href="https://imgse.com/i/ppiUIr6"><img src="https://s1.ax1x.com/2023/03/01/ppiUIr6.png" alt="ppiUIr6.png"></a></p><p>3.然后<strong>鼠标右击，选择共享选项卡</strong>，则出现共享界面，<strong>win7</strong>或者<strong>xp</strong>如下图：</p><p><a href="https://imgse.com/i/ppiU7VO"><img src="https://s1.ax1x.com/2023/03/01/ppiU7VO.png" alt="ppiU7VO.png"></a></p><p><strong>win10</strong>系统在打印机列表里，点击先管理，在打印机属性，选择共享选项卡。</p><p><a href="https://imgse.com/i/ppiUjxI"><img src="https://s1.ax1x.com/2023/03/01/ppiUjxI.png" alt="ppiUjxI.png"></a></p><p>4.点击共享这台打印机，<strong>共享名自己可以随便起名或者默认即可</strong>，然后点击确定按钮，到此打印机共享完成。</p><p><strong>客户端设置打印机</strong></p><p>1.注意，到了关键步骤了，打印机我们共享了之后，局域网内其他电脑如何访问呢？其实很简单，只要我们同时按**（<strong>win+r</strong>），<strong>在弹出的运行对话框里输入</strong>\\IP**地址，就会出现共享列表，如下图：</p><p><a href="https://imgse.com/i/ppiaARs"><img src="https://s1.ax1x.com/2023/03/01/ppiaARs.png" alt="ppiaARs.png"></a></p><p>2.只里面是双斜杠，一定不要错，后面加上ip地址（这个ip地址是你共享打印机的那台电脑的ip地址），点击确定，跳出共享的打印机，如下：</p><p><a href="https://imgse.com/i/ppiauZT"><img src="https://s1.ax1x.com/2023/03/01/ppiauZT.png" alt="ppiauZT.png"></a></p><p>这时，我们只要双击箭头所指的共享打印机就可以了，如果电脑有密码，输入电脑的密码，即可完成共享打印机的连接。</p><p>打印机共享和文件共享方式方法一样,而且打印机共享的时候需要你的电脑在同一个局域网内。</p><p><strong>32位与64位共享打印机的安装</strong></p><p>共享完打印机后，服务器的打印机驱动必须安装32位驱动或64位驱动</p><p><a href="https://imgse.com/i/ppiw8Dx"><img src="https://s1.ax1x.com/2023/03/01/ppiw8Dx.png" alt="ppiw8Dx.png"></a><br><a href="https://imgse.com/i/ppiw3K1"><img src="https://s1.ax1x.com/2023/03/01/ppiw3K1.png" alt="ppiw3K1.png"></a></p><p><em><strong>特别注意的是：有些打印机驱动在安装的过程中需要ntprint.inf驱动核心引导，要注意区别安装！</strong></em></p><p><strong>带网络接口的打印机的设置</strong></p><p>1、网线和交换机连接好打印机。</p><p>2、在打印机的设置选项里给打印机设置IP地址。</p><p>3、在电脑端安装驱动程序，选择网络打印机，过一会儿就会显示局域网里的所有网络打印机，选择本办公室的打印机，一路下一步，就能在客户端上完成网络打印机的安装。</p><p><em><strong>结合以上经验，公司里的打印机如果是有网络接口和无线功能的话，安装维护会更加方便。如果只有usb接品和Lpt打印端口的话，必须要在打印机服务器上安装32位和64位驱动，安装维护比较麻烦</strong></em></p><p>共享工具和试验驱动在以下链接里，快去下来试试吧！</p><p>共享打印机 <a href="https://www.aliyundrive.com/s/EFxovCT1gyE">https://www.aliyundrive.com/s/EFxovCT1gyE</a> 点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这次带大家了解一下在企业中怎么共享打印机，步䯅分为：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、打开windos系统共享&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、安装打印服务器驱动程序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3、共享打印机&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4、打印机客户端连接打印机&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5、32位操作系统和64位操作系统怎样互相连接共享打印机&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6、带网络接口的打印机的设置及连接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;总结：企业中最好选择带网络端口的打印机，设置和维护都很方便&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="worknote" scheme="http://example.com/categories/worknote/"/>
+    
+    
+    <category term="windows共享打印机" scheme="http://example.com/tags/windows%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/"/>
+    
+    <category term="windows技巧" scheme="http://example.com/tags/windows%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>转载-内网arp欺骗与dns欺骗</title>

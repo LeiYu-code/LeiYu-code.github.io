@@ -493,50 +493,58 @@
   <entry>
     <title>笔记-第二章新手必须掌握的linux命令-查找定位文件命令</title>
     <url>/2022/06/03/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84linux%E5%91%BD%E4%BB%A4-%E6%9F%A5%E6%89%BE%E5%AE%9A%E4%BD%8D%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>工作目录指的是用户当前在系统中所处的位置</p>
+    <content><![CDATA[<h1>笔记-第二章新手必须掌握的linux命令-查找定位文件命令</h1>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p>[Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (<a href="http://linuxcool.com">linuxcool.com</a>)](</p>
+<p>工作目录指的是用户当前在系统中所处的位置</p>
 <ul>
 <li><strong>pwd</strong></li>
 </ul>
 <p>用于显示用户当前所处的工作目录，英文全称为“print working directory”</p>
 <ul>
-<li><p><strong>cd</strong></p>
+<li>
+<p><strong>cd</strong></p>
 <p>cd [参数] [目录]</p>
 <p>用于切换当前的工作路径</p>
 </li>
-<li><p><strong>ls</strong></p>
+<li>
+<p><strong>ls</strong></p>
 <p>ls [参数] [文件名称]</p>
 <p>用于显示目录中的文件信息</p>
 </li>
-<li><p><strong>tree</strong></p>
+<li>
+<p><strong>tree</strong></p>
 <p>用于以树状图的形式列出目录内容及结构</p>
 </li>
-<li><p><strong>find</strong></p>
+<li>
+<p><strong>find</strong></p>
 <p>find [查找范围] 寻找条件</p>
 <p>用于按照指定条件来查找文件所对应的位置</p>
 <span id="more"></span>
-
 <p>这里需要重点讲解-exec参数的重要作用。这个参数用于把find命令搜索到的结果交由紧随其后的命令作进一步处理。它十分类似于第3章将要讲解的管道符技术，并且由于find命令对参数有特殊要求，因此虽然exec是长格式形式，但它的前面依然只需要一个减号（-）。</p>
-<p>根据文件系统层次标准（Filesystem Hierarchy Standard）协议，Linux系统中的配置文件会保存到&#x2F;etc目录中（详见第6章）。如果要想获取该目录中所有以host开头的文件列表，可以执行如下命令：</p>
+<p>根据文件系统层次标准（Filesystem Hierarchy Standard）协议，Linux系统中的配置文件会保存到/etc目录中（详见第6章）。如果要想获取该目录中所有以host开头的文件列表，可以执行如下命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# find /etc -name &quot;host*&quot; -print</span><br><span class="line">/etc/host.conf</span><br><span class="line">/etc/hosts</span><br><span class="line">/etc/hosts.allow</span><br><span class="line">/etc/hosts.deny</span><br><span class="line">/etc/avahi/hosts</span><br><span class="line">/etc/hostname</span><br></pre></td></tr></table></figure>
-
 <p>如果要在整个系统中搜索权限中包括SUID权限的所有文件（详见第5章），只需使用-4000即可：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# find / -perm -4000 -print</span><br><span class="line">/usr/bin/fusermount</span><br><span class="line">/usr/bin/chage</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/umount</span><br><span class="line">/usr/bin/mount</span><br><span class="line">/usr/bin/su</span><br><span class="line">/usr/bin/pkexec</span><br><span class="line">/usr/bin/crontab</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">………………省略部分输出信息………………</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>进阶实验：</p>
-<p>在整个文件系统中找出所有归属于linuxprobe用户的文件并复制到&#x2F;root&#x2F;findresults目录中。该实验的重点是“-exec {} ;”参数，其中的{}表示find命令搜索出的每一个文件，并且命令的结尾必须是“;”。完成该实验的具体命令如下：</p>
-<p>[root@linuxprobe ~]# find &#x2F; -user linuxprobe -exec cp -a {} &#x2F;root&#x2F;findresults&#x2F; ;</p>
+<p>在整个文件系统中找出所有归属于linuxprobe用户的文件并复制到/root/findresults目录中。该实验的重点是“-exec {} ;”参数，其中的{}表示find命令搜索出的每一个文件，并且命令的结尾必须是“;”。完成该实验的具体命令如下：</p>
+<p>[root@linuxprobe ~]# find / -user linuxprobe -exec cp -a {} /root/findresults/ ;</p>
 </blockquote>
 </li>
-<li><p><strong>locate</strong></p>
+<li>
+<p><strong>locate</strong></p>
 <p>locate文件名称</p>
 <p>用于按照名称快速搜索文件所对应的位置，作用是找一些常见的且又知道大概名称的文件</p>
 </li>
-<li><p><strong>whereis</strong></p>
+<li>
+<p><strong>whereis</strong></p>
 <p>whereis命令名称</p>
 <p>用于按照名称快速搜索二进制程序（命令）、源代码以及帮助文件所对应的位置</p>
 </li>
-<li><p><strong>which</strong></p>
+<li>
+<p><strong>which</strong></p>
 <p>which命令名称</p>
 <p>按照指定名称快速搜索二进制程序（命令）所对应的位置</p>
 </li>
@@ -553,10 +561,12 @@
   <entry>
     <title>软件-notion笔记软件</title>
     <url>/2022/06/02/%E8%BD%AF%E4%BB%B6-notion%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="Notion，一款强大到改变我人生的软件"><a href="#Notion，一款强大到改变我人生的软件" class="headerlink" title="Notion，一款强大到改变我人生的软件"></a>Notion，一款强大到改变我人生的软件</h1><blockquote>
-<p>A unified &amp; collaborative workspace for your notes, wikis, and tasks. 将笔记、知识库和任务管理无缝整合的协作平台</p>
-</blockquote>
-<p>01.png</p>
+    <content><![CDATA[<h1>Notion，一款强大到改变我人生的软件</h1>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><strong>A unified &amp; collaborative workspace for your notes, wikis, and tasks. 将笔记、知识库和任务管理无缝整合的协作平台</strong></p>
+<span id="more"></span>
 <p>熟悉我的人都知道，我是一名重度处女座整理癖，不论是现实生活还是网络世界，我最受不了杂乱无章，所以我会尽我所能的将所有的东西分门别类，安置的井井有条。</p>
 <p>生活中的物品还好说，只要摆放整齐，定期断舍离就可以保证不凌乱。但是电子设备中的文件本就是由一个个无序的字符串组成，规模庞大、纷繁复杂。在今天这个信息大爆炸的时代，我们每天都要接收各种各样的新闻、资讯，在这中间有的时候浏览到好的内容，想保存下来等随后有时间再查看，但是它们多半的命运都是扔到收藏夹里吃灰。然后自己骗自己，马了等于看了。</p>
 <p>如果你也像我一样，是个爱好广泛且好奇心比较强烈的学习者，那么一款好的笔记型应用，绝对是提高生产力的路上不可或缺的好帮手。我曾经在茫茫海洋中苦苦寻觅，希望可以找到一个帮助我提升专注力、提高学习效率的软件，因为我意识到如果我没有办法及时的对新内容进行筛选、转化，将信息增长的速度抵消掉，那么我终究有一天要被堆积如山的信息所淹没。</p>
@@ -566,11 +576,15 @@
 <p>直到后来我遇见了Notion，它真正的实现了All in One，解决了我一直以来的痛点，好用到我想以身相许（请把公屏打在般配上）。<strong>从此以后，我的天空，星星都亮了。</strong></p>
 <p>Notion是一款及其出色的软件，它的中文翻译是「概念」。这不是一款年代悠久的软件，从2016年问世之初到现在也不过才短短的四年时间。跟那些笔记应用届的前辈们相比，它只能算一个初出茅庐的小鲜肉。其实单纯的说它是一款笔记型应用是不准确的。它拥有非常丰富的使用场景，可以说是一个集项目管理、任务管理以及知识库于一身的在线团队协作工具。早些时候有朋友给我推荐过它，但是苦于它的上手成本太高，并且是全英文软件，服务器在国外，所以当时在国内的时候打开速度你懂的，畏难心理让我过早地放弃了，于是就没有花太多的时间去深入的了解它，第一次的相遇就这么遗憾地擦肩而过。</p>
 <p>在进入新公司之后，我们所有的工作文档都保存在Notion上，所以我必须要逼自己开始学习如何去使用它，在这个过程中，我渐渐发现了它的魔力，并且在这个过程中被它深深的迷住了。在经过了一个星期的摸索之后，我发现我的生活再也离不开它了，于是我又花了一个星期的时间，把我前小半辈子所有的资料都迁移到了Notion上面，等到这个大工程完成之后，看着它，我竟然发出了此生无憾的感慨，糟糕，这就是心动的感觉。</p>
-<h2 id="一切皆对象"><a href="#一切皆对象" class="headerlink" title="一切皆对象"></a><strong>一切皆对象</strong></h2><p>在javascript中有一个思想：’一切皆对象’，Notion将这个理念很好的应用在软件中，使用者拥有极高的自由度，可以根据自己的实际需求去定制、去改造，打造适合自己的专属知识库。同时它强大的在线协作功能完美的实现了团队需求，不仅可以编辑文档，同时还支持项目管理、Todo list、日程表、计划清单、音&#x2F;视频播放器…它几乎满足了我对于一个笔记型应用的所有想象，甚至我没想到的地方它也做到了。</p>
-<h2 id="Markdown富文本"><a href="#Markdown富文本" class="headerlink" title="Markdown富文本"></a><strong>Markdown富文本</strong></h2><p>其中尤其让我欲罢不能的是它对于Markdown语法的支持，因为被Word和Pages杂乱无章的排版搞的心烦意乱，所以Markdown编辑器Typora一直是我的写作首选。印象笔记和有道云笔记虽然都支持Markdown语法，但是他们都不能直接编辑富文本，只能分成两个屏幕，左边是编辑器，右边是显示效果，由于图片展位等问题经常位置不同步，在软件中的编辑体验糟糕至极，所以我通常是将编辑好的文档直接导入。</p>
+<h2 id="一切皆对象"><strong>一切皆对象</strong></h2>
+<p>在javascript中有一个思想：‘一切皆对象’，Notion将这个理念很好的应用在软件中，使用者拥有极高的自由度，可以根据自己的实际需求去定制、去改造，打造适合自己的专属知识库。同时它强大的在线协作功能完美的实现了团队需求，不仅可以编辑文档，同时还支持项目管理、Todo list、日程表、计划清单、音/视频播放器…它几乎满足了我对于一个笔记型应用的所有想象，甚至我没想到的地方它也做到了。</p>
+<h2 id="Markdown富文本"><strong>Markdown富文本</strong></h2>
+<p>其中尤其让我欲罢不能的是它对于Markdown语法的支持，因为被Word和Pages杂乱无章的排版搞的心烦意乱，所以Markdown编辑器Typora一直是我的写作首选。印象笔记和有道云笔记虽然都支持Markdown语法，但是他们都不能直接编辑富文本，只能分成两个屏幕，左边是编辑器，右边是显示效果，由于图片展位等问题经常位置不同步，在软件中的编辑体验糟糕至极，所以我通常是将编辑好的文档直接导入。</p>
 <p>而在Notion中，所有的内容直接在编辑器内以富文本显示，不仅让我们可以轻松的使用Markdown语法编辑文字，同时还可以与Notion提供的各种排版、布局方式配合使用，帮助我们排除一切干扰，心无旁骛的专注于写作本身，大大提高了输入效率。它还可以识别几十种代码，通过不同颜色的高亮显示，让代码即清晰易读又整洁美观，对程序员的友好度已经到了’令人发指’的地步。再加上几乎相差无几的快捷方式神助攻，真正实现了所见即所得，让习惯于使用Markdown语法的用户几乎不需要花费太多的学习成本，就可以无缝切换到Notion中。</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a><strong>基本概念</strong></h2><p>接下来介绍几个Notion中的基本概念，它打破了传统的笔记软件中对于内容的组合方式，以一种革命性的理念颠覆了我们过往对于笔记型应用的认知。</p>
-<h3 id="Block（模块）"><a href="#Block（模块）" class="headerlink" title="Block（模块）"></a><strong>Block（模块）</strong></h3><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_4_20201212025502103.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_4_20201212025502103.gif"></p>
+<h2 id="基本概念"><strong>基本概念</strong></h2>
+<p>接下来介绍几个Notion中的基本概念，它打破了传统的笔记软件中对于内容的组合方式，以一种革命性的理念颠覆了我们过往对于笔记型应用的认知。</p>
+<h3 id="Block（模块）"><strong>Block（模块）</strong></h3>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_4_20201212025502103.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_4_20201212025502103.gif"></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/2484592-88054287f90f9cd6.gif?imageMogr2/auto-orient/strip" alt="04.gif"></p>
 <p>Notion中的基本对象为Block（模块），它可以是任何形式：表格、文本、网页、代码块、图片、视频、文件或者直接是一个Page（页面），目前Notion中支持的Block类型有23种。</p>
 <p>而且Block的操作方式极其简单快捷，直接使用鼠标按住拖拽，就可以随意重新排列它们的位置，免去了繁琐的复制粘贴困扰。</p>
@@ -581,16 +595,18 @@
 <p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_6_20201212025504525.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_6_20201212025504525.gif"></p>
 <p>06.gif</p>
 <p>有了Notion中的checkbox，基本上就可以抛弃市面上的Todo类App了，我会将每周需要做的事都列在一个Page中，因为Notion拥有非常自由的分栏功能，所以我可以按照自己的个人习惯来布局整个页面，用我最熟悉的方式将我每天的日程进行量化，这样也方便我后期回顾查阅。</p>
-<h3 id="Page（页面）"><a href="#Page（页面）" class="headerlink" title="Page（页面）"></a><strong>Page（页面）</strong></h3><p>当我们在记笔记的时候，它们往往并不是独立的知识块，常常需要与其他的文件相互联系、旁征博引，一起构建一个完整的知识体系。使用其他笔记型软件的时候，遇到这种情况就会感觉非常糟心。</p>
+<h3 id="Page（页面）"><strong>Page（页面）</strong></h3>
+<p>当我们在记笔记的时候，它们往往并不是独立的知识块，常常需要与其他的文件相互联系、旁征博引，一起构建一个完整的知识体系。使用其他笔记型软件的时候，遇到这种情况就会感觉非常糟心。</p>
 <p>而Notion彻底改变了这种局面，在它的理念中，一个笔记就是一个Page，它其实类似于收藏夹的功能。不同的Page之间可以相互嵌套，这种俄罗斯套娃般的无限层级就像一根无形的线，将所有有联系的部分紧紧的拴在一起，形成一个完整而又丰富的知识库。习惯用康奈尔笔记法的同学可以直接使用Notion提供的模版，根据自己的实际需求自定义分栏和层级即可。</p>
 <p>同时因为Notion支持直接复制网址嵌入视频，搭配分栏功能，就可以在一个软件中，左边播放教学视频，同时在右边记笔记。而且还可以随时调整左右屏幕的占比。</p>
 <p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_7_20201212025505884.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_7_20201212025505884.gif"></p>
 <p>08.gif</p>
 <p>目前支持比较好的是Youtube这类国外视频网站，不过对于国内Bilibili这种主流的视频网站，也有网友编写的教程，教你如何在笔记中插入视频。如果是本地视频，直接拖拽上传即可。这样当回顾复习的时候，只要打开一个Page，里面所有相关的文字资料、笔记、视频、音频等一切相关的内容就全都涵盖了，妈妈真的再也不用担心我的学习。</p>
-<h3 id="Database（数据库）"><a href="#Database（数据库）" class="headerlink" title="Database（数据库）"></a><strong>Database（数据库）</strong></h3><p>Notion的数据库是一个非常强大的板块，它提供了五种不同的展示方式：Table、Board、calendar、List、Gallery，分别对应各种不同的使用场景。同时它支持在这五种展示方式中互相切换，搭配它提供的Filter（过滤）功能，可以按照不同属性生成最适合的展示效果。</p>
+<h3 id="Database（数据库）"><strong>Database（数据库）</strong></h3>
+<p>Notion的数据库是一个非常强大的板块，它提供了五种不同的展示方式：Table、Board、calendar、List、Gallery，分别对应各种不同的使用场景。同时它支持在这五种展示方式中互相切换，搭配它提供的Filter（过滤）功能，可以按照不同属性生成最适合的展示效果。</p>
 <p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_8_20201212025507134.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_8_20201212025507134.gif"></p>
 <p>09-Reading list.gif</p>
-<p>这里用我每日的阅读列表举例，Database的第一栏是标签栏，可以自定义属性，例如我定义的是：Type（文章类型）、Name（文章名称）、Status（阅读状态）、Score&#x2F;5（文章等级），根据不同的属性我可以快速地检索到不同类型的文章，因为我每天看的东西多且杂，这个功能帮我很好的整理归档阅读资料，方便我日后检索和查找。</p>
+<p>这里用我每日的阅读列表举例，Database的第一栏是标签栏，可以自定义属性，例如我定义的是：Type（文章类型）、Name（文章名称）、Status（阅读状态）、Score/5（文章等级），根据不同的属性我可以快速地检索到不同类型的文章，因为我每天看的东西多且杂，这个功能帮我很好的整理归档阅读资料，方便我日后检索和查找。</p>
 <p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_9_20201212025508728.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_9_20201212025508728.gif"></p>
 <p>10.gif</p>
 <p>因为阅读过的文章已经有一定印象，所以我习惯于把状态为Finished的文章用List的形式展示，Ready to Start的文章用Gallery的形式来展示，这样可以让我在阅读之前更加直观的了解到文章内容。</p>
@@ -622,21 +638,26 @@
 <p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_17_20201212025516822.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_17_20201212025516822.gif"></p>
 <p>18-kanban.gif</p>
 <p>习惯于Trello这样项目管理工具的同学对于看板功能肯定不陌生，我们可以按照不同功能将页面划分成不同的栏，在对应的每一栏下面添加卡片。因为Board的卡片支持拖拽，所以我平时除了会用它管理工作进度，同时还将它作为一个规划旅行清单的工具，每打卡完一个目的地就把它放到已去过的一栏，这样可以清晰的显示整个旅行进程。</p>
-<h2 id="查看历史版本"><a href="#查看历史版本" class="headerlink" title="查看历史版本"></a>查看历史版本</h2><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_18_20201212025518259.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_18_20201212025518259.gif"></p>
+<h2 id="查看历史版本">查看历史版本</h2>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_18_20201212025518259.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_18_20201212025518259.gif"></p>
 <p>19-History.gif</p>
 <p>Notion和Figma一样支持回看历史版本，所以及时文件修改之后反悔了也不用担心，Notion可以轻轻松松帮你时光倒流，回退到你之前的历史版本。这一点跟开发中的Git管理有异曲同工之妙，Notion让我们知道世界上真的有后悔药存在。但是这个功能在免费版本中不支持，需要升级到Personal Pro才可以。</p>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a><strong>兼容性</strong></h2><p>在小型智能设备高速发展的今天，我们对于手机的依赖甚至某些时候都超过了电脑，随着办公场景的移动性越来越强，更多的便携设备开始取代笨重的台式机，成为当代人的生产力工具。为了紧跟时代的潮流，软件也需要考虑多平台协作兼容，最理想的状态就是可以让用户存储的资料可以在各个设备之间顺畅切换，无缝衔接。</p>
+<h2 id="兼容性"><strong>兼容性</strong></h2>
+<p>在小型智能设备高速发展的今天，我们对于手机的依赖甚至某些时候都超过了电脑，随着办公场景的移动性越来越强，更多的便携设备开始取代笨重的台式机，成为当代人的生产力工具。为了紧跟时代的潮流，软件也需要考虑多平台协作兼容，最理想的状态就是可以让用户存储的资料可以在各个设备之间顺畅切换，无缝衔接。</p>
 <p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_19_20201212025519353.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_19_20201212025519353.png"></p>
 <p>20.png</p>
 <p>Notion在兼容性方面可以说做到了极致，它不仅支持Web端在线访问，同时提供Window、Mac系统本地安装包，Android和IOS系统的手机用户也可以放心使用。可以说只要有网络覆盖的地方，就可以无缝切换，全平台通吃。而且只要你在任何一个设备上修改了内容，其余的所有平台都会实时同步，在web端你甚至都不用刷新网页，Notion真正实现了多端同步。</p>
 <p>但是对应的有一个很大的问题就是，因为Notion的文档存储在云端，所以读取速度很大程度上取决于服务器的速度，我在国外使用的时候没有感觉到有明显的延迟，打开和导出的速度都很快。但是据国内用户的使用反馈，目前看来对于大陆区的用户还是不太友好。</p>
-<h2 id="模版广场"><a href="#模版广场" class="headerlink" title="模版广场"></a><strong>模版广场</strong></h2><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_20_20201212025520119.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_20_20201212025520119.gif"></p>
+<h2 id="模版广场"><strong>模版广场</strong></h2>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_20_20201212025520119.gif" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_20_20201212025520119.gif"></p>
 <p>21-template.gif</p>
 <p>为了方便新手入门，Notion为大家提供了上百种现成的模版，并且根据不同职业需求做了分类，帮助大家轻松面对工作学习、求职应聘、休闲娱乐、居家生活的各种场景。如果觉得官方提供的用得还不过瘾，可以去网站上的Template Gallery自行挖掘探索，上面有各种网友自己DIY的模版。</p>
 <p>Notion就像是一块无限的画布，大家可以在上面肆意的挥洒自己的想象力，最后可能会产生令人意想不到的效果。</p>
-<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a><strong>语言</strong></h2><p>Notion目前有英文版和韩语版两个版本，Notion表示韩国是除美国外国外最大的市场，今年韩国用户数量同比增长了 263%。根据 App Annie 的数据，Notion 排在美韩后的几个主要市场，依次是巴西、俄罗斯和英国，而中国在这个排名中处于相对靠后的位置（这可能和一些人想的不同）。但是因为Notion在Web端也可以访问，所以担心语言问题的小伙伴可以使用Google浏览器的翻译助手，我测试了一下基本翻译的比较准确。</p>
+<h2 id="语言"><strong>语言</strong></h2>
+<p>Notion目前有英文版和韩语版两个版本，Notion表示韩国是除美国外国外最大的市场，今年韩国用户数量同比增长了 263%。根据 App Annie 的数据，Notion 排在美韩后的几个主要市场，依次是巴西、俄罗斯和英国，而中国在这个排名中处于相对靠后的位置（这可能和一些人想的不同）。但是因为Notion在Web端也可以访问，所以担心语言问题的小伙伴可以使用Google浏览器的翻译助手，我测试了一下基本翻译的比较准确。</p>
 <p>同时我们国内有志愿者成立了Notion中文社区，正在翻译Notion的官方文档，社区里面也有非常丰富的资料，感兴趣的同学可以加入社区，大家一起交流讨论Notion的使用心得。</p>
-<h2 id="价格"><a href="#价格" class="headerlink" title="价格"></a><strong>价格</strong></h2><p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_21_20201212025521401.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_21_20201212025521401.png"></p>
+<h2 id="价格"><strong>价格</strong></h2>
+<p><img src="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_21_20201212025521401.png" alt="http://image109.360doc.com/DownloadImg/2020/12/1214/209696085_21_20201212025521401.png"></p>
 <p>22.png</p>
 <p>最后来说一下大家最关心的定价方面，目前个人使用的话是免费的，但是上传文件的空间只有5M，之前限制可以使用1000个Block，更新升级之后个人免费版本也可以无限嵌套Block，Notion真的是一款非常良心的软件了，如果对于文件存储空间没有需求的用户，其实免费版本就完全够用了。使用教育邮箱注册的同学还可以直接升级到Pro，之后就可以无限上传文件，简直不能再香了。</p>
 <hr>
@@ -675,8 +696,9 @@
   <entry>
     <title>笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令</title>
     <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p>leiyu-code.github.io</p>
+    <content><![CDATA[<h1>笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令</h1>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
 <p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
 <ul>
 <li>长格式与短格式</li>
@@ -690,7 +712,6 @@
 <p>用户通过服务程序来与电脑对话</p>
 <hr>
 <span id="more"></span>
-
 <ul>
 <li>执行命令的必备知识</li>
 </ul>
@@ -700,15 +721,17 @@
 <table>
 <thead>
 <tr>
-<th align="left">长格式</th>
-<th align="left">man –help</th>
+<th style="text-align:left">长格式</th>
+<th style="text-align:left">man –help</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">短格式</td>
-<td align="left">man -h</td>
+<tbody>
+<tr>
+<td style="text-align:left">短格式</td>
+<td style="text-align:left">man -h</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><em><strong>命令名称、命令参数与命令对象之间要用空格进行分隔，且字母严格区分大小写</strong></em></p>
 <hr>
 <ul>
@@ -717,108 +740,112 @@
 <table>
 <thead>
 <tr>
-<th align="left">按键</th>
-<th align="left">作用</th>
+<th style="text-align:left">按键</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">空格键</td>
-<td align="left">向下翻一页</td>
+<tbody>
+<tr>
+<td style="text-align:left">空格键</td>
+<td style="text-align:left">向下翻一页</td>
 </tr>
 <tr>
-<td align="left">PaGe down</td>
-<td align="left">向下翻一页</td>
+<td style="text-align:left">PaGe down</td>
+<td style="text-align:left">向下翻一页</td>
 </tr>
 <tr>
-<td align="left">PaGe up</td>
-<td align="left">向上翻一页</td>
+<td style="text-align:left">PaGe up</td>
+<td style="text-align:left">向上翻一页</td>
 </tr>
 <tr>
-<td align="left">home</td>
-<td align="left">直接前往首页</td>
+<td style="text-align:left">home</td>
+<td style="text-align:left">直接前往首页</td>
 </tr>
 <tr>
-<td align="left">end</td>
-<td align="left">直接前往尾页</td>
+<td style="text-align:left">end</td>
+<td style="text-align:left">直接前往尾页</td>
 </tr>
 <tr>
-<td align="left">&#x2F;</td>
-<td align="left">从上至下搜索某个关键词，如“&#x2F;linux”</td>
+<td style="text-align:left">/</td>
+<td style="text-align:left">从上至下搜索某个关键词，如“/linux”</td>
 </tr>
 <tr>
-<td align="left">?</td>
-<td align="left">从下至上搜索某个关键词，如“?linux”</td>
+<td style="text-align:left">?</td>
+<td style="text-align:left">从下至上搜索某个关键词，如“?linux”</td>
 </tr>
 <tr>
-<td align="left">n</td>
-<td align="left">定位到下一个搜索到的关键词</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">定位到下一个搜索到的关键词</td>
 </tr>
 <tr>
-<td align="left">N</td>
-<td align="left">定位到上一个搜索到的关键词</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">定位到上一个搜索到的关键词</td>
 </tr>
 <tr>
-<td align="left">q</td>
-<td align="left">退出帮助文档</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">退出帮助文档</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <ul>
 <li>man命令中帮助信息的结构以及意义</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th align="left">结构名称</th>
-<th align="left">代表意义</th>
+<th style="text-align:left">结构名称</th>
+<th style="text-align:left">代表意义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">NAME</td>
-<td align="left">命令的名称</td>
+<tbody>
+<tr>
+<td style="text-align:left">NAME</td>
+<td style="text-align:left">命令的名称</td>
 </tr>
 <tr>
-<td align="left">SYNOPSIS</td>
-<td align="left">参数的大致使用方法</td>
+<td style="text-align:left">SYNOPSIS</td>
+<td style="text-align:left">参数的大致使用方法</td>
 </tr>
 <tr>
-<td align="left">DESCRIPTION</td>
-<td align="left">介绍说明</td>
+<td style="text-align:left">DESCRIPTION</td>
+<td style="text-align:left">介绍说明</td>
 </tr>
 <tr>
-<td align="left">EXAMPLES</td>
-<td align="left">演示（附带简单说明）</td>
+<td style="text-align:left">EXAMPLES</td>
+<td style="text-align:left">演示（附带简单说明）</td>
 </tr>
 <tr>
-<td align="left">OVERVIEW</td>
-<td align="left">概述</td>
+<td style="text-align:left">OVERVIEW</td>
+<td style="text-align:left">概述</td>
 </tr>
 <tr>
-<td align="left">DEFAULTS</td>
-<td align="left">默认的功能</td>
+<td style="text-align:left">DEFAULTS</td>
+<td style="text-align:left">默认的功能</td>
 </tr>
 <tr>
-<td align="left">OPTIONS</td>
-<td align="left">具体的可用选项（带介绍）</td>
+<td style="text-align:left">OPTIONS</td>
+<td style="text-align:left">具体的可用选项（带介绍）</td>
 </tr>
 <tr>
-<td align="left">ENVIRONMENT</td>
-<td align="left">环境变量</td>
+<td style="text-align:left">ENVIRONMENT</td>
+<td style="text-align:left">环境变量</td>
 </tr>
 <tr>
-<td align="left">FILES</td>
-<td align="left">用到的文件</td>
+<td style="text-align:left">FILES</td>
+<td style="text-align:left">用到的文件</td>
 </tr>
 <tr>
-<td align="left">SEE ALSO</td>
-<td align="left">相关的资料</td>
+<td style="text-align:left">SEE ALSO</td>
+<td style="text-align:left">相关的资料</td>
 </tr>
 <tr>
-<td align="left">HISTORY</td>
-<td align="left">维护历史与联系方式</td>
+<td style="text-align:left">HISTORY</td>
+<td style="text-align:left">维护历史与联系方式</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <ul>
-<li>额外的4个快捷键&#x2F;组合键小技巧</li>
+<li>额外的4个快捷键/组合键小技巧</li>
 </ul>
 <p><em><strong>TAB键 补全命令</strong></em></p>
 <p><em><strong>ctrl+c组合键</strong></em> 终止当前的进程</p>
@@ -836,106 +863,110 @@
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">作用</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">%S</td>
-<td align="left">秒（00～59）</td>
+<tbody>
+<tr>
+<td style="text-align:left">%S</td>
+<td style="text-align:left">秒（00～59）</td>
 </tr>
 <tr>
-<td align="left">%M</td>
-<td align="left">分钟（00～59）</td>
+<td style="text-align:left">%M</td>
+<td style="text-align:left">分钟（00～59）</td>
 </tr>
 <tr>
-<td align="left">%H</td>
-<td align="left">小时（00～23）</td>
+<td style="text-align:left">%H</td>
+<td style="text-align:left">小时（00～23）</td>
 </tr>
 <tr>
-<td align="left">%I</td>
-<td align="left">小时（00～12）</td>
+<td style="text-align:left">%I</td>
+<td style="text-align:left">小时（00～12）</td>
 </tr>
 <tr>
-<td align="left">%m</td>
-<td align="left">月份（1~12）</td>
+<td style="text-align:left">%m</td>
+<td style="text-align:left">月份（1~12）</td>
 </tr>
 <tr>
-<td align="left">%p</td>
-<td align="left">显示出AM或PM</td>
+<td style="text-align:left">%p</td>
+<td style="text-align:left">显示出AM或PM</td>
 </tr>
 <tr>
-<td align="left">%a</td>
-<td align="left">缩写的工作日名称（例如：Sun）</td>
+<td style="text-align:left">%a</td>
+<td style="text-align:left">缩写的工作日名称（例如：Sun）</td>
 </tr>
 <tr>
-<td align="left">%A</td>
-<td align="left">完整的工作日名称（例如：Sunday）</td>
+<td style="text-align:left">%A</td>
+<td style="text-align:left">完整的工作日名称（例如：Sunday）</td>
 </tr>
 <tr>
-<td align="left">%b</td>
-<td align="left">缩写的月份名称（例如：Jan）</td>
+<td style="text-align:left">%b</td>
+<td style="text-align:left">缩写的月份名称（例如：Jan）</td>
 </tr>
 <tr>
-<td align="left">%B</td>
-<td align="left">完整的月份名称（例如：January）</td>
+<td style="text-align:left">%B</td>
+<td style="text-align:left">完整的月份名称（例如：January）</td>
 </tr>
 <tr>
-<td align="left">%q</td>
-<td align="left">季度（1~4）</td>
+<td style="text-align:left">%q</td>
+<td style="text-align:left">季度（1~4）</td>
 </tr>
 <tr>
-<td align="left">%y</td>
-<td align="left">简写年份（例如：20）</td>
+<td style="text-align:left">%y</td>
+<td style="text-align:left">简写年份（例如：20）</td>
 </tr>
 <tr>
-<td align="left">%Y</td>
-<td align="left">完整年份（例如：2020）</td>
+<td style="text-align:left">%Y</td>
+<td style="text-align:left">完整年份（例如：2020）</td>
 </tr>
 <tr>
-<td align="left">%d</td>
-<td align="left">本月中的第几天</td>
+<td style="text-align:left">%d</td>
+<td style="text-align:left">本月中的第几天</td>
 </tr>
 <tr>
-<td align="left">%j</td>
-<td align="left">今年中的第几天</td>
+<td style="text-align:left">%j</td>
+<td style="text-align:left">今年中的第几天</td>
 </tr>
 <tr>
-<td align="left">%n</td>
-<td align="left">换行符（相当于按下回车键）</td>
+<td style="text-align:left">%n</td>
+<td style="text-align:left">换行符（相当于按下回车键）</td>
 </tr>
 <tr>
-<td align="left">%t</td>
-<td align="left">跳格（相当于按下Tab键）</td>
+<td style="text-align:left">%t</td>
+<td style="text-align:left">跳格（相当于按下Tab键）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><strong>timedatectl命令</strong></p>
 <p>timedatectl [参数]</p>
 <p>timedatectl命令中的参数以及作用</p>
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">作用</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">status</td>
-<td align="left">显示状态信息</td>
+<tbody>
+<tr>
+<td style="text-align:left">status</td>
+<td style="text-align:left">显示状态信息</td>
 </tr>
 <tr>
-<td align="left">list-timezones</td>
-<td align="left">列出已知时区</td>
+<td style="text-align:left">list-timezones</td>
+<td style="text-align:left">列出已知时区</td>
 </tr>
 <tr>
-<td align="left">set-time</td>
-<td align="left">设置系统时间</td>
+<td style="text-align:left">set-time</td>
+<td style="text-align:left">设置系统时间</td>
 </tr>
 <tr>
-<td align="left">set-timezone</td>
-<td align="left">设置生效时区</td>
+<td style="text-align:left">set-timezone</td>
+<td style="text-align:left">设置生效时区</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><strong>reboot命令</strong></p>
 <p>重启系统命令</p>
 <p><strong>poweroff命令</strong></p>
@@ -946,58 +977,62 @@
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">作用</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">-b</td>
-<td align="left">后台下载模式</td>
+<tbody>
+<tr>
+<td style="text-align:left">-b</td>
+<td style="text-align:left">后台下载模式</td>
 </tr>
 <tr>
-<td align="left">-P</td>
-<td align="left">下载到指定目录</td>
+<td style="text-align:left">-P</td>
+<td style="text-align:left">下载到指定目录</td>
 </tr>
 <tr>
-<td align="left">-t</td>
-<td align="left">最大尝试次数</td>
+<td style="text-align:left">-t</td>
+<td style="text-align:left">最大尝试次数</td>
 </tr>
 <tr>
-<td align="left">-c</td>
-<td align="left">断点续传</td>
+<td style="text-align:left">-c</td>
+<td style="text-align:left">断点续传</td>
 </tr>
 <tr>
-<td align="left">-p</td>
-<td align="left">下载页面内所有资源，包括图片、视频等</td>
+<td style="text-align:left">-p</td>
+<td style="text-align:left">下载页面内所有资源，包括图片、视频等</td>
 </tr>
 <tr>
-<td align="left">-r</td>
-<td align="left">递归下载</td>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">递归下载</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><strong>ps命令</strong></p>
 <p>ps [参数]</p>
 <p>ps命令中的参数以及作用</p>
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">作用</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">-a</td>
-<td align="left">显示所有进程（包括其他用户的进程）</td>
+<tbody>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">显示所有进程（包括其他用户的进程）</td>
 </tr>
 <tr>
-<td align="left">-u</td>
-<td align="left">用户以及其他详细信息</td>
+<td style="text-align:left">-u</td>
+<td style="text-align:left">用户以及其他详细信息</td>
 </tr>
 <tr>
-<td align="left">-x</td>
-<td align="left">显示没有控制终端的进程</td>
+<td style="text-align:left">-x</td>
+<td style="text-align:left">显示没有控制终端的进程</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>常见进程状态及进程补充形式</p>
 <blockquote>
 <p><strong>R（运行）</strong>：进程正在运行或在运行队列中等待。</p>
@@ -1048,7 +1083,12 @@
   <entry>
     <title>学习 第1章 动手部署一台Linux操作系统</title>
     <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E7%AB%A0-%E5%8A%A8%E6%89%8B%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><strong>工欲善其事，必先利其器</strong></p>
+    <content><![CDATA[<hr>
+<h1>学习 第一章 动手部署一台Linux操作系统</h1>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p>[Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (<a href="http://linuxcool.com">linuxcool.com</a>)](</p>
+<p><strong>工欲善其事，必先利其器</strong></p>
 <ul>
 <li>注意：配置的系统环境最好和老师的系统环境一致</li>
 </ul>
@@ -1060,7 +1100,6 @@
 <hr>
 <p>安装过程：略</p>
 <span id="more"></span>
-
 <p><a href="https://www.linuxprobe.com/basic-learning-01.html">第1章 动手部署一台Linux操作系统 | 《Linux就该这么学》 (linuxprobe.com)</a></p>
 <ul>
 <li>在虚拟机里安装Linux时一定不要直接安装Linux系统，而是要选择稍后安装Linux系统</li>
@@ -1083,96 +1122,100 @@
 <table>
 <thead>
 <tr>
-<th align="left">命令</th>
-<th align="left">作用</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">rpm -ivh filename.rpm</td>
-<td align="left">安装软件</td>
+<tbody>
+<tr>
+<td style="text-align:left">rpm -ivh filename.rpm</td>
+<td style="text-align:left">安装软件</td>
 </tr>
 <tr>
-<td align="left">rpm -Uvh filename.rpm</td>
-<td align="left">升级软件</td>
+<td style="text-align:left">rpm -Uvh filename.rpm</td>
+<td style="text-align:left">升级软件</td>
 </tr>
 <tr>
-<td align="left">rpm -e filename.rpm</td>
-<td align="left">卸载软件</td>
+<td style="text-align:left">rpm -e filename.rpm</td>
+<td style="text-align:left">卸载软件</td>
 </tr>
 <tr>
-<td align="left">rpm -qpi filename.rpm</td>
-<td align="left">查询软件描述信息</td>
+<td style="text-align:left">rpm -qpi filename.rpm</td>
+<td style="text-align:left">查询软件描述信息</td>
 </tr>
 <tr>
-<td align="left">rpm -qpl filename.rpm</td>
-<td align="left">列出软件文件信息</td>
+<td style="text-align:left">rpm -qpl filename.rpm</td>
+<td style="text-align:left">列出软件文件信息</td>
 </tr>
 <tr>
-<td align="left">rpm -qf filename</td>
-<td align="left">查询文件属于哪个RPM</td>
+<td style="text-align:left">rpm -qf filename</td>
+<td style="text-align:left">查询文件属于哪个RPM</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>Yum 常见的Yum命令</p>
 <table>
 <thead>
 <tr>
-<th align="left">命令</th>
-<th align="left">作用</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">yum repolist all</td>
-<td align="left">列出所有仓库</td>
+<tbody>
+<tr>
+<td style="text-align:left">yum repolist all</td>
+<td style="text-align:left">列出所有仓库</td>
 </tr>
 <tr>
-<td align="left">yum list all</td>
-<td align="left">列出仓库中所有软件包</td>
+<td style="text-align:left">yum list all</td>
+<td style="text-align:left">列出仓库中所有软件包</td>
 </tr>
 <tr>
-<td align="left">yum info 软件包名称</td>
-<td align="left">查看软件包信息</td>
+<td style="text-align:left">yum info 软件包名称</td>
+<td style="text-align:left">查看软件包信息</td>
 </tr>
 <tr>
-<td align="left">yum install 软件包名称</td>
-<td align="left">安装软件包</td>
+<td style="text-align:left">yum install 软件包名称</td>
+<td style="text-align:left">安装软件包</td>
 </tr>
 <tr>
-<td align="left">yum reinstall 软件包名称</td>
-<td align="left">重新安装软件包</td>
+<td style="text-align:left">yum reinstall 软件包名称</td>
+<td style="text-align:left">重新安装软件包</td>
 </tr>
 <tr>
-<td align="left">yum update 软件包名称</td>
-<td align="left">升级软件包</td>
+<td style="text-align:left">yum update 软件包名称</td>
+<td style="text-align:left">升级软件包</td>
 </tr>
 <tr>
-<td align="left">yum remove 软件包名称</td>
-<td align="left">移除软件包</td>
+<td style="text-align:left">yum remove 软件包名称</td>
+<td style="text-align:left">移除软件包</td>
 </tr>
 <tr>
-<td align="left">yum clean all</td>
-<td align="left">清除所有仓库缓存</td>
+<td style="text-align:left">yum clean all</td>
+<td style="text-align:left">清除所有仓库缓存</td>
 </tr>
 <tr>
-<td align="left">yum check-update</td>
-<td align="left">检查可更新的软件包</td>
+<td style="text-align:left">yum check-update</td>
+<td style="text-align:left">检查可更新的软件包</td>
 </tr>
 <tr>
-<td align="left">yum grouplist</td>
-<td align="left">查看系统中已经安装的软件包组</td>
+<td style="text-align:left">yum grouplist</td>
+<td style="text-align:left">查看系统中已经安装的软件包组</td>
 </tr>
 <tr>
-<td align="left">yum groupinstall 软件包组</td>
-<td align="left">安装指定的软件包组</td>
+<td style="text-align:left">yum groupinstall 软件包组</td>
+<td style="text-align:left">安装指定的软件包组</td>
 </tr>
 <tr>
-<td align="left">yum groupremove 软件包组</td>
-<td align="left">移除指定的软件包组</td>
+<td style="text-align:left">yum groupremove 软件包组</td>
+<td style="text-align:left">移除指定的软件包组</td>
 </tr>
 <tr>
-<td align="left">yum groupinfo 软件包组</td>
-<td align="left">查询指定的软件包组信息</td>
+<td style="text-align:left">yum groupinfo 软件包组</td>
+<td style="text-align:left">查询指定的软件包组信息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><em><strong>dnf install软件包名称</strong></em></p>
 <hr>
 <ul>
@@ -1183,121 +1226,126 @@
 <table>
 <thead>
 <tr>
-<th align="left">System V init运行级别</th>
-<th align="left">systemd目标名称</th>
-<th align="left">systemd 目标作用</th>
+<th style="text-align:left">System V init运行级别</th>
+<th style="text-align:left">systemd目标名称</th>
+<th style="text-align:left">systemd 目标作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">0</td>
-<td align="left">poweroff.target</td>
-<td align="left">关机</td>
+<tbody>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:left">poweroff.target</td>
+<td style="text-align:left">关机</td>
 </tr>
 <tr>
-<td align="left">1</td>
-<td align="left">rescue.target</td>
-<td align="left">单用户模式</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rescue.target</td>
+<td style="text-align:left">单用户模式</td>
 </tr>
 <tr>
-<td align="left">2</td>
-<td align="left">multi-user.target</td>
-<td align="left">多用户的文本界面</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">multi-user.target</td>
+<td style="text-align:left">多用户的文本界面</td>
 </tr>
 <tr>
-<td align="left">3</td>
-<td align="left">multi-user.target</td>
-<td align="left">多用户的文本界面</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">multi-user.target</td>
+<td style="text-align:left">多用户的文本界面</td>
 </tr>
 <tr>
-<td align="left">4</td>
-<td align="left">multi-user.target</td>
-<td align="left">多用户的文本界面</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">multi-user.target</td>
+<td style="text-align:left">多用户的文本界面</td>
 </tr>
 <tr>
-<td align="left">5</td>
-<td align="left">graphical.target</td>
-<td align="left">多用户的图形界面</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">graphical.target</td>
+<td style="text-align:left">多用户的图形界面</td>
 </tr>
 <tr>
-<td align="left">6</td>
-<td align="left">reboot.target</td>
-<td align="left">重启</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">reboot.target</td>
+<td style="text-align:left">重启</td>
 </tr>
 <tr>
-<td align="left">emergency</td>
-<td align="left">emergency.target</td>
-<td align="left">救援模式</td>
+<td style="text-align:left">emergency</td>
+<td style="text-align:left">emergency.target</td>
+<td style="text-align:left">救援模式</td>
 </tr>
-</tbody></table>
-<p>如果想要将系统默认的运行目标修改为“多用户的文本界面”模式，可直接用ln命令把多用户模式目标文件链接到&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;目录：</p>
+</tbody>
+</table>
+<p>如果想要将系统默认的运行目标修改为“多用户的文本界面”模式，可直接用ln命令把多用户模式目标文件链接到/etc/systemd/system/目录：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target</span><br></pre></td></tr></table></figure>
-
-<p>如果有读者之前学习过RHEL 5&#x2F;6系统，或者已经习惯使用service、chkconfig等命令来管理系统服务，那么现在就比较郁闷了，因为在RHEL 7&#x2F;8系统中是使用systemctl命令来管理服务的。表1-4和表1-5所示为新老版本系统的对比，您可以先大致了解一下，后续章节中会经常用到它们。</p>
+<p>如果有读者之前学习过RHEL 5/6系统，或者已经习惯使用service、chkconfig等命令来管理系统服务，那么现在就比较郁闷了，因为在RHEL 7/8系统中是使用systemctl命令来管理服务的。表1-4和表1-5所示为新老版本系统的对比，您可以先大致了解一下，后续章节中会经常用到它们。</p>
 <p>表1-4 服务的启动、重启、停止、重载、查看状态等常用命令</p>
 <table>
 <thead>
 <tr>
-<th align="left">老系统命令</th>
-<th align="left">新系统命令</th>
-<th align="left">作用</th>
+<th style="text-align:left">老系统命令</th>
+<th style="text-align:left">新系统命令</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">service foo start</td>
-<td align="left">systemctl start httpd</td>
-<td align="left">启动服务</td>
+<tbody>
+<tr>
+<td style="text-align:left">service foo start</td>
+<td style="text-align:left">systemctl start httpd</td>
+<td style="text-align:left">启动服务</td>
 </tr>
 <tr>
-<td align="left">service foo restart</td>
-<td align="left">systemctl restart httpd</td>
-<td align="left">重启服务</td>
+<td style="text-align:left">service foo restart</td>
+<td style="text-align:left">systemctl restart httpd</td>
+<td style="text-align:left">重启服务</td>
 </tr>
 <tr>
-<td align="left">service foo stop</td>
-<td align="left">systemctl stop httpd</td>
-<td align="left">停止服务</td>
+<td style="text-align:left">service foo stop</td>
+<td style="text-align:left">systemctl stop httpd</td>
+<td style="text-align:left">停止服务</td>
 </tr>
 <tr>
-<td align="left">service foo reload</td>
-<td align="left">systemctl reload httpd</td>
-<td align="left">重新加载配置文件（不终止服务）</td>
+<td style="text-align:left">service foo reload</td>
+<td style="text-align:left">systemctl reload httpd</td>
+<td style="text-align:left">重新加载配置文件（不终止服务）</td>
 </tr>
 <tr>
-<td align="left">service foo status</td>
-<td align="left">systemctl status httpd</td>
-<td align="left">查看服务状态</td>
+<td style="text-align:left">service foo status</td>
+<td style="text-align:left">systemctl status httpd</td>
+<td style="text-align:left">查看服务状态</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>表1-5 服务开机启动、不启动、查看各级别下服务启动状态等常用命令</p>
 <table>
 <thead>
 <tr>
-<th align="left">老系统命令</th>
-<th align="left">新系统命令</th>
-<th align="left">作用</th>
+<th style="text-align:left">老系统命令</th>
+<th style="text-align:left">新系统命令</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">chkconfig foo on</td>
-<td align="left">systemctl enable httpd</td>
-<td align="left">开机自动启动</td>
+<tbody>
+<tr>
+<td style="text-align:left">chkconfig foo on</td>
+<td style="text-align:left">systemctl enable httpd</td>
+<td style="text-align:left">开机自动启动</td>
 </tr>
 <tr>
-<td align="left">chkconfig foo off</td>
-<td align="left">systemctl disable httpd</td>
-<td align="left">开机不自动启动</td>
+<td style="text-align:left">chkconfig foo off</td>
+<td style="text-align:left">systemctl disable httpd</td>
+<td style="text-align:left">开机不自动启动</td>
 </tr>
 <tr>
-<td align="left">chkconfig foo</td>
-<td align="left">systemctl is-enabled httpd</td>
-<td align="left">查看特定服务是否为开机自启动</td>
+<td style="text-align:left">chkconfig foo</td>
+<td style="text-align:left">systemctl is-enabled httpd</td>
+<td style="text-align:left">查看特定服务是否为开机自启动</td>
 </tr>
 <tr>
-<td align="left">chkconfig –list</td>
-<td align="left">systemctl list-unit-files –type&#x3D;httpd</td>
-<td align="left">查看各个级别下服务的启动与禁用情况</td>
+<td style="text-align:left">chkconfig –list</td>
+<td style="text-align:left">systemctl list-unit-files –type=httpd</td>
+<td style="text-align:left">查看各个级别下服务的启动与禁用情况</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <hr>
 <ul>
 <li>重置Linux系统的root密码</li>
@@ -1309,7 +1357,6 @@
 <p>Linux系统的紧急救援模式</p>
 <p>然后依次输入以下命令，再连续按下两次Ctrl + D组合键盘来退出并重启。等待系统再次重启完毕后便可以使用新密码登录Linux系统。这一系列命令的执行效果如图1-53所示。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mount -o remount,rw /sysroot</span><br><span class="line">chroot /sysroot</span><br><span class="line">passwd</span><br><span class="line">touch /.autorelabel</span><br></pre></td></tr></table></figure>
-
 <p>重置Linux系统的管理员密码</p>
 ]]></content>
       <categories>
@@ -1323,36 +1370,43 @@
   <entry>
     <title>笔记-第2章-新手必须掌握的Linux命令-系统状态检测命令</title>
     <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p>leiyu-code.github.io</p>
+    <content><![CDATA[<h1>笔记-第2章-新手必须掌握的Linux命令-系统状态检测命令</h1>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
 <p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
 <p><strong>本节讲解与网卡网络、系统内核、系统负载、内存使用情况、当前启用终端数量、历史登录记录、命令执行记录以及救援诊断等相关命令的使用方法。</strong></p>
 <span id="more"></span>
-
 <ul>
-<li><p><strong>ifconfig</strong></p>
+<li>
+<p><strong>ifconfig</strong></p>
 <p>ifconfig [参数] [网络设备]</p>
 <p>用于获取网卡配置与网络状态等信息，英文全称为“interface config”</p>
 </li>
-<li><p><strong>uname</strong></p>
+<li>
+<p><strong>uname</strong></p>
 <p>uname [-a]</p>
 <p>用于查看系统内核版本与系统架构等信息</p>
 </li>
-<li><p><strong>uptime</strong>    </p>
+<li>
+<p><strong>uptime</strong></p>
 <p>用于查看系统的负载信息</p>
 <p>建议负载值保持在1，生产环境中不能超过5</p>
 </li>
-<li><p><strong>free</strong></p>
+<li>
+<p><strong>free</strong></p>
 <p>free [-h]</p>
 <p>用于显示当前系统中内存的使用量信息</p>
 </li>
-<li><p><strong>who</strong></p>
+<li>
+<p><strong>who</strong></p>
 <p>用于查看当前登入主机的用户终端信息</p>
 </li>
-<li><p><strong>last</strong></p>
+<li>
+<p><strong>last</strong></p>
 <p>用于查看当前登入主机的用户终端信息</p>
 </li>
-<li><p><strong>ping</strong></p>
+<li>
+<p><strong>ping</strong></p>
 <p>ping [参数] 主机地址</p>
 <p>用于测试主机之间的网络连通性</p>
 <p>表2-11                         ping命令中的参数以及作用</p>
@@ -1363,7 +1417,8 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-c</td>
 <td>总共发送次数</td>
 </tr>
@@ -1379,13 +1434,16 @@
 <td>-W</td>
 <td>最长等待时间（秒）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 </li>
-<li><p><strong>tracepath</strong></p>
+<li>
+<p><strong>tracepath</strong></p>
 <p>tracepath [参数] 域名</p>
 <p>用于显示数据包到达目的主机时途中经过的所有路由信息</p>
 </li>
-<li><p><strong>netstat</strong></p>
+<li>
+<p><strong>netstat</strong></p>
 <p>netstat [参数]</p>
 <p>用于显示如网络连接、路由表、接口状态等的网络相关信息，英文全称为“network status”</p>
 <p>表2-12                         netstat命令中的参数以及作用</p>
@@ -1396,7 +1454,8 @@
 <th>显示所有连接中的Socket</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-p</td>
 <td>显示正在使用的Socket信息</td>
 </tr>
@@ -1424,21 +1483,21 @@
 <td>-r</td>
 <td>显示路由表信息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 </li>
-<li><p><strong>history</strong></p>
+<li>
+<p><strong>history</strong></p>
 <p>history [-c]</p>
 <p>用于显示执行过的命令历史</p>
-<p><em><strong>tec:可以自定义&#x2F;etc&#x2F;profile文件中的HISTSIZE变量值，即自定义存储多少条执行过的历史命令</strong></em></p>
+<p><em><strong>tec:可以自定义/etc/profile文件中的HISTSIZE变量值，即自定义存储多少条执行过的历史命令</strong></em></p>
 <p><em><strong>历史命令会被保存到用户家目录中的.bash_history文件中。Linux系统中以点（.）开头的文件均代表隐藏文件，这些文件大多数为系统服务文件，可以用cat命令查看其文件内容：</strong></em></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# cat ~/.bash_history</span><br></pre></td></tr></table></figure>
-
 <p><em><strong>要清空当前用户在本机上执行的Linux命令历史记录信息，可执行如下命令：</strong></em></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# history -c</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><p>sosreport</p>
+<li>
+<p>sosreport</p>
 <p>收集系统配置及架构信息并输出诊断文档</p>
 </li>
 </ul>
@@ -1455,29 +1514,33 @@
   <entry>
     <title>笔记-第二章新手必须掌握的Linux命令-文件目录管理命令</title>
     <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p><strong>1．touch 命令</strong> </p>
-<p>touch 命令用于创建空白文件或设置文件的时间，格式为“touch [选项] [文件]”。 </p>
-<p><strong>mkdir 命令</strong> </p>
+    <content><![CDATA[<h1>笔记-第二章新手必须掌握的Linux命令-文件目录管理命令</h1>
+<p><strong>南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><strong>1．touch 命令</strong></p>
+<p>touch 命令用于创建空白文件或设置文件的时间，格式为“touch [选项] [文件]”。</p>
+<p><strong>mkdir 命令</strong></p>
 <p>mkdir 命令用于创建空白的目录，格式为“mkdir [选项] 目录”。 在 Linux 系统中，文件夹是常见的文件类型之一。除了能创建单个空白目录外，mkdir 命令还可以结合-p 参数来递归创建出具有嵌套叠层关系的文件目录。</p>
-<p><strong>3．cp 命令</strong> </p>
-<p>cp 命令用于复制文件或目录，格式为“cp [选项] 源文件 目标文件”。 大家对文件复制操作应该不陌生，在 Linux 系统中，复制操作具体分为 3 种情况： </p>
-<p><strong>4．mv 命令</strong> </p>
+<p><strong>3．cp 命令</strong></p>
+<p>cp 命令用于复制文件或目录，格式为“cp [选项] 源文件 目标文件”。 大家对文件复制操作应该不陌生，在 Linux 系统中，复制操作具体分为 3 种情况：</p>
+<p><strong>4．mv 命令</strong></p>
 <p>mv 命令用于剪切文件或将文件重命名，格式为“mv [选项] 源文件 [目标路径|目标文件名]” 。</p>
-<p> 剪切操作不同于复制操作，因为它会默认把源文件删除掉，只保留剪切后的文件。如果 在同一个目录中对一个文件进行剪切操作，其实也就是对其进行重命名：</p>
-<p><strong>5．rm 命令</strong> </p>
+<p>剪切操作不同于复制操作，因为它会默认把源文件删除掉，只保留剪切后的文件。如果 在同一个目录中对一个文件进行剪切操作，其实也就是对其进行重命名：</p>
+<p><strong>5．rm 命令</strong></p>
 <p>rm 命令用于删除文件或目录，格式为“rm [选项] 文件”。 在 Linux 系统中删除文件时，系统会默认向您询问是否要执行删除操作，如果不想总是 看到这种反复的确认信息，可在 rm 命令后跟上-f 参数来强制删除。另外，想要删除一个目录， 需要在 rm 命令后面一个-r 参数才可以，</p>
-<p><strong>6. dd 命令</strong> </p>
-<p>dd 命令用于按照指定大小和个数的数据块来复制文件或转换文件，格式为“dd [参数]” 。 </p>
+<p><strong>6. dd 命令</strong></p>
+<p>dd 命令用于按照指定大小和个数的数据块来复制文件或转换文件，格式为“dd [参数]” 。</p>
 <p>但在 Linux 系统中可以直接 使用 dd 命令来压制出光盘镜像文件，将它编程一个可立即使用的 iso 镜像：</p>
-<p>[root@liruilong liruilong]# dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;560_file count&#x3D;1 bs&#x3D;60M</p>
+<p>[root@liruilong liruilong]# dd if=/dev/zero of=560_file count=1 bs=60M</p>
 <p>1+0 records in</p>
 <p>1+0 records out</p>
-<p>62914560 bytes (63 MB) copied, 0.106262 s, 592 MB&#x2F;s</p>
+<p>62914560 bytes (63 MB) copied, 0.106262 s, 592 MB/s</p>
 <p>[root@liruilong liruilong]# ls</p>
 <p>560_file liruilong.html lirui.txt</p>
-<p>[root@liruilong liruilong]# dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;Demo.iso</p>
+<p>[root@liruilong liruilong]# dd if=/dev/zero of=Demo.iso</p>
 <p>下面举一个吃货的例子进行 解释。假设小明的饭量（即需求）是一个固定的值，用来盛饭的勺子的大小即 bs 块大小， 而用勺子盛饭的次数即 count 块个数。小明要想吃饱（满足需求），则需要在勺子大小（bs 块大小）与用勺子盛饭的次数（count 块个数）之间进行平衡。勺子越大，用勺子盛饭的次数 就越少。有上可见，bs 与 count 都是用来指定容量的大小，只要能满足需求，可随意组合搭 配方式。</p>
-<p><strong>7．file 命令</strong> </p>
+<p><strong>7．file 命令</strong></p>
 <p>file 命令用于查看文件的类型，格式为“file 文件名”。 在 Linux 系统中，由于文本、目录、设备等所有这些一切都统称为文件</p>
 <p>[root@liruilong liruilong]# file 60_file</p>
 <p>60_file: data</p>
@@ -1498,50 +1561,50 @@
   <entry>
     <title>笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令</title>
     <url>/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p>leiyu-code.github.io</p>
-<p><a href="https://linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
-<p> <strong>1．cat 命令</strong> </p>
+    <content><![CDATA[<h1>笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令</h1>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a href="https://linuxcool.com">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><strong>1．cat 命令</strong></p>
 <p>cat 命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。 Linux 系统中有多个用于查看文本内容的命令，每个命令都有自己的特点，比如这个 cat 命令就是用于查看内容较少的纯文本文件的。cat 这个命令也很好记，</p>
-<p><strong>2．more 命令</strong> </p>
-<p>more 命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。 </p>
-<p><strong>3．head 命令</strong> </p>
-<p>head 命令用于查看纯文本文档的前 N 行，格式为“head [选项] [文件]”。 </p>
+<p><strong>2．more 命令</strong></p>
+<p>more 命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。</p>
+<p><strong>3．head 命令</strong></p>
+<p>head 命令用于查看纯文本文档的前 N 行，格式为“head [选项] [文件]”。</p>
 <span id="more"></span>
-
 <p>[root@liruilong ~]# head nohup.out</p>
 <p>.  ____     _      __ _ _</p>
-<p>&#x2F;\ &#x2F; __<em>‘</em> __ _ <em>(</em>)_ __ __ _ \ \ \ \</p>
-<p>( ( )___ | ‘_ | ‘<em>| | ‘</em> / _&#96; | \ \ \ \</p>
-<p>\&#x2F; __<em>)| |</em>)| | | | | || (_| | ) ) ) )</p>
-<p>‘ |<em><em><strong>| .</strong>|</em>| |<em>|</em>| |</em>__, | &#x2F; &#x2F; &#x2F; &#x2F;</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;|<em>|&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;|</em>_<em>&#x2F;&#x3D;&#x2F;</em>&#x2F;<em>&#x2F;</em>&#x2F;</p>
+<p>/\ / _<em><em>’</em> __ _ <em>(</em>)</em> __ __ _ \ \ \ \</p>
+<p>( ( )___ | '_ | '<em>| | ’</em> / _` | \ \ \ \</p>
+<p>\/ _<em><em>)| |</em>)| | | | | || (</em>| | ) ) ) )</p>
+<p>’ |<em><em><em><em>| .__|</em>| |</em>|</em>| |</em>__, | / / / /</p>
+<p>=========|<em>|==============|</em><em><em>/=/</em>/</em>/_/</p>
 <p>:: Spring Boot ::    (v2.2.2.RELEASE)</p>
-<p>2020-02-29 22:25:39.873 INFO 20912 — [      main] com.liruilong.hros.HrosApplication    : Starting HrosApplication v0.0.1-SNAPSHOT on liruilong with PID 20912 (&#x2F;root&#x2F;hros-0.0.1-SNAPSHOT.jar started by root in &#x2F;root)</p>
+<p>2020-02-29 22:25:39.873 INFO 20912 — [      main] com.liruilong.hros.HrosApplication    : Starting HrosApplication v0.0.1-SNAPSHOT on liruilong with PID 20912 (/root/hros-0.0.1-SNAPSHOT.jar started by root in /root)</p>
 <p>[root@liruilong ~]# tail nohup.out</p>
-<p>2020-07-05 21:13:17.014 INFO 6470 — [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 212 total, 1 closed abnormally (1 connect failure, 0 send limit, 28 transport error)], stompSubProtocol[processed CONNECT(210)-CONNECTED(210)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size &#x3D; 0, active threads &#x3D; 0, queued tasks &#x3D; 0, completed tasks &#x3D; 1929], outboundChannel[pool size &#x3D; 0, active threads &#x3D; 0, queued tasks &#x3D; 0, completed tasks &#x3D; 460], sockJsScheduler[pool size &#x3D; 1, active threads &#x3D; 1, queued tasks &#x3D; 1, completed tasks &#x3D; 1946024]</p>
-<p><strong>4．tail 命令</strong> </p>
+<p>2020-07-05 21:13:17.014 INFO 6470 — [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 212 total, 1 closed abnormally (1 connect failure, 0 send limit, 28 transport error)], stompSubProtocol[processed CONNECT(210)-CONNECTED(210)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1929], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 460], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 1, completed tasks = 1946024]</p>
+<p><strong>4．tail 命令</strong></p>
 <p>tail 命令用于查看纯文本文档的后 N 行或持续刷新内容，格式为“tail [选项] [文件]”。 只需要执行“tail -n 20 文件名”命令</p>
-<p>tail 命令强悍的功能是可以持续刷新一个文件的内容，当想要实时 查看新日志文件时，这特别有用，此时的命令格式为“tail -f 文件名”： </p>
-<p><strong>5．tr 命令</strong> </p>
-<p>tr 命令用于替换文本文件中的字符，格式为“tr [原始字符] [目标字符]”。 </p>
-<p><strong>6．wc 命令</strong> </p>
-<p>wc 命令用于统计指定文本的行数、字数、字节数，格式为“wc [参数] 文本”。 </p>
-<p><strong>7．stat 命令</strong> </p>
-<p>stat 命令用于查看文件的具体存储信息和时间等信息，格式为“stat 文件名称”。 </p>
+<p>tail 命令强悍的功能是可以持续刷新一个文件的内容，当想要实时 查看新日志文件时，这特别有用，此时的命令格式为“tail -f 文件名”：</p>
+<p><strong>5．tr 命令</strong></p>
+<p>tr 命令用于替换文本文件中的字符，格式为“tr [原始字符] [目标字符]”。</p>
+<p><strong>6．wc 命令</strong></p>
+<p>wc 命令用于统计指定文本的行数、字数、字节数，格式为“wc [参数] 文本”。</p>
+<p><strong>7．stat 命令</strong></p>
+<p>stat 命令用于查看文件的具体存储信息和时间等信息，格式为“stat 文件名称”。</p>
 <p>[root@liruilong ~]# stat nohup.out</p>
 <p>File: ‘nohup.out’</p>
 <p>Size: 612547045    Blocks: 1196392  IO Block: 4096  regular file</p>
-<p>Device: fd01h&#x2F;64769d  Inode: 132546   Links: 1</p>
-<p>Access: (0600&#x2F;-rw——-) Uid: (  0&#x2F;  root)  Gid: (  0&#x2F;  root)</p>
+<p>Device: fd01h/64769d  Inode: 132546   Links: 1</p>
+<p>Access: (0600/-rw-------) Uid: (  0/  root)  Gid: (  0/  root)</p>
 <p>Access: 2020-10-11 08:49:04.564740893 +0800</p>
 <p>Modify: 2020-07-05 21:54:05.297348682 +0800</p>
 <p>Change: 2020-07-05 21:54:05.297348682 +0800</p>
 <p>Birth: -</p>
-<p><strong>8．cut 命令</strong> </p>
+<p><strong>8．cut 命令</strong></p>
 <p>cut 命令用于按“列”提取文本字符，格式为“cut [参数] 文本”。</p>
-<p> <strong>9．diff 命令</strong> </p>
-<p>diff 命令用于比较多个文本文件的差异，格式为“diff [参数] 文件”。 </p>
+<p><strong>9．diff 命令</strong></p>
+<p>diff 命令用于比较多个文本文件的差异，格式为“diff [参数] 文件”。</p>
 <p>在使用 diff 命令时，不仅可以使用–brief 参数来确认两个文件是否不同，还可以使用-c 参数来详细比较出多个文件的差异之处，这绝对是判断文件是否被篡改的有力神器。例如， 先使用 cat 命令分别查看 diff_A.txt 和 diff_B.txt 文件的内容，然后进行比较：</p>
 ]]></content>
       <categories>
@@ -1555,14 +1618,17 @@
   <entry>
     <title>笔记 Linux就该这么学-第零章 为什么要学习Linux</title>
     <url>/2022/05/23/%E7%AC%94%E8%AE%B0-Linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6-%E7%AC%AC0%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Linux/</url>
-    <content><![CDATA[<h3 id="前言-为什么要学习Linux"><a href="#前言-为什么要学习Linux" class="headerlink" title="前言 为什么要学习Linux"></a>前言 为什么要学习Linux</h3><ul>
+    <content><![CDATA[<h3 id="前言-为什么要学习Linux">前言 为什么要学习Linux</h3>
+<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p>[Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (<a href="http://linuxcool.com">linuxcool.com</a>)](</p>
+<ul>
 <li>养成在学习、工作、生活中得到快乐的习惯</li>
 </ul>
 <p>工作马马虎虎，只想在兴趣和游戏中寻觅快活，充其量只能获得一时的快感，绝不能尝到从心底涌出的惊喜和快乐，但来自工作的喜悦并不像糖果那样——放进嘴里就甜味十足，而是需要从劳苦与艰辛中渗出。因此，世上没有哪种喜悦可以与我们聚精会神，孜孜不倦，克服艰辛后达到目标时的成就感。</p>
 <p>更何况人类生活中工作占据了较大的比重，如果不能从劳动中、工作中获得充实感，那么即使从别的地方找到快乐，最终我们仍然会感到空虚和缺憾。</p>
 <p><strong>稻盛和夫</strong></p>
 <span id="more"></span>
-
 <ul>
 <li>开源</li>
 </ul>
@@ -1589,7 +1655,7 @@
 <p><strong>低风险</strong>：使用闭源软件无疑把命运交付给他人，一旦封闭的源代码没有人来维护，您将进退维谷。而且相较于商业软件公司，开源社区很少存在倒闭的问题。并且，源代码一旦公布于世，任何人或组织都可以接手进行新的维护工作。</p>
 <p><strong>高品质</strong>：相较于闭源软件产品，开源项目通常是由开源社区来研发及维护的，参与编写、维护、测试的用户数量众多，一般的bug还没有等暴发就已经被修补。另外，在灵感不断碰撞、代码不断迭代的交流氛围中，程序员也不可能将“半成品”上传到开源社区中。</p>
 <p><strong>低成本</strong>：开源工作者大多都是在幕后默默且无偿地付出劳动成果，为美好的世界贡献一份力量，因此使用开源社区推动的软件项目可以节省大量的人力、物力和财力。</p>
-<p><strong>更透明：</strong>没有哪个笨蛋会把木马或后门代码放到开源项目中，这样无疑是把自己的罪行暴露在阳光之下，很容易被他人发现。</p>
+<p>**更透明：**没有哪个笨蛋会把木马或后门代码放到开源项目中，这样无疑是把自己的罪行暴露在阳光之下，很容易被他人发现。</p>
 <ul>
 <li>Linux常见的几个版本</li>
 </ul>
@@ -1614,7 +1680,6 @@
 <p>Ubuntu系统的第一个版本发布于2004年10月。2005年7月，Ubuntu基金会成立，Ubuntu后续不断增加开发分支，有了桌面版系统、服务器版系统和手机版系统。据调查，Ubuntu最高峰时的用户达到了10亿人。尽管Ubuntu基于Debian系统衍生而来，但会对系统进行深度化定制，因此两者之间的软件并不一定完全兼容。Ubuntu系统现在由Canonical公司提供商业技术支持，只要购买付费技术支持服务就能获得帮助，桌面版系统最长时间3年，服务器版系统最长时间5年。</p>
 <hr>
 <img src="https://www.linuxprobe.com/wp-content/uploads/2016/03/OpenSUSE.png" alt="第0章 咱们先来谈谈为什么要学习Linux系统第0章 咱们先来谈谈为什么要学习Linux系统" style="zoom:50%;" />
-
 <p><strong>openSUSE Linux</strong></p>
 <p>一款源自德国的Linux系统，在全球范围内有着不错的声誉及市场占有率。openSUSE的桌面版系统简洁轻快易于使用，而服务器版本则功能丰富极具稳定性，而且即便是“菜鸟”也能轻松上手。虽然openSUSE在技术上颇具优势，而且大大的绿色蜥蜴Logo人见人爱，只可惜命途多舛，赞助和研发该系统的SuSE Linux AG公司由于效益不佳，于2003年被Novell公司收购，而Novell公司又因经营不佳而在2011年被Attachmate公司收购。而到了2014年，Attachmate公司又被Micro Focus公司收购，后者仍然只把维护openSUSE系统的团队当作公司内的一个部门来运营。</p>
 <p>即便如此，依然不妨碍openSUSE系统的坚强发展，用户可以完全自主选择要使用的软件。例如，针对GUI环境，就提供了诸如GNOME、KDE、Cinnamon、MATE、LXQt、Xfce等可选项；除此之外，还为用户提供了数千个免费开源的软件包。</p>
@@ -1624,7 +1689,6 @@
 <p>跟上面的呆萌大蜥蜴相比，Kali Linux的Logo似乎有点凶巴巴，一副不好惹的样子。这款系统一般是供黑客或安全人员使用的，能够以此为平台对网站进行渗透测试，通俗来讲就是能“攻击”网站。Kali Linux系统的前身名为BackTrack，其设计用途就是进行数字鉴识和渗透测试，内置有600多款网站及系统的渗透测试软件，包括大名鼎鼎的Nmap、Wireshark、sqlmap等。Kali Linux能够被安装到个人电脑、公司服务器，甚至手掌大小的树莓派（一款微型电脑）上，可以让人有一种随身携带了一个武器库的感觉，有机会真应该单独写本书聊聊它。</p>
 <hr>
 <img src="https://www.linuxprobe.com/wp-content/uploads/2016/03/Gentoo.png" alt="第0章 咱们先来谈谈为什么要学习Linux系统第0章 咱们先来谈谈为什么要学习Linux系统" style="zoom: 33%;" />
-
 <p><strong>Gentoo Linux</strong></p>
 <p>Gentoo翻译为中文是“巴布亚企鹅”。终于找到一个跟Linux吉祥物—企鹅相关的名字了。巴布亚企鹅是企鹅家族中体型最大的物种之一，游泳时速最快可达36千米—多么灵活的胖子！</p>
 <p>Gentoo系统最大的特色就是允许用户完全自由地进行定制。开发人员Daniel曾经说过：“Gentoo系统的设计出发点就是让用户随意使用，没有限制地使用”。只要理解了这句话，后面也就不需要再解释什么了。在Gentoo系统中，任何一部分功能（包括最基本的系统库和编译器）都允许用户重新编译；用户也可以选择喜欢的补丁或者插件进行定制。但是，也因为Gentoo极高的自定制性，导致操作复杂，因此仅适合有经验的运维人员使用。有兴趣的读者可以在学习完本书后尝试一下该系统。</p>
@@ -1632,7 +1696,7 @@
 <hr>
 <p><img src="https://www.linuxprobe.com/wp-content/uploads/2020/04/deepin.png" alt="第0章 咱们先来谈谈为什么要学习Linux系统第0章 咱们先来谈谈为什么要学习Linux系统"></p>
 <p><strong>深度操作系统（deepin）</strong></p>
-<p>在过去的十多年，基于开源系统二次定制开发的“国产操作系统”陆续出现过一些，但大多发展不好，深度操作系统却是少数能够将技术研发与商业运作结合起来的成功案例。据Deepin的官网介绍，该系统是由武汉深之度科技有限公司于2011年基于Debian系统衍生而来的，提供32种语言版本，目前累计下载量已近1亿次，用户遍布100余个国家&#x2F;地区。</p>
+<p>在过去的十多年，基于开源系统二次定制开发的“国产操作系统”陆续出现过一些，但大多发展不好，深度操作系统却是少数能够将技术研发与商业运作结合起来的成功案例。据Deepin的官网介绍，该系统是由武汉深之度科技有限公司于2011年基于Debian系统衍生而来的，提供32种语言版本，目前累计下载量已近1亿次，用户遍布100余个国家/地区。</p>
 <p>就Deepin来讲，最吸引人的还是它的本土化工作。Deepin默认集成了诸如WPS Office、搜狗输入法、有道词典等国内常用的软件，对“小白”用户相当友好。当然，Deepin的技术研发能力相较于国际水平肯定还有差距，这点我们也要承认并正视。虽然刘遄老师偶尔也会在微博上调侃一下，但谁又不希望自己国家的技术发展越来越强大呢？</p>
 ]]></content>
       <categories>

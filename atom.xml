@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-30T08:09:34.119Z</updated>
+  <updated>2023-05-31T06:50:44.703Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>workDaily_boot mgr is conmpressed</title>
+    <link href="http://example.com/2023/05/31/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/"/>
+    <id>http://example.com/2023/05/31/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/</id>
+    <published>2023-05-31T06:50:06.000Z</published>
+    <updated>2023-05-31T06:50:44.703Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="workDaily-boot-mgr-is-conmpressed"><a href="#workDaily-boot-mgr-is-conmpressed" class="headerlink" title="workDaily_boot mgr is conmpressed"></a>workDaily_boot mgr is conmpressed</h2><p><strong>电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressed    press ctrl+alt+del reboot</strong></p><p>故障解决步骤：</p><p><em><strong>step:1、插入带PE的U盘，进入windows pe维护系统</strong></em></p><p>​         <em><strong>2、在PE中打开我的电脑，右键点击系统盘，一般是C盘</strong></em></p><p>​         <em><strong>3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间</strong></em></p><p>​        *<strong>4、点击确定后选择”仅将更改应用于驱动器 c:\*</strong></p><span id="more"></span><p>具体情况描述：</p><p>电脑开机后不能进入系统，提示按热键重启</p><p><a href="https://imgse.com/i/p9v5o90"><img src="https://s1.ax1x.com/2023/05/31/p9v5o90.jpg" alt="p9v5o90.jpg"></a></p><p>解决方法：</p><p>重启电脑，插入带PE的启动设备，在PE里右键打开C盘，勾选掉压缩驱动器以节约磁盘空间</p><p><a href="https://imgse.com/i/p9v55hq"><img src="https://s1.ax1x.com/2023/05/31/p9v55hq.jpg" alt="p9v55hq.jpg"></a></p><p><strong>NOTE:</strong></p><p><strong>此解决方案仅适用于windows开机后显示“boot mgr is conmpressed”，然后进入不了电脑系统的故障</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;workDaily-boot-mgr-is-conmpressed&quot;&gt;&lt;a href=&quot;#workDaily-boot-mgr-is-conmpressed&quot; class=&quot;headerlink&quot; title=&quot;workDaily_boot mgr is conmpressed&quot;&gt;&lt;/a&gt;workDaily_boot mgr is conmpressed&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressed    press ctrl+alt+del reboot&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;故障解决步骤：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;step:1、插入带PE的U盘，进入windows pe维护系统&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;2、在PE中打开我的电脑，右键点击系统盘，一般是C盘&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​        *&lt;strong&gt;4、点击确定后选择”仅将更改应用于驱动器 c:\*&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="workdaily" scheme="http://example.com/categories/workdaily/"/>
+    
+    
+    <category term="windows" scheme="http://example.com/tags/windows/"/>
+    
+    <category term="Troubleshooting" scheme="http://example.com/tags/Troubleshooting/"/>
+    
+  </entry>
   
   <entry>
     <title>好书推荐_翦商</title>
@@ -72,38 +103,6 @@
     <category term="linux" scheme="http://example.com/tags/linux/"/>
     
     <category term="nethunter" scheme="http://example.com/tags/nethunter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>workDaily_boot mgr is conmpressed</title>
-    <link href="http://example.com/2023/03/15/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/"/>
-    <id>http://example.com/2023/03/15/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/</id>
-    <published>2023-03-15T07:45:06.000Z</published>
-    <updated>2023-05-31T06:40:35.132Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="workDaily-boot-mgr-is-conmpressed">workDaily_boot mgr is conmpressed</h2><p><strong>电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressedpress ctrl+alt+del reboot</strong></p><p>故障解决步骤：</p><p><em><strong>step:1、插入带PE的U盘，进入windows pe维护系统</strong></em></p><p>​ <em><strong>2、在PE中打开我的电脑，右键点击系统盘，一般是C盘</strong></em></p><p>​ <em><strong>3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间</strong></em></p><p>​<em><strong>4、点击确定后选择”仅将更改应用于驱动器 c:\</strong></em></p><span id="more"></span><p>具体情况描述：</p><p>电脑开机后不能进入系统，提示按热键重启</p><p><a href="https://imgse.com/i/p9v5o90"><img src="https://s1.ax1x.com/2023/05/31/p9v5o90.jpg" alt="p9v5o90.jpg"></a></p><p>解决方法：</p><p>重启电脑，插入带PE的启动设备，在PE里右键打开C盘，勾选掉压缩驱动器以节约磁盘空间</p><p><a href="https://imgse.com/i/p9v55hq"><img src="https://s1.ax1x.com/2023/05/31/p9v55hq.jpg" alt="p9v55hq.jpg"></a></p><p><strong>NOTE:</strong></p><p><strong>此解决方案仅适用于windows开机后显示“boot mgr is conmpressed”，然后进入不了电脑系统的故障</strong></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;workDaily-boot-mgr-is-conmpressed&quot;&gt;workDaily_boot mgr is conmpressed&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressed	press ctrl+alt+del reboot&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;故障解决步骤：&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;step:1、插入带PE的U盘，进入windows pe维护系统&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​		 &lt;em&gt;&lt;strong&gt;2、在PE中打开我的电脑，右键点击系统盘，一般是C盘&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​		 &lt;em&gt;&lt;strong&gt;3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​		&lt;em&gt;&lt;strong&gt;4、点击确定后选择”仅将更改应用于驱动器 c:\&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="workdaily" scheme="http://example.com/categories/workdaily/"/>
-    
-    
-    <category term="windows" scheme="http://example.com/tags/windows/"/>
-    
-    <category term="Troubleshooting" scheme="http://example.com/tags/Troubleshooting/"/>
     
   </entry>
   

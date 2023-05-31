@@ -83,6 +83,37 @@
       </tags>
   </entry>
   <entry>
+    <title>workDaily_boot mgr is conmpressed</title>
+    <url>/2023/03/15/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h2 id="workDaily-boot-mgr-is-conmpressed">workDaily_boot mgr is conmpressed</h2>
+<p><strong>电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressed	press ctrl+alt+del reboot</strong></p>
+<p>故障解决步骤：</p>
+<p><em><strong>step:1、插入带PE的U盘，进入windows pe维护系统</strong></em></p>
+<p>​		 <em><strong>2、在PE中打开我的电脑，右键点击系统盘，一般是C盘</strong></em></p>
+<p>​		 <em><strong>3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间</strong></em></p>
+<p>​		<em><strong>4、点击确定后选择”仅将更改应用于驱动器 c:\</strong></em></p>
+<span id="more"></span>
+<p>具体情况描述：</p>
+<p>电脑开机后不能进入系统，提示按热键重启</p>
+<p><a href="https://imgse.com/i/p9v5o90"><img src="https://s1.ax1x.com/2023/05/31/p9v5o90.jpg" alt="p9v5o90.jpg"></a></p>
+<p>解决方法：</p>
+<p>重启电脑，插入带PE的启动设备，在PE里右键打开C盘，勾选掉压缩驱动器以节约磁盘空间</p>
+<p><a href="https://imgse.com/i/p9v55hq"><img src="https://s1.ax1x.com/2023/05/31/p9v55hq.jpg" alt="p9v55hq.jpg"></a></p>
+<p><strong>NOTE:</strong></p>
+<p><strong>此解决方案仅适用于windows开机后显示“boot mgr is conmpressed”，然后进入不了电脑系统的故障</strong></p>
+]]></content>
+      <categories>
+        <category>workdaily</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>Troubleshooting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网工、运维最常用的四款远程工具：PuTTY、MobaXterm、SecureCRT、XSHELL</title>
     <url>/2023/03/15/%E7%BD%91%E5%B7%A5%E3%80%81%E8%BF%90%E7%BB%B4%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9B%9B%E6%AC%BE%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7%EF%BC%9APuTTY%E3%80%81MobaXterm%E3%80%81SecureCRT%E3%80%81XSHELL/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

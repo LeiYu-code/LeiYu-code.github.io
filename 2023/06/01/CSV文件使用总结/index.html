@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="函数,tips," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="南月晨的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="[南月晨的blog](南月晨的博客 (leiyu-code.github.io)) leiyu-code.github.io Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com) CVS使用技巧总结How to use CVS FILE of Office’excel 为什么要使用CVS文件 CVS文件可以在不兼容的格式上转移表格数据 怎样在Exce">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vlookup函数使用技巧总结">
+<meta property="og:url" content="http://example.com/2023/06/01/CSV%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="南月晨的博客">
+<meta property="og:description" content="[南月晨的blog](南月晨的博客 (leiyu-code.github.io)) leiyu-code.github.io Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com) CVS使用技巧总结How to use CVS FILE of Office’excel 为什么要使用CVS文件 CVS文件可以在不兼容的格式上转移表格数据 怎样在Exce">
+<meta property="og:locale">
+<meta property="og:image" content="https://s1.ax1x.com/2023/06/01/p9zMbwt.png">
+<meta property="article:published_time" content="2023-06-01T09:24:06.000Z">
+<meta property="article:modified_time" content="2023-06-01T09:24:53.908Z">
+<meta property="article:author" content="yu skywalker">
+<meta property="article:tag" content="函数">
+<meta property="article:tag" content="tips">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/06/01/p9zMbwt.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2023/06/01/CSV文件使用总结/"/>
+
+
+
+
+
+  <title>vlookup函数使用技巧总结 | 南月晨的博客</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">南月晨的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">南山下，月落时，必有晨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-rss">
+          <a href="/atom.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            RSS
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/01/CSV%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vlookup函数使用技巧总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-06-01T17:24:06+08:00">
+                2023-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/office/" itemprop="url" rel="index">
+                    <span itemprop="name">office</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h2 id="CVS使用技巧总结"><a href="#CVS使用技巧总结" class="headerlink" title="CVS使用技巧总结"></a>CVS使用技巧总结</h2><p><strong>How to use CVS FILE of Office’excel</strong></p>
+<p><em><strong>为什么要使用CVS文件</strong></em></p>
+<p>CVS文件可以在不兼容的格式上转移表格数据</p>
+<p><em><strong>怎样在Excel里使用CSV文件</strong></em></p>
+<p>使用Excel里的分列功能或者导入文件功能，然后另存为Excel表格式</p>
+<span id="more"></span>
+
+
+
+<p>先上大图：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9zMbwt"><img src="https://s1.ax1x.com/2023/06/01/p9zMbwt.png" alt="p9zMbwt.png"></a></p>
+<h3 id="1-什么是CSV文件"><a href="#1-什么是CSV文件" class="headerlink" title="1. 什么是CSV文件"></a>1. 什么是CSV文件</h3><p><strong>CSV：逗号分隔值（Comma-Separated Values）其文件以纯文本形式存储数据（数字和文本），其中逗号被称为分隔符，但是逗号并不是唯一的分隔符。</strong></p>
+<p><strong>其他流行的分隔符包括制表符（<code>\t</code>）、冒号（<code>:</code>)和分号（<code>;</code>），所以一般说CSV文件都是泛指，指用特定分隔符进行字段分隔的结构化格式文件。</strong></p>
+<p><strong>【1】CVS文件基本规则&#x2F;特点</strong></p>
+<ul>
+<li>首行是「<strong>字段</strong>」行，以分隔符分割，字段也就是列名，就是对数据的描述</li>
+<li>首行外，其他行是记录行</li>
+<li><strong>一条记录在一行内，不跨行</strong></li>
+</ul>
+<p><strong>【2】CSV文件打开方式</strong></p>
+<p>CSV文件本身是相对简单、通用的表格类型文件，也就是说文本编辑器记事本以及Excel都可以直接打开。</p>
+<blockquote>
+<p>如果对文本处理有极高要求，这里推荐Notepad++</p>
+</blockquote>
+<p><strong>如果分隔符为”,”，那么CSV文件在Excel打开后无需分列操作；</strong></p>
+<blockquote>
+<p>但是如果明明分隔符是逗号，打开却没有自动分列，多半是编码问题；此时可以用记事本将<strong>CSV文件另存，修改编码为ANSI或者UTF-8</strong></p>
+</blockquote>
+<h3 id="简单认识字符集和编码"><a href="#简单认识字符集和编码" class="headerlink" title="简单认识字符集和编码"></a>简单认识字符集和编码</h3><ul>
+<li><strong>ASCII码</strong></li>
+</ul>
+<p>计算机对所有数据&#x2F;信息的读取，最底层都是基于二进制0和1，通过多个0和1的组合就可以有多种状态，比如说8位二进制就可以有256种组合&#x2F;状态，当然也就可以代表256个字符了。</p>
+<p>我们都知道计算机是美国人发明的，由英语字母、阿拉伯数字、符号这些字符组成一个字符集，称为美国信息交换标准代码，ASCII码（American Standard Code for Information Interchange）。</p>
+<p>关于ASCII码我们需要知道就两条：</p>
+<p>&lt;1. 存储使用8位二进制，即一个字节；</p>
+<p>&lt;2. 适用于英文环境，不能对中文编码；</p>
+<ul>
+<li><strong>UNICODE码</strong></li>
+</ul>
+<p>前面说到，ASCII没法表示中文，事实上除了中文，法文、德文…都没法表示，这时候ISO出现了，制定unicode字符集，unicode 也叫万国码，因为开发者是统一码联盟，所以又称为统一码，unicode 很复杂，不需要深究，知道三点就行：</p>
+<p>&lt;1. unicode 制定者是统一码联盟；</p>
+<p>&lt;2. 使用<strong>2-4</strong>个字节来表示字符；</p>
+<p>&lt;3. unicode只规定了字符集，并没有规定在计算机如何存储；</p>
+<p>同时期，ISO也在开发这样一种编码，叫做通用字符集UCS（Universal Character Set），不同之处是UCS分为UCS-2以及UCS-4，分别指用2&#x2F;4个字节对字符进行编码。</p>
+<p>后来双方开始进行整合，所以现在unicode的编码和ucs的编码都基本一致。</p>
+<p>前面说过unicode&#x2F;ucs只规定了字符集，但是在计算机的存储上却没有指明，于是又出现了UTF-16、UTF-32、UTF-8形式，这里UTF全称Unicode Transformation Format。16，32，8分别指存储位数。</p>
+<blockquote>
+<p>数据在内存上存储又分为大端序[BE, big endian]和小端序[LE, little endian]；<br>举例，数据0x1234，需要占用两个字节存储，数据0x34存储在内存低字节地址上则代表LE，否则则是BE<br><strong>所以说UTF-16可细分为UTF-16 BE、UTF-16 LE</strong></p>
+</blockquote>
+<p><strong>再说UTF-8</strong></p>
+<p><strong>UTF-8 也是unicode的实现方式之一</strong></p>
+<p>UTF-8的特点是可变字长，用一个字节就可以表示英文字符，用三个字节来表示汉字…</p>
+<blockquote>
+<p>UTF-8的出现完全是顺应了互联网的需求，因为占用存储少，所以现在很流行，目前网页编码多采用这一形式。</p>
+</blockquote>
+<ul>
+<li><strong>ANSI</strong></li>
+</ul>
+<p>ANSI(American National Standards Institute)，美国国家标准学会。ANSI就比较奇怪了，首先ANSI的编码是取决与各国家语言的，而且各语言之间并不兼容。</p>
+<p><strong>ANSI其实是一种伪编码或者说继承类编码！</strong></p>
+<p>ANSI并不是某一种特定的字符编码，而是一种体系，说白了每种语言都会有自己独立的编码，像中文<strong>GB2312</strong>，繁体中文的<strong>BIG5</strong>，日本的**JIS…**，而这些编码都在ANSI体系下。</p>
+<p><strong>说白了，ANSI是他们特定语言的指向！</strong></p>
+<p>Windows默认编码是ANSI，但是针对不同国家的语言，ANSI是如何确定具体编码那？</p>
+<p><strong>其实很简单，就是看windows设置的语言或者设定区域。</strong></p>
+<p><strong>比如说，当我用记事本&#x2F;Notepad录入汉字，保存时会提出警告，建议我将编码更改为unicode，否则汉字将会丢失</strong></p>
+<h3 id="3、怎么将自己的操作系统语言更改为支持中文"><a href="#3、怎么将自己的操作系统语言更改为支持中文" class="headerlink" title="3、怎么将自己的操作系统语言更改为支持中文"></a>3、怎么将自己的操作系统语言更改为支持中文</h3><p><strong>首先我的系统语言是英语，设定区域为United States，ANSI遵从的编码其实是ASCII，当然是不支持汉字字符的。</strong></p>
+<p>假如你跟我一样，系统语言为英文，同时因为各种原因没办法切换到中文系统，怎么办？</p>
+<ul>
+<li><strong>临时解决</strong></li>
+</ul>
+<p><strong>将文本文件另存，编码选择为unicode，因为unicode是支持中文的</strong></p>
+<blockquote>
+<p>缺点就是每次新建记事本都需要更改编码</p>
+</blockquote>
+<ul>
+<li><strong>一次性解决</strong></li>
+</ul>
+<p><strong>系统位置更改为Chinese(Simplified, China)，推荐！</strong></p>
+<h2 id="4、CSV文件如何在Excel中分列显示-Tips"><a href="#4、CSV文件如何在Excel中分列显示-Tips" class="headerlink" title="4、CSV文件如何在Excel中分列显示    Tips"></a>4、CSV文件如何在Excel中分列显示    Tips</h2><p>前面说了，对于用逗号分隔的CSV文件，在Excel打开自然就已经分列，所以现在要说的是其他分隔符类型的CSV文件，如何在Excel中分列显示。</p>
+<p><strong>三种方法</strong></p>
+<p><strong>【1】使用记事本将分隔符直接替换为逗号</strong></p>
+<p><strong>【2】使用Excel分列(Text to Column)功能</strong></p>
+<p><strong>【3】使用Excel数据导入功能</strong></p>
+<p><strong>NOTE:</strong></p>
+<p>需要注意的是，如果使用Excel对CSV文件进行编辑，保存后，分隔符自动替换为”,”！如果需要更改其他分隔符，建议在记事本中替换。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%87%BD%E6%95%B0/" rel="tag"># 函数</a>
+          
+            <a href="/tags/tips/" rel="tag"># tips</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/05/31/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/" rel="next" title="workDaily_boot mgr is conmpressed">
+                <i class="fa fa-chevron-left"></i> workDaily_boot mgr is conmpressed
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CVS%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">CVS使用技巧总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFCSV%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">1. 什么是CSV文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81"><span class="nav-number">1.2.</span> <span class="nav-text">简单认识字符集和编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%80%8E%E4%B9%88%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87"><span class="nav-number">1.3.</span> <span class="nav-text">3、怎么将自己的操作系统语言更改为支持中文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81CSV%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E5%9C%A8Excel%E4%B8%AD%E5%88%86%E5%88%97%E6%98%BE%E7%A4%BA-Tips"><span class="nav-number">2.</span> <span class="nav-text">4、CSV文件如何在Excel中分列显示    Tips</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yu skywalker</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

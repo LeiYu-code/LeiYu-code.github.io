@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vlookup function TIPS</title>
+    <url>/2023/06/02/vlookup%20fuction%20tips(E)/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h2 id="vlookup-function-TIPS">vlookup function TIPS</h2>
+<p><strong>How to use vlookup function of Office’excel</strong></p>
+<p><em><strong>Tisps:use vllokup functon and others must know:</strong></em></p>
+<p><em><strong>1、best use CVS file go to date and number 's changs，if you want be good use</strong></em></p>
+<p><em><strong>2、vlookup function ’ format:</strong></em></p>
+<p>​	VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)</p>
+<p><em><strong>3、vlookup function 's effect</strong></em>:</p>
+<p>​	Search for the first column of the table region that meets the criteria, determine the row number of the cell to be retrieved in the region, and then further return the value of the selected cell. By default, tables are sorted in ascending order</p>
+<p><em><strong>4、vlookup function parrameter specification</strong></em></p>
+<p>​	lookup_value	|	find the value of the first column</p>
+<p>​	table_array		|	find the range of that table</p>
+<p>​	col_inex_num	|	column of find’s table (1,…)</p>
+<p>​	range_lookup	|	exact match or fuzzy match(1,true or 0,false)</p>
+<p><em><strong>5、common problem</strong></em></p>
+<p>​	5.1 Unmatched date</p>
+<p>​	<strong>table_array effect 's first column must is lookup_value</strong></p>
+<p>​	5.2 When you drop-downing formula, the formula was change</p>
+<p>​	<strong>drop-downing formula must use “$” lock value</strong></p>
+<p>​	<strong>$A$2:$B$7</strong></p>
+<p>​	5.3 the value’s format was diffrent</p>
+<p>​	<strong>keep the table value same and format same</strong></p>
+<p>​	<strong>when the value 's front have green mark, must use &quot;,&quot;add the value 's front, disspear the green mark</strong></p>
+<p>​	<strong>,112223366</strong></p>
+<p>​	5.4 didn’t see space</p>
+<p>​	<strong>when the value back have a space, we must clear that space</strong></p>
+<p>​	<strong>1122336688  this value have a space</strong></p>
+]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>function</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CVS使用技巧总结</title>
     <url>/2023/06/01/CSV%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

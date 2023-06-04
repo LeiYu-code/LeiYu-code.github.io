@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-02T09:17:38.917Z</updated>
+  <updated>2023-06-04T09:25:39.111Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vlookup函数使用技巧及注意事项</title>
+    <link href="http://example.com/2023/06/04/vlookup%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9(C)/"/>
+    <id>http://example.com/2023/06/04/vlookup%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9(C)/</id>
+    <published>2023-06-04T02:09:06.000Z</published>
+    <updated>2023-06-04T09:25:39.111Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="vlookup函数的使用技巧及注意事项">vlookup函数的使用技巧及注意事项</h2><p><strong>怎样才能更好的掌握vlookup函数以及使用时应当注意的问题</strong></p><p><em><strong>vlookup函数必知必会</strong></em></p><p><em><strong>1、最好使用CVS文件对数据或数值进行操作，如果你想更好地使用vlookup函数</strong></em></p><p><em><strong>2、vlookup函数的格式</strong></em></p><p>​VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)</p><p><em><strong>3、vlookup函数的作用</strong></em></p><p>​从一个表的范围数据里第一列的数据或数值匹配当前表某个单元格数据或数值，并调用查找范围内这一行某一列的数据或数值到本表的这个单元格里，默认函数的的查找方式(range_lookup)为精确查找</p><p><em><strong>4、vlookup函数参数作用</strong></em></p><p>​lookup_value|查找的值</p><p>​table_array|查找数据的范围</p><p>​col_inex_num|返回查找范围内第几列的数据(查找到的当前列的数据为第一列)1…</p><p>​range_lookup|匹配数据的精确度(1,true为真，模糊查找  0,false为假，精确查找)</p><p><em><strong>5、vlookup使用过程中遇到的常见问题</strong></em></p><p>​5.1 找不到数据或数值</p><p>​<strong>查找的值不对或者查找数据的范围内没有该值或者查找的值查找范围的前几列</strong></p><p>​5.2 当你下拉公式时，里面的数值是不是发生了变化，导致查询出错</p><p>​<strong>当下拉公式时必须用 “$” 锁定公式里的数值</strong></p><p>​<strong>$A$2:$B$7</strong></p><p>​5.3 单元格里的数值的格式不一致</p><p>​<strong>保证单元格里的数据一致，格式也一致</strong></p><p>​查找的单元格里的数据的左上角有绿色三角时，在数值的前面加上个半角的逗号，数据就会正常</p><p>​<strong>,112223366</strong></p><p>​用分列工具，将有绿色三角的数据分列为正常的格式</p><p>​5.4 看不到的空格</p><p>​<strong>有时查不到数据时，有可能是单元格里的中g据的后面有看不见的空格，导致查找不到数据</strong></p><p>​<strong>1122336688  比如像这样，1122336688后面的空格</strong></p><p>​<em><strong>解决方法：</strong></em></p><p>​ctrl+h替换掉表里所有单元格数据里的空格</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leiyu-code.</summary>
+      
+    
+    
+    
+    <category term="office" scheme="http://example.com/categories/office/"/>
+    
+    
+    <category term="tips" scheme="http://example.com/tags/tips/"/>
+    
+    <category term="function" scheme="http://example.com/tags/function/"/>
+    
+  </entry>
   
   <entry>
     <title>vlookup function TIPS</title>
@@ -611,38 +638,6 @@
     <summary type="html">&lt;h1&gt;笔记-第二章新手必须掌握的Linux命令-文件目录管理命令&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/stro</summary>
       
-    
-    
-    
-    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
-    
-    
-    <category term="linux" scheme="http://example.com/tags/linux/"/>
-    
-    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令</title>
-    <link href="http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/"/>
-    <id>http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-06-02T11:45:06.000Z</published>
-    <updated>2023-03-09T04:48:31.432Z</updated>
-    
-    <content type="html"><![CDATA[<h1>笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令</h1><p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://linuxcool.com">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>1．cat 命令</strong></p><p>cat 命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。 Linux 系统中有多个用于查看文本内容的命令，每个命令都有自己的特点，比如这个 cat 命令就是用于查看内容较少的纯文本文件的。cat 这个命令也很好记，</p><p><strong>2．more 命令</strong></p><p>more 命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。</p><p><strong>3．head 命令</strong></p><p>head 命令用于查看纯文本文档的前 N 行，格式为“head [选项] [文件]”。</p><span id="more"></span><p>[root@liruilong ~]# head nohup.out</p><p>.  ____     _      __ _ _</p><p>/\ / _<em><em>’</em> __ _ <em>(</em>)</em> __ __ _ \ \ \ \</p><p>( ( )___ | '_ | '<em>| | ’</em> / _` | \ \ \ \</p><p>\/ _<em><em>)| |</em>)| | | | | || (</em>| | ) ) ) )</p><p>’ |<em><em><em><em>| .__|</em>| |</em>|</em>| |</em>__, | / / / /</p><p>=========|<em>|==============|</em><em><em>/=/</em>/</em>/_/</p><p>:: Spring Boot ::    (v2.2.2.RELEASE)</p><p>2020-02-29 22:25:39.873 INFO 20912 — [      main] com.liruilong.hros.HrosApplication    : Starting HrosApplication v0.0.1-SNAPSHOT on liruilong with PID 20912 (/root/hros-0.0.1-SNAPSHOT.jar started by root in /root)</p><p>[root@liruilong ~]# tail nohup.out</p><p>2020-07-05 21:13:17.014 INFO 6470 — [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 212 total, 1 closed abnormally (1 connect failure, 0 send limit, 28 transport error)], stompSubProtocol[processed CONNECT(210)-CONNECTED(210)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1929], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 460], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 1, completed tasks = 1946024]</p><p><strong>4．tail 命令</strong></p><p>tail 命令用于查看纯文本文档的后 N 行或持续刷新内容，格式为“tail [选项] [文件]”。 只需要执行“tail -n 20 文件名”命令</p><p>tail 命令强悍的功能是可以持续刷新一个文件的内容，当想要实时 查看新日志文件时，这特别有用，此时的命令格式为“tail -f 文件名”：</p><p><strong>5．tr 命令</strong></p><p>tr 命令用于替换文本文件中的字符，格式为“tr [原始字符] [目标字符]”。</p><p><strong>6．wc 命令</strong></p><p>wc 命令用于统计指定文本的行数、字数、字节数，格式为“wc [参数] 文本”。</p><p><strong>7．stat 命令</strong></p><p>stat 命令用于查看文件的具体存储信息和时间等信息，格式为“stat 文件名称”。</p><p>[root@liruilong ~]# stat nohup.out</p><p>File: ‘nohup.out’</p><p>Size: 612547045    Blocks: 1196392  IO Block: 4096  regular file</p><p>Device: fd01h/64769d  Inode: 132546   Links: 1</p><p>Access: (0600/-rw-------) Uid: (  0/  root)  Gid: (  0/  root)</p><p>Access: 2020-10-11 08:49:04.564740893 +0800</p><p>Modify: 2020-07-05 21:54:05.297348682 +0800</p><p>Change: 2020-07-05 21:54:05.297348682 +0800</p><p>Birth: -</p><p><strong>8．cut 命令</strong></p><p>cut 命令用于按“列”提取文本字符，格式为“cut [参数] 文本”。</p><p><strong>9．diff 命令</strong></p><p>diff 命令用于比较多个文本文件的差异，格式为“diff [参数] 文件”。</p><p>在使用 diff 命令时，不仅可以使用–brief 参数来确认两个文件是否不同，还可以使用-c 参数来详细比较出多个文件的差异之处，这绝对是判断文件是否被篡改的有力神器。例如， 先使用 cat 命令分别查看 diff_A.txt 和 diff_B.txt 文件的内容，然后进行比较：</p>]]></content>
-    
-    
-    <summary type="html">&lt;h1&gt;笔记-第二章新手必须掌握的Linux命令-文本文件编辑命令&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://linuxcool.com&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1．cat 命令&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;cat 命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。 Linux 系统中有多个用于查看文本内容的命令，每个命令都有自己的特点，比如这个 cat 命令就是用于查看内容较少的纯文本文件的。cat 这个命令也很好记，&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2．more 命令&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;more 命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3．head 命令&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;head 命令用于查看纯文本文档的前 N 行，格式为“head [选项] [文件]”。&lt;/p&gt;</summary>
     
     
     

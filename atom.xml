@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-13T07:26:09.130Z</updated>
+  <updated>2023-06-13T08:57:02.003Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工作笔记_离线驱动导入工具CeoMSX</title>
+    <link href="http://example.com/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/"/>
+    <id>http://example.com/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/</id>
+    <published>2023-06-13T08:56:06.000Z</published>
+    <updated>2023-06-13T08:57:02.003Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="工作笔记-离线驱动导入工具CeoMSX"><a href="#工作笔记-离线驱动导入工具CeoMSX" class="headerlink" title="工作笔记_离线驱动导入工具CeoMSX"></a>工作笔记_离线驱动导入工具CeoMSX</h2><p><strong>How change  &amp; No root</strong></p><p>video link’s here:</p><p>【你的下一台Kali，何必是电脑（无Root）（小白教程）】<a href="https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64">https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64</a></p><p><em><strong>step:1、Get Termux program</strong></em></p><p>​         <em><strong>2、upgrad termux</strong></em></p><p>​         <em><strong>3、Get nethunter Store</strong></em></p><span id="more"></span><h4 id="1、Get-Termux-program"><a href="#1、Get-Termux-program" class="headerlink" title="1、Get Termux program"></a>1、Get Termux program</h4><p>github.com&#x2F;termux&#x2F;termux-app&#x2F;releases</p><p>Download file：</p><p>termux-app_v0.118.0+github-debug_arm64-v8a.apk</p><p>Install this apk</p><p>After installed termux apk,Open it</p><h4 id="2、upgrad-termux"><a href="#2、upgrad-termux" class="headerlink" title="2、upgrad termux"></a>2、upgrad termux</h4><p>apt update</p><p>Apt upgrade</p><p><em><strong>Install wget</strong></em></p><p>apt install wget</p><p>wget -O install -nethunter-termux <a href="https://offs.ec/2MceZwr">https://offs.ec/2MceZwr</a></p><p><em><strong>Chmod file permissions</strong></em></p><p>chmod +x install-nethunter-termux</p><p>.&#x2F;install-nethunter-termux</p><p><em><strong>When [?] Delete downloaded rootfs file? [y&#x2F;N] then N</strong></em></p><p><em><strong>Set nethunter password</strong></em></p><p>Nethunter kex passwd</p><h4 id="3、Get-nethunter-Store"><a href="#3、Get-nethunter-Store" class="headerlink" title="3、Get nethunter Store"></a>3、Get nethunter Store</h4><p>Form Browser</p><p>Store.nethunter.com&#x2F;en</p><p>Click</p><p>DOWNLOAD STORE APP</p><p>Installing</p><p>Open “Allow from this source”</p><p>In browsers ,serch NetHunter KeX</p><p>Double click ,run it </p><p>Input VNC Username</p><p>Click Connect</p><p><strong>NOTE:</strong></p><p><strong>Don’t install it on Android 12</strong></p><p><strong>In Android 12 have programs killed term。</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;工作笔记-离线驱动导入工具CeoMSX&quot;&gt;&lt;a href=&quot;#工作笔记-离线驱动导入工具CeoMSX&quot; class=&quot;headerlink&quot; title=&quot;工作笔记_离线驱动导入工具CeoMSX&quot;&gt;&lt;/a&gt;工作笔记_离线驱动导入工具CeoMSX&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;How change  &amp;amp; No root&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;video link’s here:&lt;/p&gt;
+&lt;p&gt;【你的下一台Kali，何必是电脑（无Root）（小白教程）】&lt;a href=&quot;https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64&quot;&gt;https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;step:1、Get Termux program&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;2、upgrad termux&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;3、Get nethunter Store&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="worknote" scheme="http://example.com/categories/worknote/"/>
+    
+    
+    <category term="drive" scheme="http://example.com/tags/drive/"/>
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+  </entry>
   
   <entry>
     <title>工作笔记_u盘启动工具：usbos&amp;ventoy</title>
@@ -230,37 +261,6 @@
     <category term="linux" scheme="http://example.com/tags/linux/"/>
     
     <category term="nethunter" scheme="http://example.com/tags/nethunter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工作笔记_离线驱动导入工具CeoMSX</title>
-    <link href="http://example.com/2023/03/15/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/"/>
-    <id>http://example.com/2023/03/15/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/</id>
-    <published>2023-03-15T07:45:06.000Z</published>
-    <updated>2023-06-13T08:39:54.813Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="工作笔记-离线驱动导入工具CeoMSX"><a href="#工作笔记-离线驱动导入工具CeoMSX" class="headerlink" title="工作笔记_离线驱动导入工具CeoMSX"></a>工作笔记_离线驱动导入工具CeoMSX</h2><p><strong>How change  &amp; No root</strong></p><p>video link’s here:</p><p>【你的下一台Kali，何必是电脑（无Root）（小白教程）】<a href="https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64">https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64</a></p><p><em><strong>step:1、Get Termux program</strong></em></p><p>​         <em><strong>2、upgrad termux</strong></em></p><p>​         <em><strong>3、Get nethunter Store</strong></em></p><span id="more"></span><h4 id="1、Get-Termux-program"><a href="#1、Get-Termux-program" class="headerlink" title="1、Get Termux program"></a>1、Get Termux program</h4><p>github.com&#x2F;termux&#x2F;termux-app&#x2F;releases</p><p>Download file：</p><p>termux-app_v0.118.0+github-debug_arm64-v8a.apk</p><p>Install this apk</p><p>After installed termux apk,Open it</p><h4 id="2、upgrad-termux"><a href="#2、upgrad-termux" class="headerlink" title="2、upgrad termux"></a>2、upgrad termux</h4><p>apt update</p><p>Apt upgrade</p><p><em><strong>Install wget</strong></em></p><p>apt install wget</p><p>wget -O install -nethunter-termux <a href="https://offs.ec/2MceZwr">https://offs.ec/2MceZwr</a></p><p><em><strong>Chmod file permissions</strong></em></p><p>chmod +x install-nethunter-termux</p><p>.&#x2F;install-nethunter-termux</p><p><em><strong>When [?] Delete downloaded rootfs file? [y&#x2F;N] then N</strong></em></p><p><em><strong>Set nethunter password</strong></em></p><p>Nethunter kex passwd</p><h4 id="3、Get-nethunter-Store"><a href="#3、Get-nethunter-Store" class="headerlink" title="3、Get nethunter Store"></a>3、Get nethunter Store</h4><p>Form Browser</p><p>Store.nethunter.com&#x2F;en</p><p>Click</p><p>DOWNLOAD STORE APP</p><p>Installing</p><p>Open “Allow from this source”</p><p>In browsers ,serch NetHunter KeX</p><p>Double click ,run it </p><p>Input VNC Username</p><p>Click Connect</p><p><strong>NOTE:</strong></p><p><strong>Don’t install it on Android 12</strong></p><p><strong>In Android 12 have programs killed term。</strong></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;工作笔记-离线驱动导入工具CeoMSX&quot;&gt;&lt;a href=&quot;#工作笔记-离线驱动导入工具CeoMSX&quot; class=&quot;headerlink&quot; title=&quot;工作笔记_离线驱动导入工具CeoMSX&quot;&gt;&lt;/a&gt;工作笔记_离线驱动导入工具CeoMSX&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;How change  &amp;amp; No root&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;video link’s here:&lt;/p&gt;
-&lt;p&gt;【你的下一台Kali，何必是电脑（无Root）（小白教程）】&lt;a href=&quot;https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64&quot;&gt;https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;step:1、Get Termux program&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;2、upgrad termux&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;3、Get nethunter Store&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="worknote" scheme="http://example.com/categories/worknote/"/>
-    
-    
-    <category term="drive" scheme="http://example.com/tags/drive/"/>
-    
-    <category term="tools" scheme="http://example.com/tags/tools/"/>
     
   </entry>
   

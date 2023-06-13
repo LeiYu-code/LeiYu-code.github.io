@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-04T09:25:39.111Z</updated>
+  <updated>2023-06-13T07:26:09.130Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工作笔记_u盘启动工具：usbos&amp;ventoy</title>
+    <link href="http://example.com/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_u%E7%9B%98%E5%90%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%EF%BC%9Ausbos&amp;ventoy/"/>
+    <id>http://example.com/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_u%E7%9B%98%E5%90%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%EF%BC%9Ausbos&amp;ventoy/</id>
+    <published>2023-06-13T07:23:06.000Z</published>
+    <updated>2023-06-13T07:26:09.130Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="工作笔记-u盘启动工具：usbos-ventoy">工作笔记_u盘启动工具：usbos&amp;ventoy</h2><p><strong>U disk tools:old mechine use usbosnew mechine use ventoy</strong></p><p><em><strong>How to select U disk toolseasy use lovly use</strong></em></p><p>​ <em><strong>1、usbosold mechine</strong></em></p><p>​ <em><strong>2、vetoynewly mechine</strong></em></p><p>在日常电脑维护工作中，电脑有十几年前的，也有最近的，那么问题来了：</p><p>1、IDE   AHCIRAID</p><p>2、CPU</p><p>3、FAT16,FAT32,NTFS,exFAT,Ext2/3/4,HFS+,VMFS</p><p>4、MBRGPT</p><p>5、BIOSUEFI</p><p>这么多跟启动有关的项目，那么怎么才能选择u盘启动工具才能更好地维护电脑呢？这里我选择以下两个u盘启动工具：</p><p>USBOS用于旧一点儿的电脑和新电脑，兼容性99%可以启动大部分的电脑</p><p>VETOY安装windows系统、Linux系统、苹果系统都可以，简洁、方便、强大</p><span id="more"></span><h4 id="1、USBOS">1、USBOS</h4><p>USBOS是一款专门用于解决计算机问题的非常专业的PE工具箱，无任何流氓行为，非常纯净，功能超级强大，虽然体积大了一些但是在功能上，兼容性上是很多微型PE无法比拟的，用过的朋友就深有感触。是至今一直免费，未加入捆绑，无流氓，未加入商业用途的一款好PE。USBOS系统维护盘工具是集成最全的winpe集合，自带ISO版与UD版合体，不管你是用来做cdrom量产U盘，还是做U盘启动盘都没问题。对于目前的大容量U盘来说不算什么，但确可以满足几乎所有电脑的维护需求，装机需求。软件不但可以用于PC电脑，还可以用于工控机和服务器乃至Surface和Mac电脑，这些设备都可以用本pe来启动，具有极强的兼容性和适用性，拥有diskgenius硬盘分区工具，ghost备份恢复工具等实用工具，支持ghost、iso格式的光盘映像文件。</p><p><strong>1.1、特色功能</strong></p><p>1、支持各式部署：纯UD、udm、UD二分区、UD三分区、U+高隐、U+深隐、U+不隐、B+、直接安装到本地硬盘、量产、刻盘等等；</p><p>2、内置软件总是最新、最潮、最强、也覆盖广泛！</p><p>3、利用自带安装工具安装USBOS到移动设备时，因采用独家编制的G4D菜单，在发生UD MBR损毁事故后，具备一定的自我修复能力！！</p><p>4、支持安装到Legacy（Win2K-Win10）或UEFI（Win7-Win10）启动本地硬盘，若本地Windows 是Legacy模式启动，USBOS可选带密码保护功能。</p><p>5、原则上建议使用WinntSetup来安装原版各Windows，可不区分PE版本，不区分Windows版本，实现无差别对待。</p><p><strong>2、VENTOY</strong></p><p>简单来说，Ventoy 是一个制作可启动 U 盘的开源工具。<br>有了 Ventoy 你就无需反复地格式化 U 盘，你只需要把 ISO/WIM/IMG/VHD(x)/EFI 等类型的文件直接拷贝到 U 盘里面就可以启动了，无需其他操作。<br>你可以一次性拷贝很多个不同类型的镜像文件，Ventoy 会在启动时显示一个菜单来供你进行选择</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;工作笔记-u盘启动工具：usbos-ventoy&quot;&gt;工作笔记_u盘启动工具：usbos&amp;amp;ventoy&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;U disk tools:old mechine use usbos	new mechine use ventoy&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;How to select U disk tools	easy use lovly use&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​		 &lt;em&gt;&lt;strong&gt;1、usbos	old mechine&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​		 &lt;em&gt;&lt;strong&gt;2、vetoy	newly mechine&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;在日常电脑维护工作中，电脑有十几年前的，也有最近的，那么问题来了：&lt;/p&gt;
+&lt;p&gt;1、IDE   AHCI	RAID&lt;/p&gt;
+&lt;p&gt;2、CPU&lt;/p&gt;
+&lt;p&gt;3、FAT16,FAT32,NTFS,exFAT,Ext2/3/4,HFS+,VMFS&lt;/p&gt;
+&lt;p&gt;4、MBR	GPT&lt;/p&gt;
+&lt;p&gt;5、BIOS	UEFI&lt;/p&gt;
+&lt;p&gt;这么多跟启动有关的项目，那么怎么才能选择u盘启动工具才能更好地维护电脑呢？这里我选择以下两个u盘启动工具：&lt;/p&gt;
+&lt;p&gt;USBOS	用于旧一点儿的电脑和新电脑，兼容性99%可以启动大部分的电脑&lt;/p&gt;
+&lt;p&gt;VETOY	安装windows系统、Linux系统、苹果系统都可以，简洁、方便、强大&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="worknote" scheme="http://example.com/categories/worknote/"/>
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="windows" scheme="http://example.com/tags/windows/"/>
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+    <category term="apple" scheme="http://example.com/tags/apple/"/>
+    
+  </entry>
   
   <entry>
     <title>vlookup函数使用技巧及注意事项</title>
@@ -611,33 +654,6 @@
 &lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;本节讲解与网卡网络、系统内核、系统负载、内存使用情况、当前启用终端数量、历史登录记录、命令执行记录以及救援诊断等相关命令的使用方法。&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
-    
-    
-    <category term="linux" scheme="http://example.com/tags/linux/"/>
-    
-    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-第二章新手必须掌握的Linux命令-文件目录管理命令</title>
-    <link href="http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/"/>
-    <id>http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-06-02T11:45:06.000Z</published>
-    <updated>2023-03-09T04:49:42.016Z</updated>
-    
-    <content type="html"><![CDATA[<h1>笔记-第二章新手必须掌握的Linux命令-文件目录管理命令</h1><p><strong>南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>1．touch 命令</strong></p><p>touch 命令用于创建空白文件或设置文件的时间，格式为“touch [选项] [文件]”。</p><p><strong>mkdir 命令</strong></p><p>mkdir 命令用于创建空白的目录，格式为“mkdir [选项] 目录”。 在 Linux 系统中，文件夹是常见的文件类型之一。除了能创建单个空白目录外，mkdir 命令还可以结合-p 参数来递归创建出具有嵌套叠层关系的文件目录。</p><p><strong>3．cp 命令</strong></p><p>cp 命令用于复制文件或目录，格式为“cp [选项] 源文件 目标文件”。 大家对文件复制操作应该不陌生，在 Linux 系统中，复制操作具体分为 3 种情况：</p><p><strong>4．mv 命令</strong></p><p>mv 命令用于剪切文件或将文件重命名，格式为“mv [选项] 源文件 [目标路径|目标文件名]” 。</p><p>剪切操作不同于复制操作，因为它会默认把源文件删除掉，只保留剪切后的文件。如果 在同一个目录中对一个文件进行剪切操作，其实也就是对其进行重命名：</p><p><strong>5．rm 命令</strong></p><p>rm 命令用于删除文件或目录，格式为“rm [选项] 文件”。 在 Linux 系统中删除文件时，系统会默认向您询问是否要执行删除操作，如果不想总是 看到这种反复的确认信息，可在 rm 命令后跟上-f 参数来强制删除。另外，想要删除一个目录， 需要在 rm 命令后面一个-r 参数才可以，</p><p><strong>6. dd 命令</strong></p><p>dd 命令用于按照指定大小和个数的数据块来复制文件或转换文件，格式为“dd [参数]” 。</p><p>但在 Linux 系统中可以直接 使用 dd 命令来压制出光盘镜像文件，将它编程一个可立即使用的 iso 镜像：</p><p>[root@liruilong liruilong]# dd if=/dev/zero of=560_file count=1 bs=60M</p><p>1+0 records in</p><p>1+0 records out</p><p>62914560 bytes (63 MB) copied, 0.106262 s, 592 MB/s</p><p>[root@liruilong liruilong]# ls</p><p>560_file liruilong.html lirui.txt</p><p>[root@liruilong liruilong]# dd if=/dev/zero of=Demo.iso</p><p>下面举一个吃货的例子进行 解释。假设小明的饭量（即需求）是一个固定的值，用来盛饭的勺子的大小即 bs 块大小， 而用勺子盛饭的次数即 count 块个数。小明要想吃饱（满足需求），则需要在勺子大小（bs 块大小）与用勺子盛饭的次数（count 块个数）之间进行平衡。勺子越大，用勺子盛饭的次数 就越少。有上可见，bs 与 count 都是用来指定容量的大小，只要能满足需求，可随意组合搭 配方式。</p><p><strong>7．file 命令</strong></p><p>file 命令用于查看文件的类型，格式为“file 文件名”。 在 Linux 系统中，由于文本、目录、设备等所有这些一切都统称为文件</p><p>[root@liruilong liruilong]# file 60_file</p><p>60_file: data</p><p>[root@liruilong liruilong]# file Demo.iso</p><p>Demo.iso: data</p><p>[root@liruilong liruilong]# file lirui.txt</p><p>lirui.txt: UTF-8 Unicode text, with very long lines</p><p>[root@liruilong liruilong]#</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;笔记-第二章新手必须掌握的Linux命令-文件目录管理命令&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/stro</summary>
-      
     
     
     

@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>工作笔记_u盘启动工具：usbos&amp;ventoy</title>
+    <url>/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_u%E7%9B%98%E5%90%AF%E5%8A%A8%E5%B7%A5%E5%85%B7%EF%BC%9Ausbos&amp;ventoy/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h2 id="工作笔记-u盘启动工具：usbos-ventoy">工作笔记_u盘启动工具：usbos&amp;ventoy</h2>
+<p><strong>U disk tools:old mechine use usbos	new mechine use ventoy</strong></p>
+<p><em><strong>How to select U disk tools	easy use lovly use</strong></em></p>
+<p>​		 <em><strong>1、usbos	old mechine</strong></em></p>
+<p>​		 <em><strong>2、vetoy	newly mechine</strong></em></p>
+<p>在日常电脑维护工作中，电脑有十几年前的，也有最近的，那么问题来了：</p>
+<p>1、IDE   AHCI	RAID</p>
+<p>2、CPU</p>
+<p>3、FAT16,FAT32,NTFS,exFAT,Ext2/3/4,HFS+,VMFS</p>
+<p>4、MBR	GPT</p>
+<p>5、BIOS	UEFI</p>
+<p>这么多跟启动有关的项目，那么怎么才能选择u盘启动工具才能更好地维护电脑呢？这里我选择以下两个u盘启动工具：</p>
+<p>USBOS	用于旧一点儿的电脑和新电脑，兼容性99%可以启动大部分的电脑</p>
+<p>VETOY	安装windows系统、Linux系统、苹果系统都可以，简洁、方便、强大</p>
+<span id="more"></span>
+<h4 id="1、USBOS">1、USBOS</h4>
+<p>USBOS是一款专门用于解决计算机问题的非常专业的PE工具箱，无任何流氓行为，非常纯净，功能超级强大，虽然体积大了一些但是在功能上，兼容性上是很多微型PE无法比拟的，用过的朋友就深有感触。是至今一直免费，未加入捆绑，无流氓，未加入商业用途的一款好PE。USBOS系统维护盘工具是集成最全的winpe集合，自带ISO版与UD版合体，不管你是用来做cdrom量产U盘，还是做U盘启动盘都没问题。对于目前的大容量U盘来说不算什么，但确可以满足几乎所有电脑的维护需求，装机需求。软件不但可以用于PC电脑，还可以用于工控机和服务器乃至Surface和Mac电脑，这些设备都可以用本pe来启动，具有极强的兼容性和适用性，拥有diskgenius硬盘分区工具，ghost备份恢复工具等实用工具，支持ghost、iso格式的光盘映像文件。</p>
+<p><strong>1.1、特色功能</strong></p>
+<p>1、支持各式部署：纯UD、udm、UD二分区、UD三分区、U+高隐、U+深隐、U+不隐、B+、直接安装到本地硬盘、量产、刻盘等等；</p>
+<p>2、内置软件总是最新、最潮、最强、也覆盖广泛！</p>
+<p>3、利用自带安装工具安装USBOS到移动设备时，因采用独家编制的G4D菜单，在发生UD MBR损毁事故后，具备一定的自我修复能力！！</p>
+<p>4、支持安装到Legacy（Win2K-Win10）或UEFI（Win7-Win10）启动本地硬盘，若本地Windows 是Legacy模式启动，USBOS可选带密码保护功能。</p>
+<p>5、原则上建议使用WinntSetup来安装原版各Windows，可不区分PE版本，不区分Windows版本，实现无差别对待。</p>
+<p><strong>2、VENTOY</strong></p>
+<p>简单来说，Ventoy 是一个制作可启动 U 盘的开源工具。<br>
+有了 Ventoy 你就无需反复地格式化 U 盘，你只需要把 ISO/WIM/IMG/VHD(x)/EFI 等类型的文件直接拷贝到 U 盘里面就可以启动了，无需其他操作。<br>
+你可以一次性拷贝很多个不同类型的镜像文件，Ventoy 会在启动时显示一个菜单来供你进行选择</p>
+]]></content>
+      <categories>
+        <category>worknote</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>windows</tag>
+        <tag>tools</tag>
+        <tag>apple</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vlookup函数使用技巧及注意事项</title>
     <url>/2023/06/04/vlookup%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9(C)/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

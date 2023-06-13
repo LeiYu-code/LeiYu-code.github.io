@@ -2,49 +2,28 @@
 <search>
   <entry>
     <title>工作笔记_离线驱动导入工具CeoMSX</title>
-    <url>/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/</url>
+    <url>/2023/06/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E9%A9%B1%E5%8A%A8%E5%B7%A5%E5%85%B7%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%9FG%E8%B5%B7%E6%9D%A5%E5%90%A7/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
 <p>leiyu-code.github.io</p>
 <p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
-<h2 id="工作笔记-离线驱动导入工具CeoMSX"><a href="#工作笔记-离线驱动导入工具CeoMSX" class="headerlink" title="工作笔记_离线驱动导入工具CeoMSX"></a>工作笔记_离线驱动导入工具CeoMSX</h2><p><strong>How change  &amp; No root</strong></p>
-<p>video link’s here:</p>
-<p>【你的下一台Kali，何必是电脑（无Root）（小白教程）】<a href="https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64">https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64</a></p>
-<p><em><strong>step:1、Get Termux program</strong></em></p>
-<p>​         <em><strong>2、upgrad termux</strong></em></p>
-<p>​         <em><strong>3、Get nethunter Store</strong></em></p>
+<h2 id="工作笔记-离线驱动导入工具CeoMSX"><a href="#工作笔记-离线驱动导入工具CeoMSX" class="headerlink" title="工作笔记_离线驱动导入工具CeoMSX"></a>工作笔记_离线驱动导入工具CeoMSX</h2><p><strong>How Replace the computer hardware without renstalling the system</strong></p>
+<p><strong>Come on Use CeoMsx</strong></p>
+<p>当您遇到系统无法安装，数据无法读取，怎么办？答案是肯定的，USM是您的首选。USM内置SRS方案能帮助您在PE下识别读取硬盘重要数据，CEO_MSX能帮助您给正常系统导入磁盘控制器驱动从而顺利安装系统，还可以帮助你在换电脑硬件的时候不用重新安装操作系统，甚至能为您导入服务器raid驱动。</p>
 <span id="more"></span>
 
 
 
-<h4 id="1、Get-Termux-program"><a href="#1、Get-Termux-program" class="headerlink" title="1、Get Termux program"></a>1、Get Termux program</h4><p>github.com&#x2F;termux&#x2F;termux-app&#x2F;releases</p>
-<p>Download file：</p>
-<p>termux-app_v0.118.0+github-debug_arm64-v8a.apk</p>
-<p>Install this apk</p>
-<p>After installed termux apk,Open it</p>
-<h4 id="2、upgrad-termux"><a href="#2、upgrad-termux" class="headerlink" title="2、upgrad termux"></a>2、upgrad termux</h4><p>apt update</p>
-<p>Apt upgrade</p>
-<p><em><strong>Install wget</strong></em></p>
-<p>apt install wget</p>
-<p>wget -O install -nethunter-termux <a href="https://offs.ec/2MceZwr">https://offs.ec/2MceZwr</a></p>
-<p><em><strong>Chmod file permissions</strong></em></p>
-<p>chmod +x install-nethunter-termux</p>
-<p>.&#x2F;install-nethunter-termux</p>
-<p><em><strong>When [?] Delete downloaded rootfs file? [y&#x2F;N] then N</strong></em></p>
-<p><em><strong>Set nethunter password</strong></em></p>
-<p>Nethunter kex passwd</p>
-<h4 id="3、Get-nethunter-Store"><a href="#3、Get-nethunter-Store" class="headerlink" title="3、Get nethunter Store"></a>3、Get nethunter Store</h4><p>Form Browser</p>
-<p>Store.nethunter.com&#x2F;en</p>
-<p>Click</p>
-<p>DOWNLOAD STORE APP</p>
-<p>Installing</p>
-<p>Open “Allow from this source”</p>
-<p>In browsers ,serch NetHunter KeX</p>
-<p>Double click ,run it </p>
-<p>Input VNC Username</p>
-<p>Click Connect</p>
-<p><strong>NOTE:</strong></p>
-<p><strong>Don’t install it on Android 12</strong></p>
-<p><strong>In Android 12 have programs killed term。</strong></p>
+<p> 。USM内置SRS方案能帮助您在PE下识别读取硬盘重要数据，CEO_MSX能帮助您给正常系统导入磁盘控制器驱动从而顺利安装系统。若遇到不支持的设备，请第一时间联系我，反馈给我，我们将免费为您开启VIP绿色通道，我们将以最快的速度适配您的设备。  </p>
+<p> 驱动收集原则，系统自身能支持的尽量用系统自带的，确保成功率。(比如NT6.x原生支持AHCI规范，比如Win8之后系统默认  支持USB3.0，比如Win8.1之后的系统默认支持Nvme)  备注：驱动整理收集内容公开，不限任何组织或个人使用，但需注明来源，否则我们保留拒绝使用的权利</p>
+<p> 支持XP&#x2F;Vista&#x2F;Win7&#x2F;Win8&#x2F;Win8.1&#x2F;Win10及对应的服务器版本     </p>
+<p>几个静默参数，方便第三方开发使用，具体参数说明如下（参数不区分大小写）:  </p>
+<p>&#x2F;g 采用通用匹配方案默认静默导入(所有盘符下存在的系统都导入)  </p>
+<p>&#x2F;e 采用精确匹配方案默认静默导入(所有盘符下存在的系统都导入)(默认即为&#x2F;e模式，可省略)  </p>
+<p>&#x2F;c: 指定盘符静默导入&#x2F;安装  </p>
+<p>&#x2F;AHCI:No 在Nt6系统中不导入AHCI驱动，若需导入请使用</p>
+<p>&#x2F;AHCI:Yes参数(没有指定此参数时，默认为No)(2019-06-18版新参数)  CEO  MassStorage and XHCI Drivers(CeoMSX)  支持磁盘控制器驱动及XHCI驱动(SRS+USB3.0&#x2F;3.1)离线导入，其中“通用匹配”就是封装系统时使用的导入SRS方案。  </p>
+<p>不支持处理当前系统(比如你启动的是C盘的系统，就不能在C盘系统工作下去处理C盘，但是你可以启动C盘的系统去处理D盘的系统。不要问我支不支持PE，我就不告诉你)  特别注意使用前提：其中USB3.0&#x2F;3.1只对win7做完整支持，并且只有精确匹配方案无通用方案，原因intel usb3.0分版本。已经安装好的系统，导入USB3.0&#x2F;3.1驱动可能无法直接生效，需要触发设备管理器的自动刷新。因此建议在系统开始部署之前就导入，也就是说你如果在PE下装GHO，在GHO恢复完就需要用CeoMSX导入USB3.0&#x2F;3.1驱动(原版系统请用PE下的安装工具安装之后再导入)。  支持多ID列表：  （演示intel usb3.0与asm  usb3.1同机）  <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image003.png" alt="img">  <strong>3.png</strong> (64.35  KB, 下载次数: 261)  <a href="https://www.sysceo.com/forum/forum.php?mod=attachment&aid=MjU2Nzd8NmZmZWY0ZWJ8MTY4NjY0NTA1NXwwfDQ3Mzk0&nothumb=yes">下载附件</a> <a href="javascript:;">保存到相册</a>  2020-8-15 16:01 上传     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image005.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image009.png" alt="img">     <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image010.png" alt="img">  </p>
+<p>来自 <a href="https://www.sysceo.com/forum/thread-47394-1-1.html">https://www.sysceo.com/forum/thread-47394-1-1.html</a> </p>
 ]]></content>
       <categories>
         <category>worknote</category>

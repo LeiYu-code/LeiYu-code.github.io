@@ -234,6 +234,37 @@
   </entry>
   
   <entry>
+    <title>工作笔记_离线驱动导入工具CeoMSX</title>
+    <link href="http://example.com/2023/03/15/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/"/>
+    <id>http://example.com/2023/03/15/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0_%E7%A6%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%AF%BC%E5%85%A5%E5%B7%A5%E5%85%B7CeoMSX/</id>
+    <published>2023-03-15T07:45:06.000Z</published>
+    <updated>2023-06-13T08:39:54.813Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="工作笔记-离线驱动导入工具CeoMSX"><a href="#工作笔记-离线驱动导入工具CeoMSX" class="headerlink" title="工作笔记_离线驱动导入工具CeoMSX"></a>工作笔记_离线驱动导入工具CeoMSX</h2><p><strong>How change  &amp; No root</strong></p><p>video link’s here:</p><p>【你的下一台Kali，何必是电脑（无Root）（小白教程）】<a href="https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64">https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64</a></p><p><em><strong>step:1、Get Termux program</strong></em></p><p>​         <em><strong>2、upgrad termux</strong></em></p><p>​         <em><strong>3、Get nethunter Store</strong></em></p><span id="more"></span><h4 id="1、Get-Termux-program"><a href="#1、Get-Termux-program" class="headerlink" title="1、Get Termux program"></a>1、Get Termux program</h4><p>github.com&#x2F;termux&#x2F;termux-app&#x2F;releases</p><p>Download file：</p><p>termux-app_v0.118.0+github-debug_arm64-v8a.apk</p><p>Install this apk</p><p>After installed termux apk,Open it</p><h4 id="2、upgrad-termux"><a href="#2、upgrad-termux" class="headerlink" title="2、upgrad termux"></a>2、upgrad termux</h4><p>apt update</p><p>Apt upgrade</p><p><em><strong>Install wget</strong></em></p><p>apt install wget</p><p>wget -O install -nethunter-termux <a href="https://offs.ec/2MceZwr">https://offs.ec/2MceZwr</a></p><p><em><strong>Chmod file permissions</strong></em></p><p>chmod +x install-nethunter-termux</p><p>.&#x2F;install-nethunter-termux</p><p><em><strong>When [?] Delete downloaded rootfs file? [y&#x2F;N] then N</strong></em></p><p><em><strong>Set nethunter password</strong></em></p><p>Nethunter kex passwd</p><h4 id="3、Get-nethunter-Store"><a href="#3、Get-nethunter-Store" class="headerlink" title="3、Get nethunter Store"></a>3、Get nethunter Store</h4><p>Form Browser</p><p>Store.nethunter.com&#x2F;en</p><p>Click</p><p>DOWNLOAD STORE APP</p><p>Installing</p><p>Open “Allow from this source”</p><p>In browsers ,serch NetHunter KeX</p><p>Double click ,run it </p><p>Input VNC Username</p><p>Click Connect</p><p><strong>NOTE:</strong></p><p><strong>Don’t install it on Android 12</strong></p><p><strong>In Android 12 have programs killed term。</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;工作笔记-离线驱动导入工具CeoMSX&quot;&gt;&lt;a href=&quot;#工作笔记-离线驱动导入工具CeoMSX&quot; class=&quot;headerlink&quot; title=&quot;工作笔记_离线驱动导入工具CeoMSX&quot;&gt;&lt;/a&gt;工作笔记_离线驱动导入工具CeoMSX&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;How change  &amp;amp; No root&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;video link’s here:&lt;/p&gt;
+&lt;p&gt;【你的下一台Kali，何必是电脑（无Root）（小白教程）】&lt;a href=&quot;https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64&quot;&gt;https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;step:1、Get Termux program&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;2、upgrad termux&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;3、Get nethunter Store&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="worknote" scheme="http://example.com/categories/worknote/"/>
+    
+    
+    <category term="drive" scheme="http://example.com/tags/drive/"/>
+    
+    <category term="tools" scheme="http://example.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网工、运维最常用的四款远程工具：PuTTY、MobaXterm、SecureCRT、XSHELL</title>
     <link href="http://example.com/2023/03/15/%E7%BD%91%E5%B7%A5%E3%80%81%E8%BF%90%E7%BB%B4%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9B%9B%E6%AC%BE%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7%EF%BC%9APuTTY%E3%80%81MobaXterm%E3%80%81SecureCRT%E3%80%81XSHELL/"/>
     <id>http://example.com/2023/03/15/%E7%BD%91%E5%B7%A5%E3%80%81%E8%BF%90%E7%BB%B4%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9B%9B%E6%AC%BE%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7%EF%BC%9APuTTY%E3%80%81MobaXterm%E3%80%81SecureCRT%E3%80%81XSHELL/</id>
@@ -627,33 +658,6 @@
 &lt;p&gt;由开源软件及全球服务型系统开发商&lt;a href=&quot;https://www.linuxprobe.com/&quot;&gt;红帽&lt;/a&gt;公司出品，是一款相当稳定、出色的Linux操作系统。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;安装过程：略&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
-    
-    
-    <category term="linux" scheme="http://example.com/tags/linux/"/>
-    
-    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-第2章-新手必须掌握的Linux命令-系统状态检测命令</title>
-    <link href="http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4/"/>
-    <id>http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-06-02T11:45:06.000Z</published>
-    <updated>2023-03-09T04:50:16.822Z</updated>
-    
-    <content type="html"><![CDATA[<h1>笔记-第2章-新手必须掌握的Linux命令-系统状态检测命令</h1><p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>本节讲解与网卡网络、系统内核、系统负载、内存使用情况、当前启用终端数量、历史登录记录、命令执行记录以及救援诊断等相关命令的使用方法。</strong></p><span id="more"></span><ul><li><p><strong>ifconfig</strong></p><p>ifconfig [参数] [网络设备]</p><p>用于获取网卡配置与网络状态等信息，英文全称为“interface config”</p></li><li><p><strong>uname</strong></p><p>uname [-a]</p><p>用于查看系统内核版本与系统架构等信息</p></li><li><p><strong>uptime</strong></p><p>用于查看系统的负载信息</p><p>建议负载值保持在1，生产环境中不能超过5</p></li><li><p><strong>free</strong></p><p>free [-h]</p><p>用于显示当前系统中内存的使用量信息</p></li><li><p><strong>who</strong></p><p>用于查看当前登入主机的用户终端信息</p></li><li><p><strong>last</strong></p><p>用于查看当前登入主机的用户终端信息</p></li><li><p><strong>ping</strong></p><p>ping [参数] 主机地址</p><p>用于测试主机之间的网络连通性</p><p>表2-11                         ping命令中的参数以及作用</p><table><thead><tr><th>参数</th><th>作用</th></tr></thead><tbody><tr><td>-c</td><td>总共发送次数</td></tr><tr><td>-l</td><td>指定网卡名称</td></tr><tr><td>-i</td><td>每次间隔时间（秒）</td></tr><tr><td>-W</td><td>最长等待时间（秒）</td></tr></tbody></table></li><li><p><strong>tracepath</strong></p><p>tracepath [参数] 域名</p><p>用于显示数据包到达目的主机时途中经过的所有路由信息</p></li><li><p><strong>netstat</strong></p><p>netstat [参数]</p><p>用于显示如网络连接、路由表、接口状态等的网络相关信息，英文全称为“network status”</p><p>表2-12                         netstat命令中的参数以及作用</p><table><thead><tr><th>-a</th><th>显示所有连接中的Socket</th></tr></thead><tbody><tr><td>-p</td><td>显示正在使用的Socket信息</td></tr><tr><td>-t</td><td>显示TCP协议的连接状态</td></tr><tr><td>-u</td><td>显示UDP协议的连接状态</td></tr><tr><td>-n</td><td>使用IP地址，不使用域名</td></tr><tr><td>-l</td><td>仅列出正在监听的服务状态</td></tr><tr><td>-i</td><td>显示网卡列表信息</td></tr><tr><td>-r</td><td>显示路由表信息</td></tr></tbody></table></li><li><p><strong>history</strong></p><p>history [-c]</p><p>用于显示执行过的命令历史</p><p><em><strong>tec:可以自定义/etc/profile文件中的HISTSIZE变量值，即自定义存储多少条执行过的历史命令</strong></em></p><p><em><strong>历史命令会被保存到用户家目录中的.bash_history文件中。Linux系统中以点（.）开头的文件均代表隐藏文件，这些文件大多数为系统服务文件，可以用cat命令查看其文件内容：</strong></em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# cat ~/.bash_history</span><br></pre></td></tr></table></figure><p><em><strong>要清空当前用户在本机上执行的Linux命令历史记录信息，可执行如下命令：</strong></em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# history -c</span><br></pre></td></tr></table></figure></li><li><p>sosreport</p><p>收集系统配置及架构信息并输出诊断文档</p></li></ul><hr>]]></content>
-    
-    
-    <summary type="html">&lt;h1&gt;笔记-第2章-新手必须掌握的Linux命令-系统状态检测命令&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;本节讲解与网卡网络、系统内核、系统负载、内存使用情况、当前启用终端数量、历史登录记录、命令执行记录以及救援诊断等相关命令的使用方法。&lt;/strong&gt;&lt;/p&gt;</summary>
     
     
     

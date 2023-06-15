@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-13T09:07:02.175Z</updated>
+  <updated>2023-06-15T03:29:05.551Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Excel小技巧_按数值自动填充颜色</title>
+    <link href="http://example.com/2023/06/15/Excel%E5%B0%8F%E6%8A%80%E5%B7%A7_%E6%8C%89%E6%95%B0%E5%80%BC%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E9%A2%9C%E8%89%B2/"/>
+    <id>http://example.com/2023/06/15/Excel%E5%B0%8F%E6%8A%80%E5%B7%A7_%E6%8C%89%E6%95%B0%E5%80%BC%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E9%A2%9C%E8%89%B2/</id>
+    <published>2023-06-15T02:33:06.000Z</published>
+    <updated>2023-06-15T03:29:05.551Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="Excel小技巧-按数值自动填充颜色"><a href="#Excel小技巧-按数值自动填充颜色" class="headerlink" title="Excel小技巧_按数值自动填充颜色"></a>Excel小技巧_按数值自动填充颜色</h2><p><strong>Excel Tips : Fill the color according to the number</strong></p><p><em><strong>Tips Code:    [蓝色][&gt;&#x3D;60];[红色][&lt;60]</strong></em></p><span id="more"></span><p>假定需用红色字体显示60以下分数，蓝色字体显示60以上分数。</p><p>点击填充颜色的表格，右键单击设置单元格格式或者</p><p>按Ctrl+1，设置单元格格式→自定义，类型输入框中输入：</p><p>[蓝色][&gt;&#x3D;60];[红色][&lt;60]</p><p><a href="https://imgse.com/i/pCusVRU"><img src="https://s1.ax1x.com/2023/06/15/pCusVRU.png" alt="pCusVRU.png"></a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Excel小技巧-按数值自动填充颜色&quot;&gt;&lt;a href=&quot;#Excel小技巧-按数值自动填充颜色&quot; class=&quot;headerlink&quot; title=&quot;Excel小技巧_按数值自动填充颜色&quot;&gt;&lt;/a&gt;Excel小技巧_按数值自动填充颜色&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Excel Tips : Fill the color according to the number&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tips Code:    [蓝色][&amp;gt;&amp;#x3D;60];[红色][&amp;lt;60]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="excel" scheme="http://example.com/categories/excel/"/>
+    
+    
+    <category term="Tips" scheme="http://example.com/tags/Tips/"/>
+    
+  </entry>
   
   <entry>
     <title>工作笔记_离线驱动导入工具CeoMSX</title>
@@ -617,44 +642,6 @@
 &lt;p&gt;Base解释器（Bourne-Again SHell)&lt;/p&gt;
 &lt;p&gt;用户通过服务程序来与电脑对话&lt;/p&gt;
 &lt;hr&gt;</summary>
-    
-    
-    
-    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
-    
-    
-    <category term="linux" scheme="http://example.com/tags/linux/"/>
-    
-    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习 第1章 动手部署一台Linux操作系统</title>
-    <link href="http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E7%AB%A0-%E5%8A%A8%E6%89%8B%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E7%AB%A0-%E5%8A%A8%E6%89%8B%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
-    <published>2022-06-02T11:48:28.000Z</published>
-    <updated>2023-03-09T04:47:02.404Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1>学习 第一章 动手部署一台Linux操作系统</h1><p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p>[Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (<a href="http://linuxcool.com">linuxcool.com</a>)](</p><p><strong>工欲善其事，必先利其器</strong></p><ul><li>注意：配置的系统环境最好和老师的系统环境一致</li></ul><p><em><strong>随书配套的软件资源可通过：(<a href="https://www.linuxprobe.com/tools/">https://www.linuxprobe.com/tools/</a>) 下载。</strong></em></p><p><strong>VmwareWorkStation 16 ——虚拟机软件（必需）</strong>：</p><p>这是一款功能强大的桌面虚拟计算机软件，能够让用户在单一主机同时运行多个不同的操作系统；同时支持实时快照、虚拟网络、拖曳文件以及PXE等强悍功能。</p><p><strong>RedHatEnterpriseLinux [RHEL] 8 ——<a href="https://www.linuxprobe.com/">红帽</a>操作系统（必需）：</strong></p><p>由开源软件及全球服务型系统开发商<a href="https://www.linuxprobe.com/">红帽</a>公司出品，是一款相当稳定、出色的Linux操作系统。</p><hr><p>安装过程：略</p><span id="more"></span><p><a href="https://www.linuxprobe.com/basic-learning-01.html">第1章 动手部署一台Linux操作系统 | 《Linux就该这么学》 (linuxprobe.com)</a></p><ul><li>在虚拟机里安装Linux时一定不要直接安装Linux系统，而是要选择稍后安装Linux系统</li><li>CPU需要支持VT（Virtualization Technology，虚拟化技术）</li></ul><p><a href="https://www.linuxprobe.com/wp-content/uploads/2020/05/BIOS.png"><img src="https://www.linuxprobe.com/wp-content/uploads/2020/05/BIOS.png" alt="第1章 动手部署一台Linux操作系统第1章 动手部署一台Linux操作系统"></a></p><ul><li><em><strong>虚拟机的网络模式</strong></em></li></ul><p>VMware Workstation这款虚拟机软件为用户提供了3种可选的网络模式，分别为“使用桥接网络”“使用网络地址转换（NAT）”与“使用仅主机模式网络”。</p><blockquote><p><strong>使用桥接网络</strong>：相当于在物理机与虚拟机网卡之间架设了一座桥梁，从而可以通过物理主机的网卡访问外网。</p><p><strong>使用网络地址转换（NAT）</strong>：让VM虚拟机的网络服务发挥路由器的作用，使得通过虚拟机软件模拟的主机可以通过物理主机访问外网；在物理机中对应的物理网卡是VMnet8。</p><p><strong>使用仅主机模式网络</strong>：仅让虚拟机的系统与物理主机通信，不能访问外网；在物理机中对应的物理网卡是VMnet1。</p></blockquote><ul><li><strong>linux中软件的安装方式</strong></li></ul><p>RPM 常用的RPM软件包命令</p><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">rpm -ivh filename.rpm</td><td style="text-align:left">安装软件</td></tr><tr><td style="text-align:left">rpm -Uvh filename.rpm</td><td style="text-align:left">升级软件</td></tr><tr><td style="text-align:left">rpm -e filename.rpm</td><td style="text-align:left">卸载软件</td></tr><tr><td style="text-align:left">rpm -qpi filename.rpm</td><td style="text-align:left">查询软件描述信息</td></tr><tr><td style="text-align:left">rpm -qpl filename.rpm</td><td style="text-align:left">列出软件文件信息</td></tr><tr><td style="text-align:left">rpm -qf filename</td><td style="text-align:left">查询文件属于哪个RPM</td></tr></tbody></table><p>Yum 常见的Yum命令</p><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">yum repolist all</td><td style="text-align:left">列出所有仓库</td></tr><tr><td style="text-align:left">yum list all</td><td style="text-align:left">列出仓库中所有软件包</td></tr><tr><td style="text-align:left">yum info 软件包名称</td><td style="text-align:left">查看软件包信息</td></tr><tr><td style="text-align:left">yum install 软件包名称</td><td style="text-align:left">安装软件包</td></tr><tr><td style="text-align:left">yum reinstall 软件包名称</td><td style="text-align:left">重新安装软件包</td></tr><tr><td style="text-align:left">yum update 软件包名称</td><td style="text-align:left">升级软件包</td></tr><tr><td style="text-align:left">yum remove 软件包名称</td><td style="text-align:left">移除软件包</td></tr><tr><td style="text-align:left">yum clean all</td><td style="text-align:left">清除所有仓库缓存</td></tr><tr><td style="text-align:left">yum check-update</td><td style="text-align:left">检查可更新的软件包</td></tr><tr><td style="text-align:left">yum grouplist</td><td style="text-align:left">查看系统中已经安装的软件包组</td></tr><tr><td style="text-align:left">yum groupinstall 软件包组</td><td style="text-align:left">安装指定的软件包组</td></tr><tr><td style="text-align:left">yum groupremove 软件包组</td><td style="text-align:left">移除指定的软件包组</td></tr><tr><td style="text-align:left">yum groupinfo 软件包组</td><td style="text-align:left">查询指定的软件包组信息</td></tr></tbody></table><p><em><strong>dnf install软件包名称</strong></em></p><hr><ul><li>老旧版本的初始化及服务的区别</li></ul><p>Linux系统在启动时要进行大量的初始化工作，比如挂载文件系统和交换分区、启动各类进程服务等，这些都可以看作是一个一个的单元（unit），systemd用目标（target）代替了System V init中运行级别的概念，这两者的区别如表1-3所示。</p><p>表1-3 systemd与System V init的区别以及作用</p><table><thead><tr><th style="text-align:left">System V init运行级别</th><th style="text-align:left">systemd目标名称</th><th style="text-align:left">systemd 目标作用</th></tr></thead><tbody><tr><td style="text-align:left">0</td><td style="text-align:left">poweroff.target</td><td style="text-align:left">关机</td></tr><tr><td style="text-align:left">1</td><td style="text-align:left">rescue.target</td><td style="text-align:left">单用户模式</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">multi-user.target</td><td style="text-align:left">多用户的文本界面</td></tr><tr><td style="text-align:left">3</td><td style="text-align:left">multi-user.target</td><td style="text-align:left">多用户的文本界面</td></tr><tr><td style="text-align:left">4</td><td style="text-align:left">multi-user.target</td><td style="text-align:left">多用户的文本界面</td></tr><tr><td style="text-align:left">5</td><td style="text-align:left">graphical.target</td><td style="text-align:left">多用户的图形界面</td></tr><tr><td style="text-align:left">6</td><td style="text-align:left">reboot.target</td><td style="text-align:left">重启</td></tr><tr><td style="text-align:left">emergency</td><td style="text-align:left">emergency.target</td><td style="text-align:left">救援模式</td></tr></tbody></table><p>如果想要将系统默认的运行目标修改为“多用户的文本界面”模式，可直接用ln命令把多用户模式目标文件链接到/etc/systemd/system/目录：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target</span><br></pre></td></tr></table></figure><p>如果有读者之前学习过RHEL 5/6系统，或者已经习惯使用service、chkconfig等命令来管理系统服务，那么现在就比较郁闷了，因为在RHEL 7/8系统中是使用systemctl命令来管理服务的。表1-4和表1-5所示为新老版本系统的对比，您可以先大致了解一下，后续章节中会经常用到它们。</p><p>表1-4 服务的启动、重启、停止、重载、查看状态等常用命令</p><table><thead><tr><th style="text-align:left">老系统命令</th><th style="text-align:left">新系统命令</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">service foo start</td><td style="text-align:left">systemctl start httpd</td><td style="text-align:left">启动服务</td></tr><tr><td style="text-align:left">service foo restart</td><td style="text-align:left">systemctl restart httpd</td><td style="text-align:left">重启服务</td></tr><tr><td style="text-align:left">service foo stop</td><td style="text-align:left">systemctl stop httpd</td><td style="text-align:left">停止服务</td></tr><tr><td style="text-align:left">service foo reload</td><td style="text-align:left">systemctl reload httpd</td><td style="text-align:left">重新加载配置文件（不终止服务）</td></tr><tr><td style="text-align:left">service foo status</td><td style="text-align:left">systemctl status httpd</td><td style="text-align:left">查看服务状态</td></tr></tbody></table><p>表1-5 服务开机启动、不启动、查看各级别下服务启动状态等常用命令</p><table><thead><tr><th style="text-align:left">老系统命令</th><th style="text-align:left">新系统命令</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">chkconfig foo on</td><td style="text-align:left">systemctl enable httpd</td><td style="text-align:left">开机自动启动</td></tr><tr><td style="text-align:left">chkconfig foo off</td><td style="text-align:left">systemctl disable httpd</td><td style="text-align:left">开机不自动启动</td></tr><tr><td style="text-align:left">chkconfig foo</td><td style="text-align:left">systemctl is-enabled httpd</td><td style="text-align:left">查看特定服务是否为开机自启动</td></tr><tr><td style="text-align:left">chkconfig –list</td><td style="text-align:left">systemctl list-unit-files –type=httpd</td><td style="text-align:left">查看各个级别下服务的启动与禁用情况</td></tr></tbody></table><hr><ul><li>重置Linux系统的root密码</li></ul><p>重启Linux系统主机并出现引导界面时，按下键盘上的e键进入内核编辑界面，如图1-50所示。</p><p>Linux系统的引导界面</p><p>在linux参数这行的最后面追加rd.break参数，然后按下Ctrl + X组合键运行修改过的内核程序，如图1-51所示。</p><p>大约30秒过后，系统会进入紧急救援模式，如图1-52所示。</p><p>Linux系统的紧急救援模式</p><p>然后依次输入以下命令，再连续按下两次Ctrl + D组合键盘来退出并重启。等待系统再次重启完毕后便可以使用新密码登录Linux系统。这一系列命令的执行效果如图1-53所示。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mount -o remount,rw /sysroot</span><br><span class="line">chroot /sysroot</span><br><span class="line">passwd</span><br><span class="line">touch /.autorelabel</span><br></pre></td></tr></table></figure><p>重置Linux系统的管理员密码</p>]]></content>
-    
-    
-    <summary type="html">&lt;hr&gt;
-&lt;h1&gt;学习 第一章 动手部署一台Linux操作系统&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (&lt;a href=&quot;http://linuxcool.com&quot;&gt;linuxcool.com&lt;/a&gt;)](&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;工欲善其事，必先利其器&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;注意：配置的系统环境最好和老师的系统环境一致&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;随书配套的软件资源可通过：(&lt;a href=&quot;https://www.linuxprobe.com/tools/&quot;&gt;https://www.linuxprobe.com/tools/&lt;/a&gt;) 下载。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;VmwareWorkStation 16 ——虚拟机软件（必需）&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;这是一款功能强大的桌面虚拟计算机软件，能够让用户在单一主机同时运行多个不同的操作系统；同时支持实时快照、虚拟网络、拖曳文件以及PXE等强悍功能。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;RedHatEnterpriseLinux [RHEL] 8 ——&lt;a href=&quot;https://www.linuxprobe.com/&quot;&gt;红帽&lt;/a&gt;操作系统（必需）：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;由开源软件及全球服务型系统开发商&lt;a href=&quot;https://www.linuxprobe.com/&quot;&gt;红帽&lt;/a&gt;公司出品，是一款相当稳定、出色的Linux操作系统。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;安装过程：略&lt;/p&gt;</summary>
     
     
     

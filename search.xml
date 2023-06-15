@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vlookup进阶_跨文件查询</title>
+    <url>/2023/06/15/vlookup%E8%BF%9B%E9%98%B6_%E8%B7%A8%E6%96%87%E4%BB%B6%E5%8C%B9%E9%85%8D/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h2 id="vlookup进阶-跨文件查询"><a href="#vlookup进阶-跨文件查询" class="headerlink" title="vlookup进阶_跨文件查询"></a>vlookup进阶_跨文件查询</h2><p><strong>How use vlookup function find data from other excel file</strong></p>
+<p>​          <em><strong>将两个excel文件放在同一个文件夹里</strong></em></p>
+<p>​         <em><strong>为了以后匹配出来的数据的正确性，最好不要在完成数据匹配后再挪动原始文件</strong></em></p>
+<p>​         <em><strong>在这里，vlookup函数的匹配范围是匹配文件的绝对路径</strong></em></p>
+<p>​        例：</p>
+<p>&#x3D;VLOOKUP(B5,’C:\Users\Administrator\Desktop[vlookup基础实验表详细情况.xlsx]Sheet1’!$A$1:$C$10,3,FALSE)</p>
+<span id="more"></span>
+
+<p>将文件放在同一个文件夹，并在以后保持不动</p>
+<p><a href="https://imgse.com/i/pCuO3zF"><img src="https://s1.ax1x.com/2023/06/15/pCuO3zF.png" alt="pCuO3zF.png"></a></p>
+<p>选择匹配范围的时候，选择要匹配的文件相应的范围</p>
+<p><a href="https://imgse.com/i/pCuO1RU"><img src="https://s1.ax1x.com/2023/06/15/pCuO1RU.png" alt="pCuO1RU.png"></a></p>
+]]></content>
+      <categories>
+        <category>excel</category>
+      </categories>
+      <tags>
+        <tag>function</tag>
+        <tag>vlookup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Excel小技巧_按数值自动填充颜色</title>
     <url>/2023/06/15/Excel%E5%B0%8F%E6%8A%80%E5%B7%A7_%E6%8C%89%E6%95%B0%E5%80%BC%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E9%A2%9C%E8%89%B2/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

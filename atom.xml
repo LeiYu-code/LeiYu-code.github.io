@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-15T03:29:05.551Z</updated>
+  <updated>2023-06-15T06:41:21.483Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vlookup进阶_跨文件查询</title>
+    <link href="http://example.com/2023/06/15/vlookup%E8%BF%9B%E9%98%B6_%E8%B7%A8%E6%96%87%E4%BB%B6%E5%8C%B9%E9%85%8D/"/>
+    <id>http://example.com/2023/06/15/vlookup%E8%BF%9B%E9%98%B6_%E8%B7%A8%E6%96%87%E4%BB%B6%E5%8C%B9%E9%85%8D/</id>
+    <published>2023-06-15T07:00:06.000Z</published>
+    <updated>2023-06-15T06:41:21.483Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="vlookup进阶-跨文件查询"><a href="#vlookup进阶-跨文件查询" class="headerlink" title="vlookup进阶_跨文件查询"></a>vlookup进阶_跨文件查询</h2><p><strong>How use vlookup function find data from other excel file</strong></p><p>​          <em><strong>将两个excel文件放在同一个文件夹里</strong></em></p><p>​         <em><strong>为了以后匹配出来的数据的正确性，最好不要在完成数据匹配后再挪动原始文件</strong></em></p><p>​         <em><strong>在这里，vlookup函数的匹配范围是匹配文件的绝对路径</strong></em></p><p>​        例：</p><p>&#x3D;VLOOKUP(B5,’C:\Users\Administrator\Desktop[vlookup基础实验表详细情况.xlsx]Sheet1’!$A$1:$C$10,3,FALSE)</p><span id="more"></span><p>将文件放在同一个文件夹，并在以后保持不动</p><p><a href="https://imgse.com/i/pCuO3zF"><img src="https://s1.ax1x.com/2023/06/15/pCuO3zF.png" alt="pCuO3zF.png"></a></p><p>选择匹配范围的时候，选择要匹配的文件相应的范围</p><p><a href="https://imgse.com/i/pCuO1RU"><img src="https://s1.ax1x.com/2023/06/15/pCuO1RU.png" alt="pCuO1RU.png"></a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;vlookup进阶-跨文件查询&quot;&gt;&lt;a href=&quot;#vlookup进阶-跨文件查询&quot; class=&quot;headerlink&quot; title=&quot;vlookup进阶_跨文件查询&quot;&gt;&lt;/a&gt;vlookup进阶_跨文件查询&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;How use vlookup function find data from other excel file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​          &lt;em&gt;&lt;strong&gt;将两个excel文件放在同一个文件夹里&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;为了以后匹配出来的数据的正确性，最好不要在完成数据匹配后再挪动原始文件&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;在这里，vlookup函数的匹配范围是匹配文件的绝对路径&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;​        例：&lt;/p&gt;
+&lt;p&gt;&amp;#x3D;VLOOKUP(B5,’C:\Users\Administrator\Desktop[vlookup基础实验表详细情况.xlsx]Sheet1’!$A$1:$C$10,3,FALSE)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="excel" scheme="http://example.com/categories/excel/"/>
+    
+    
+    <category term="function" scheme="http://example.com/tags/function/"/>
+    
+    <category term="vlookup" scheme="http://example.com/tags/vlookup/"/>
+    
+  </entry>
   
   <entry>
     <title>Excel小技巧_按数值自动填充颜色</title>
@@ -614,43 +645,6 @@
     <category term="Knowledgehub" scheme="http://example.com/tags/Knowledgehub/"/>
     
     <category term="mission mangerg" scheme="http://example.com/tags/mission-mangerg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令</title>
-    <link href="http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>http://example.com/2022/06/02/%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E7%AB%A0-%E6%96%B0%E6%89%8B%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1%E7%9A%84Linux%E5%91%BD%E4%BB%A4-%E5%B8%B8%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-06-02T11:52:03.000Z</published>
-    <updated>2023-03-09T04:48:11.502Z</updated>
-    
-    <content type="html"><![CDATA[<h1>笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令</h1><p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><ul><li>长格式与短格式</li></ul><p><em><strong>在Linux系统中的命令参数有长短格式之分，长格式和长格式之间不能合并，长格式和短格式之间也不能合并，但短格式和短格式之间是可以合并的，合并后仅保留一个减号（-）即可。另外ps命令可允许参数不加减号（-），因此可直接写成ps aux的样子</strong></em></p><ul><li>强大好用的shell</li></ul><p><a href="https://www.linuxprobe.com/wp-content/uploads/2020/05/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%A1%AC%E4%BB%B6-1.jpg"><img src="https://www.linuxprobe.com/wp-content/uploads/2020/05/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%A1%AC%E4%BB%B6-1.jpg" alt="第2章 新手必须掌握的Linux命令第2章 新手必须掌握的Linux命令"></a></p><p>Base解释器（Bourne-Again SHell)</p><p>用户通过服务程序来与电脑对话</p><hr><span id="more"></span><ul><li>执行命令的必备知识</li></ul><p>常见的Linux命令的格式：</p><p><strong>命令名称 [命令参数] [命令对象]</strong></p><p>命令参数的长格式与短格式</p><table><thead><tr><th style="text-align:left">长格式</th><th style="text-align:left">man –help</th></tr></thead><tbody><tr><td style="text-align:left">短格式</td><td style="text-align:left">man -h</td></tr></tbody></table><p><em><strong>命令名称、命令参数与命令对象之间要用空格进行分隔，且字母严格区分大小写</strong></em></p><hr><ul><li>man命令的常用操作按键及其作用</li></ul><table><thead><tr><th style="text-align:left">按键</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">空格键</td><td style="text-align:left">向下翻一页</td></tr><tr><td style="text-align:left">PaGe down</td><td style="text-align:left">向下翻一页</td></tr><tr><td style="text-align:left">PaGe up</td><td style="text-align:left">向上翻一页</td></tr><tr><td style="text-align:left">home</td><td style="text-align:left">直接前往首页</td></tr><tr><td style="text-align:left">end</td><td style="text-align:left">直接前往尾页</td></tr><tr><td style="text-align:left">/</td><td style="text-align:left">从上至下搜索某个关键词，如“/linux”</td></tr><tr><td style="text-align:left">?</td><td style="text-align:left">从下至上搜索某个关键词，如“?linux”</td></tr><tr><td style="text-align:left">n</td><td style="text-align:left">定位到下一个搜索到的关键词</td></tr><tr><td style="text-align:left">N</td><td style="text-align:left">定位到上一个搜索到的关键词</td></tr><tr><td style="text-align:left">q</td><td style="text-align:left">退出帮助文档</td></tr></tbody></table><ul><li>man命令中帮助信息的结构以及意义</li></ul><table><thead><tr><th style="text-align:left">结构名称</th><th style="text-align:left">代表意义</th></tr></thead><tbody><tr><td style="text-align:left">NAME</td><td style="text-align:left">命令的名称</td></tr><tr><td style="text-align:left">SYNOPSIS</td><td style="text-align:left">参数的大致使用方法</td></tr><tr><td style="text-align:left">DESCRIPTION</td><td style="text-align:left">介绍说明</td></tr><tr><td style="text-align:left">EXAMPLES</td><td style="text-align:left">演示（附带简单说明）</td></tr><tr><td style="text-align:left">OVERVIEW</td><td style="text-align:left">概述</td></tr><tr><td style="text-align:left">DEFAULTS</td><td style="text-align:left">默认的功能</td></tr><tr><td style="text-align:left">OPTIONS</td><td style="text-align:left">具体的可用选项（带介绍）</td></tr><tr><td style="text-align:left">ENVIRONMENT</td><td style="text-align:left">环境变量</td></tr><tr><td style="text-align:left">FILES</td><td style="text-align:left">用到的文件</td></tr><tr><td style="text-align:left">SEE ALSO</td><td style="text-align:left">相关的资料</td></tr><tr><td style="text-align:left">HISTORY</td><td style="text-align:left">维护历史与联系方式</td></tr></tbody></table><ul><li>额外的4个快捷键/组合键小技巧</li></ul><p><em><strong>TAB键 补全命令</strong></em></p><p><em><strong>ctrl+c组合键</strong></em> 终止当前的进程</p><p><em><strong>ctrl+d组合键 键盘输入结束</strong></em></p><p><em><strong>ctrl+l组合键 清屏</strong></em></p><hr><ul><li>常用系统工作命令</li></ul><p><strong>echo命令</strong></p><p>echo [字符串] [$变量]</p><p><strong>date命令</strong></p><p>date [+指定的格式]</p><p>date命令中的参数及其作用</p><table><thead><tr><th style="text-align:left">参数</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">%S</td><td style="text-align:left">秒（00～59）</td></tr><tr><td style="text-align:left">%M</td><td style="text-align:left">分钟（00～59）</td></tr><tr><td style="text-align:left">%H</td><td style="text-align:left">小时（00～23）</td></tr><tr><td style="text-align:left">%I</td><td style="text-align:left">小时（00～12）</td></tr><tr><td style="text-align:left">%m</td><td style="text-align:left">月份（1~12）</td></tr><tr><td style="text-align:left">%p</td><td style="text-align:left">显示出AM或PM</td></tr><tr><td style="text-align:left">%a</td><td style="text-align:left">缩写的工作日名称（例如：Sun）</td></tr><tr><td style="text-align:left">%A</td><td style="text-align:left">完整的工作日名称（例如：Sunday）</td></tr><tr><td style="text-align:left">%b</td><td style="text-align:left">缩写的月份名称（例如：Jan）</td></tr><tr><td style="text-align:left">%B</td><td style="text-align:left">完整的月份名称（例如：January）</td></tr><tr><td style="text-align:left">%q</td><td style="text-align:left">季度（1~4）</td></tr><tr><td style="text-align:left">%y</td><td style="text-align:left">简写年份（例如：20）</td></tr><tr><td style="text-align:left">%Y</td><td style="text-align:left">完整年份（例如：2020）</td></tr><tr><td style="text-align:left">%d</td><td style="text-align:left">本月中的第几天</td></tr><tr><td style="text-align:left">%j</td><td style="text-align:left">今年中的第几天</td></tr><tr><td style="text-align:left">%n</td><td style="text-align:left">换行符（相当于按下回车键）</td></tr><tr><td style="text-align:left">%t</td><td style="text-align:left">跳格（相当于按下Tab键）</td></tr></tbody></table><p><strong>timedatectl命令</strong></p><p>timedatectl [参数]</p><p>timedatectl命令中的参数以及作用</p><table><thead><tr><th style="text-align:left">参数</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">status</td><td style="text-align:left">显示状态信息</td></tr><tr><td style="text-align:left">list-timezones</td><td style="text-align:left">列出已知时区</td></tr><tr><td style="text-align:left">set-time</td><td style="text-align:left">设置系统时间</td></tr><tr><td style="text-align:left">set-timezone</td><td style="text-align:left">设置生效时区</td></tr></tbody></table><p><strong>reboot命令</strong></p><p>重启系统命令</p><p><strong>poweroff命令</strong></p><p>关闭系统命令</p><p><strong>wget命令</strong></p><p>wget [参数] 网址</p><p>wget命令中的参数以及作用</p><table><thead><tr><th style="text-align:left">参数</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">-b</td><td style="text-align:left">后台下载模式</td></tr><tr><td style="text-align:left">-P</td><td style="text-align:left">下载到指定目录</td></tr><tr><td style="text-align:left">-t</td><td style="text-align:left">最大尝试次数</td></tr><tr><td style="text-align:left">-c</td><td style="text-align:left">断点续传</td></tr><tr><td style="text-align:left">-p</td><td style="text-align:left">下载页面内所有资源，包括图片、视频等</td></tr><tr><td style="text-align:left">-r</td><td style="text-align:left">递归下载</td></tr></tbody></table><p><strong>ps命令</strong></p><p>ps [参数]</p><p>ps命令中的参数以及作用</p><table><thead><tr><th style="text-align:left">参数</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left">-a</td><td style="text-align:left">显示所有进程（包括其他用户的进程）</td></tr><tr><td style="text-align:left">-u</td><td style="text-align:left">用户以及其他详细信息</td></tr><tr><td style="text-align:left">-x</td><td style="text-align:left">显示没有控制终端的进程</td></tr></tbody></table><p>常见进程状态及进程补充形式</p><blockquote><p><strong>R（运行）</strong>：进程正在运行或在运行队列中等待。</p><p><strong>S（中断）</strong>：进程处于休眠中，当某个条件形成后或者接收到信号时，则脱离该 状态。</p><p><strong>D（不可中断）</strong>：进程不响应系统异步信号，即便用kill命令也不能将其中断。</p><p><strong>Z（僵死）</strong>：进程已经终止，但进程描述符依然存在, 直到父进程调用wait4()系统函数后将进程释放。</p><p><strong>T（停止）</strong>：进程收到停止信号后停止运行。</p></blockquote><p>除了上面5种常见的进程状态，还有可能是高优先级（&lt;）、低优先级（N）、被锁进内存（L）、包含子进程（s）以及多线程（l）这5种补充形式。</p><ul><li>pstree命令</li></ul><p>以树状图的形式展示进程之间的关系</p><ul><li>top命令</li></ul><p>动态地监视进程活动及系统负载等信息</p><p><a href="https://www.linuxprobe.com/wp-content/uploads/2020/05/top%E5%91%BD%E4%BB%A4-1024x648.png"><img src="https://www.linuxprobe.com/wp-content/uploads/2020/05/top%E5%91%BD%E4%BB%A4-1024x648.png" alt="第2章 新手必须掌握的Linux命令第2章 新手必须掌握的Linux命令"></a></p><p>top命令执行结果的前5行为系统整体的统计信息，其所代表的含义如下。</p><blockquote><p>第1行：系统时间、运行时间、登录终端数、系统负载（3个数值分别为1分钟、5分钟、15分钟内的平均值，数值越小意味着负载越低）。</p><p>第2行：进程总数、运行中的进程数、睡眠中的进程数、停止的进程数、僵死的进程数。</p><p>第3行：用户占用资源百分比、系统内核占用资源百分比、改变过优先级的进程资源百分比、空闲的资源百分比等。其中数据均为CPU数据并以百分比格式显示，例如“99.9 id”意味着有99.9%的CPU处理器资源处于空闲。</p><p>第4行：物理内存总量、内存空闲量、内存使用量、作为内核缓存的内存量。</p><p>第5行：虚拟内存总量、虚拟内存空闲量、虚拟内存使用量、已被提前加载的内存量。</p></blockquote><p><strong>nice命令</strong></p><p>调整进程的优先级</p><p>nice优先级数字 服务名称</p><p><strong>pidof命令</strong></p><p>查询某个指定服务进程的PID号码值</p><p>pidof [参数] 服务名称</p><p><strong>kill命令</strong></p><p>终止某个指定PID值的服务进程</p><p>kill [参数] 进程的PID</p><p><strong>killall命令</strong></p><p>killall [参数] 服务名称</p><p>终止某个指定名称的服务所对应的全部进程</p>]]></content>
-    
-    
-    <summary type="html">&lt;h1&gt;笔记-第2章-新手必须掌握的Linux命令-常用系统工作命令&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;长格式与短格式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;在Linux系统中的命令参数有长短格式之分，长格式和长格式之间不能合并，长格式和短格式之间也不能合并，但短格式和短格式之间是可以合并的，合并后仅保留一个减号（-）即可。另外ps命令可允许参数不加减号（-），因此可直接写成ps aux的样子&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;强大好用的shell&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxprobe.com/wp-content/uploads/2020/05/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%A1%AC%E4%BB%B6-1.jpg&quot;&gt;&lt;img src=&quot;https://www.linuxprobe.com/wp-content/uploads/2020/05/%E7%94%A8%E6%88%B7%E4%B8%8E%E7%A1%AC%E4%BB%B6-1.jpg&quot; alt=&quot;第2章 新手必须掌握的Linux命令第2章 新手必须掌握的Linux命令&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Base解释器（Bourne-Again SHell)&lt;/p&gt;
-&lt;p&gt;用户通过服务程序来与电脑对话&lt;/p&gt;
-&lt;hr&gt;</summary>
-    
-    
-    
-    <category term="studynote" scheme="http://example.com/categories/studynote/"/>
-    
-    
-    <category term="linux" scheme="http://example.com/tags/linux/"/>
-    
-    <category term="linux就该这么学" scheme="http://example.com/tags/linux%E5%B0%B1%E8%AF%A5%E8%BF%99%E4%B9%88%E5%AD%A6/"/>
     
   </entry>
   

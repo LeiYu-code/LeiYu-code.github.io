@@ -52,9 +52,9 @@
     <link href="http://example.com/2023/11/13/VMware%20Workstation%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     <id>http://example.com/2023/11/13/VMware%20Workstation%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
     <published>2023-11-13T07:59:06.000Z</published>
-    <updated>2023-11-13T08:13:33.589Z</updated>
+    <updated>2024-04-24T03:04:52.068Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>在重新安装VMware Workstation时会报错，错误的内容乱七八糟，了解了一下后，报错的原因如下：</strong></p><p><strong>1、软件安装临时目录里的反安装程序被删除，导致程序一直出现Vc++ runtime一直安装不了</strong></p><p><strong>2、卸载的时候软件目录里的文件未被清理干净</strong></p><p><strong>3、注册表文件未被清理干净</strong></p><p><em><strong>在安装过程中试了很多方法都不能成功地安装VM，最后使用了一款VM反安装工具后VM就能正常地安装了</strong></em></p><hr><p><strong>总结：软件安装不了最好都使用软件的专用清理工具清理下，就可以正常安装了</strong></p><span id="more"></span><p>VM清理工具在以下链接里，快去下来试试吧！</p><p>共享打印机 <a href="https://www.aliyundrive.com/s/EFxovCT1gyE">https://www.aliyundrive.com/s/EFxovCT1gyE</a> 点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><strong>在重新安装VMware Workstation时会报错，错误的内容乱七八糟，了解了一下后，报错的原因如下：</strong></p><p><strong>1、软件安装临时目录里的反安装程序被删除，导致程序一直出现Vc++ runtime一直安装不了</strong></p><p><strong>2、卸载的时候软件目录里的文件未被清理干净</strong></p><p><strong>3、注册表文件未被清理干净</strong></p><p>解决方法：</p><p>1、卸载所有的C++运行库</p><p>2、重启后再重新安装运行库</p><p>3、重启后再重新安装运行库</p><p><em><strong>在安装过程中试了很多方法都不能成功地安装VM，最后使用了一款VM反安装工具后VM就能正常地安装了</strong></em></p><hr><p><strong>总结：软件安装不了最好都使用软件的专用清理工具清理下，就可以正常安装了</strong></p><span id="more"></span><p>VM清理工具在以下链接里，快去下来试试吧！</p><p>共享打印机 <a href="https://www.aliyundrive.com/s/EFxovCT1gyE">https://www.aliyundrive.com/s/EFxovCT1gyE</a> 点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
@@ -64,6 +64,10 @@
 &lt;p&gt;&lt;strong&gt;1、软件安装临时目录里的反安装程序被删除，导致程序一直出现Vc++ runtime一直安装不了&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2、卸载的时候软件目录里的文件未被清理干净&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3、注册表文件未被清理干净&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;1、卸载所有的C++运行库&lt;/p&gt;
+&lt;p&gt;2、重启后再重新安装运行库&lt;/p&gt;
+&lt;p&gt;3、重启后再重新安装运行库&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;在安装过程中试了很多方法都不能成功地安装VM，最后使用了一款VM反安装工具后VM就能正常地安装了&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;总结：软件安装不了最好都使用软件的专用清理工具清理下，就可以正常安装了&lt;/strong&gt;&lt;/p&gt;</summary>

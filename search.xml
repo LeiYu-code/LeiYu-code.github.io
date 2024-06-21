@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>斑马Zebra条码打印机软件和驱动须知</title>
+    <url>/2024/06/20/%E6%96%91%E9%A9%ACZebra%E6%9D%A1%E7%A0%81%E6%89%93%E5%8D%B0%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E9%A1%BB%E7%9F%A5/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><em><strong>条码打印机须知</strong></em></p>
+<p>1、888T的打印方式是热敏&#x2F;热转印；</p>
+<p>​      888D的打印方式是热敏</p>
+<p>2、热敏打印和热转印是条码机的两种打印方式。</p>
+<p>虽然每种方法都使用热敏打印头对打印表面加热。 </p>
+<p>热转印是通过加热色带，在多种材料上打印出耐用、持久的图案。</p>
+<p>热敏打印不使用色带，而是直接在标签材料上打印图案。</p>
+<p>3、条码打印机使用的条码编辑软件要有相应的打印机驱动才能进入条码编辑软件</p>
+<span id="more"></span>
+
+
+
+<p><em><strong>热敏和热转印的区别：</strong></em></p>
+<ol>
+<li>技术原理</li>
+</ol>
+<p><strong>热敏打印：</strong>主要通过对打印头加热，并接触经过化学处理的热敏介质标签后打印出所需图案。热敏标签打印机在使用时不需要任何油墨、墨粉或碳带，使用成本相对较低。</p>
+<p><strong>热转印打印：</strong>主要通过打印头对碳带加热，油墨转印在标签材料上形成图案。热转印标签打印机由于需要碳带，标签纸技术要求比热敏高，因此整体成本存在较大差距。</p>
+<p><strong>02. 适配耗材</strong></p>
+<p><strong>热敏打印：</strong>只能使用热敏纸</p>
+<p><strong>热转印打印：</strong>可接受更多品种的介质，包括PP合成纸、PVC、PET等材质</p>
+<p><strong>03. 保存时间</strong></p>
+<p><strong>热敏打印标签：</strong>对热、光、化学溶剂和磨损敏感，在日常环境下长时间存放后，图案会随时间推移而褪色。市面上普通的热敏标签打印内容保存时间一般为几个月，精臣销售的热敏标签纸采用多层覆膜工艺，一般可保存1-2年不等（具体时长受实际使用环境因素影响决定）。</p>
+<p><strong>热转印打印标签：</strong>能够提供其他打印技术无法匹敌的图案质量和耐久性，相较于热敏打印，保存时间更长久，一般为5年左右，具体时间受标签纸和碳带质量影响，精臣热转印标签采用高品质树脂基碳带，一般可保存8-10年时间。</p>
+<p><strong>04. 使用场景</strong></p>
+<p><strong>热敏打印：</strong>适用于家用、餐饮、商超零售、服装、物流等标签标识更新频率较快并且对条形码要求不高的行业。</p>
+<p><strong>热转印打印：</strong>适用于制造业、汽车业、电力通信、医疗业、纺织业、化学工业、制药工业、零售分发业、运输业和物流、政府机构等多类行业。</p>
+<p><em><strong>Zebra 888t条码打印机使用软件</strong></em></p>
+<p>ZebraDesigner  V2</p>
+<p><a href="https://imgse.com/i/pkDYyx1"><img src="https://s21.ax1x.com/2024/06/21/pkDYyx1.png" alt="pkDYyx1.png"></a></p>
+<p><a href="https://imgse.com/i/pkDYcKx"><img src="https://s21.ax1x.com/2024/06/21/pkDYcKx.png" alt="pkDYcKx.png"></a></p>
+<p><a href="https://imgse.com/i/pkDYs2R"><img src="https://s21.ax1x.com/2024/06/21/pkDYs2R.png" alt="pkDYs2R.png"></a></p>
+<hr>
+<p><strong>总结：打印条码需要选择带碳带的热转印条码打印机，比如Zebra 888t条码打印机</strong></p>
+<p>​           <strong>条码打印机若是安不上驱动，检查打印数据线和打印口是否损坏，一般来讲，线插好后驱动安装完成后，条码打印机就可以打印测试页了</strong></p>
+<p>​           <strong>条码打印机要是打印的不清晰，请先更换碳带，再选择相应的纸张，要么就与条码编辑软件里的字体设置有关系，需要更改字体</strong></p>
+<p>​          <strong>斑马打印机选择的条码编辑软件为ZebraDesigner  V2，经测试可以正常使用。</strong></p>
+]]></content>
+      <categories>
+        <category>workNote</category>
+      </categories>
+      <tags>
+        <tag>software</tag>
+        <tag>print</tag>
+        <tag>zebra</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>腾讯文档使用教程</title>
     <url>/2024/04/29/%E8%85%BE%E8%AE%AF%E6%96%87%E6%A1%A3%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

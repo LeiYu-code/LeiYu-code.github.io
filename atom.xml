@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-29T02:35:35.732Z</updated>
+  <updated>2024-06-21T03:01:15.605Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>斑马Zebra条码打印机软件和驱动须知</title>
+    <link href="http://example.com/2024/06/20/%E6%96%91%E9%A9%ACZebra%E6%9D%A1%E7%A0%81%E6%89%93%E5%8D%B0%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E9%A1%BB%E7%9F%A5/"/>
+    <id>http://example.com/2024/06/20/%E6%96%91%E9%A9%ACZebra%E6%9D%A1%E7%A0%81%E6%89%93%E5%8D%B0%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E9%A1%BB%E7%9F%A5/</id>
+    <published>2024-06-20T08:28:06.000Z</published>
+    <updated>2024-06-21T03:01:15.605Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><em><strong>条码打印机须知</strong></em></p><p>1、888T的打印方式是热敏&#x2F;热转印；</p><p>​      888D的打印方式是热敏</p><p>2、热敏打印和热转印是条码机的两种打印方式。</p><p>虽然每种方法都使用热敏打印头对打印表面加热。 </p><p>热转印是通过加热色带，在多种材料上打印出耐用、持久的图案。</p><p>热敏打印不使用色带，而是直接在标签材料上打印图案。</p><p>3、条码打印机使用的条码编辑软件要有相应的打印机驱动才能进入条码编辑软件</p><span id="more"></span><p><em><strong>热敏和热转印的区别：</strong></em></p><ol><li>技术原理</li></ol><p><strong>热敏打印：</strong>主要通过对打印头加热，并接触经过化学处理的热敏介质标签后打印出所需图案。热敏标签打印机在使用时不需要任何油墨、墨粉或碳带，使用成本相对较低。</p><p><strong>热转印打印：</strong>主要通过打印头对碳带加热，油墨转印在标签材料上形成图案。热转印标签打印机由于需要碳带，标签纸技术要求比热敏高，因此整体成本存在较大差距。</p><p><strong>02. 适配耗材</strong></p><p><strong>热敏打印：</strong>只能使用热敏纸</p><p><strong>热转印打印：</strong>可接受更多品种的介质，包括PP合成纸、PVC、PET等材质</p><p><strong>03. 保存时间</strong></p><p><strong>热敏打印标签：</strong>对热、光、化学溶剂和磨损敏感，在日常环境下长时间存放后，图案会随时间推移而褪色。市面上普通的热敏标签打印内容保存时间一般为几个月，精臣销售的热敏标签纸采用多层覆膜工艺，一般可保存1-2年不等（具体时长受实际使用环境因素影响决定）。</p><p><strong>热转印打印标签：</strong>能够提供其他打印技术无法匹敌的图案质量和耐久性，相较于热敏打印，保存时间更长久，一般为5年左右，具体时间受标签纸和碳带质量影响，精臣热转印标签采用高品质树脂基碳带，一般可保存8-10年时间。</p><p><strong>04. 使用场景</strong></p><p><strong>热敏打印：</strong>适用于家用、餐饮、商超零售、服装、物流等标签标识更新频率较快并且对条形码要求不高的行业。</p><p><strong>热转印打印：</strong>适用于制造业、汽车业、电力通信、医疗业、纺织业、化学工业、制药工业、零售分发业、运输业和物流、政府机构等多类行业。</p><p><em><strong>Zebra 888t条码打印机使用软件</strong></em></p><p>ZebraDesigner  V2</p><p><a href="https://imgse.com/i/pkDYyx1"><img src="https://s21.ax1x.com/2024/06/21/pkDYyx1.png" alt="pkDYyx1.png"></a></p><p><a href="https://imgse.com/i/pkDYcKx"><img src="https://s21.ax1x.com/2024/06/21/pkDYcKx.png" alt="pkDYcKx.png"></a></p><p><a href="https://imgse.com/i/pkDYs2R"><img src="https://s21.ax1x.com/2024/06/21/pkDYs2R.png" alt="pkDYs2R.png"></a></p><hr><p><strong>总结：打印条码需要选择带碳带的热转印条码打印机，比如Zebra 888t条码打印机</strong></p><p>​           <strong>条码打印机若是安不上驱动，检查打印数据线和打印口是否损坏，一般来讲，线插好后驱动安装完成后，条码打印机就可以打印测试页了</strong></p><p>​           <strong>条码打印机要是打印的不清晰，请先更换碳带，再选择相应的纸张，要么就与条码编辑软件里的字体设置有关系，需要更改字体</strong></p><p>​          <strong>斑马打印机选择的条码编辑软件为ZebraDesigner  V2，经测试可以正常使用。</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;条码打印机须知&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1、888T的打印方式是热敏&amp;#x2F;热转印；&lt;/p&gt;
+&lt;p&gt;​      888D的打印方式是热敏&lt;/p&gt;
+&lt;p&gt;2、热敏打印和热转印是条码机的两种打印方式。&lt;/p&gt;
+&lt;p&gt;虽然每种方法都使用热敏打印头对打印表面加热。 &lt;/p&gt;
+&lt;p&gt;热转印是通过加热色带，在多种材料上打印出耐用、持久的图案。&lt;/p&gt;
+&lt;p&gt;热敏打印不使用色带，而是直接在标签材料上打印图案。&lt;/p&gt;
+&lt;p&gt;3、条码打印机使用的条码编辑软件要有相应的打印机驱动才能进入条码编辑软件&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="workNote" scheme="http://example.com/categories/workNote/"/>
+    
+    
+    <category term="software" scheme="http://example.com/tags/software/"/>
+    
+    <category term="print" scheme="http://example.com/tags/print/"/>
+    
+    <category term="zebra" scheme="http://example.com/tags/zebra/"/>
+    
+  </entry>
   
   <entry>
     <title>腾讯文档使用教程</title>
@@ -608,32 +643,6 @@
     <category term="Print" scheme="http://example.com/tags/Print/"/>
     
     <category term="drive" scheme="http://example.com/tags/drive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站工具推荐-博客图床路过</title>
-    <link href="http://example.com/2023/03/02/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90-%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%B7%AF%E8%BF%87/"/>
-    <id>http://example.com/2023/03/02/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90-%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%B7%AF%E8%BF%87/</id>
-    <published>2023-03-02T11:50:06.000Z</published>
-    <updated>2023-03-15T07:53:36.958Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><p><em><strong>写博客都需要图片，一般图片都保存在哪儿呢？不可能都保存在目录或博客里，这样就需要用到图床工具，好用的图床工具有很多，这里我推荐使用路过图床，更新后的网站域名是<a href="https://imgse.com/">路过图床 - 免费图片上传, 专业图片外链, 免费公共图床 (imgse.com)</a>，非常方便好用</strong></em></p><span id="more"></span><h2 id="图床用途">图床用途</h2><p>保存图片</p><p>生成图片外链</p><h2 id="图床特点">图床特点</h2><p>路过图床以「无限空间」和「无限流量」作为最大的亮点，同时具有全球 CDN 加速以确保高速、稳定。在上传测试中，GIF 上传耗时约 5 秒。路过图床较为繁琐的一点是，它会先显示预览和编辑，需要进行二次确认。<br>在路过图床上传照片时，你可以对其进行裁切，或是设定自动删除的时限。除了生成原图链接外，路过图床还会为你生成缩略图的链接，以满足不同需求。这样一来，你既可以分享原图以求图片精度，也可以分享缩略度以求访问速度。路过图床仅对单次上传的大小做出了限制。游客只能上传小于 5M 的图片，注册后可上传 10M 内的图片，适合作为主力图床使用。使用种类而言，路过图床 算得上一款比较优秀的图床工具。</p><h2 id="图床使用方法">图床使用方法</h2><p>打开浏览器，<a href="http://xn--imgse-ep5h875a3bzhw60pl34f.com">在地址栏输入imgse.com</a></p><p><a href="https://imgse.com/i/ppFfOde"><img src="https://s1.ax1x.com/2023/03/02/ppFfOde.md.png" alt="ppFfOde.md.png"></a></p><p>打开浏览器后，注册帐号，注册完后，右上角会显示帐户名。</p><p><a href="https://imgse.com/i/ppFhGFJ"><img src="https://s1.ax1x.com/2023/03/02/ppFhGFJ.png" alt="ppFhGFJ.png"></a></p><p>点击上传按钮，上传图片</p><p><a href="https://imgse.com/i/ppFhbpn"><img src="https://s1.ax1x.com/2023/03/02/ppFhbpn.png" alt="ppFhbpn.png">.</a></p><p><a href="https://imgse.com/i/ppF49h9"><img src="https://s1.ax1x.com/2023/03/02/ppF49h9.png" alt="ppF49h9.png"></a></p><p>上传图片完成后，会显示很多链接选项，我用的是markdown，移动到markdown代码的后面，会显示copy按钮，点击它。然后移动到markdown文档中，粘贴链接，在markdown文件里就可以显示出图床里的图片了。</p><p>这样我们就能在网站、博客里省去大量的空间存放图片，也不用在自己的电脑里辛辛苦苦地维护图片了，用的时候直接上链接喽！大家快去试试吧！</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;写博客都需要图片，一般图片都保存在哪儿呢？不可能都保存在目录或博客里，这样就需要用到图床工具，好用的图床工具有很多，这里我推荐使用路过图床，更新后的网站域名是&lt;a href=&quot;https://imgse.com/&quot;&gt;路过图床 - 免费图片上传, 专业图片外链, 免费公共图床 (imgse.com)&lt;/a&gt;，非常方便好用&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="tools" scheme="http://example.com/categories/tools/"/>
-    
-    
-    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="图床" scheme="http://example.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   

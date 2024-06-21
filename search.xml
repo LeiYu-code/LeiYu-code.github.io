@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>佳软推荐——最好用的PDF虚拟打印机CutePDF Writer</title>
+    <url>/2024/06/21/%E4%BD%B3%E8%BD%AF%E6%8E%A8%E8%8D%90%E2%80%94%E2%80%94%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84PDF%E8%99%9A%E6%8B%9F%E6%89%93%E5%8D%B0%E6%9C%BACutePDF%20Writer/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p>CutePDF Writer是 Acro Software公司出品的免费PDF虚拟打印机，支持 win98-win7，支持32位&#x2F;64位。<br><strong>软件优点：</strong>经典、稳定、持续但绝不频繁地升级；完美支持中文、字体美观。CutePDF Writer 是我使用时间跨度最长、纯使用时间最长的PDF虚拟打印机。<br>它也需要PS2PDF的转换器，当然，推荐的转换器依然是Ghostscript。并且，官方提供了一个专门制作的 GPLGS8.15 Converter，与 CutePDF Writer配合使用。相比自己下载的版本，它体积更小，并且兼容性更有保证。<br>完全免费，可以用于商业用途。（FREE for commercial and non-commercial use!）无水印。无弹出广告。</p>
+<p><a href="https://imgse.com/i/pkDcl36"><img src="https://s21.ax1x.com/2024/06/21/pkDcl36.png" alt="pkDcl36.png"></a></p>
+<span id="more"></span>
+
+
+
+<p><em><strong>CutePDF Writer的安装：</strong></em></p>
+<p>下载 <a href="http://download.cutepdf.com/download/CuteWriter.zip">zip安装包</a>（8MB），内含2个文件。<br>　　　- 先运行其中的 converter.exe （5MB），安装转换器。安装过程基本不需要任何干预。<br>　　　- 再运行其中的 CuteWriter.exe （3MB），安装PDF Writer。注意：安装过程<strong>有Ask Toobar推广广告，可以选择不安装</strong>（视频第50秒开始）。<br>　　　- 然后，就可以在任意程序的“打印”菜单中，选择CutePDF Writer，把文档打印为pdf了。</p>
+<p><a href="https://imgse.com/i/pkDc3jO"><img src="https://s21.ax1x.com/2024/06/21/pkDc3jO.png" alt="pkDc3jO.png"></a></p>
+<p><a href="https://imgse.com/i/pkDc1gK"><img src="https://s21.ax1x.com/2024/06/21/pkDc1gK.png" alt="pkDc1gK.png"></a></p>
+<hr>
+<p><strong>总结：最好用的pdf打印机CutePDF Writer，别的pdf打印机打出来乱码、格式不对的时候下来试试吧！</strong></p>
+<p>​           <em><strong>WPS也自己带有pdf打印机，安装后就可以直接使用</strong></em></p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>print</tag>
+        <tag>pdf</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>com+错误代码8007042c-依赖服务或组无法启动</title>
     <url>/2024/06/21/com+%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%818007042c-%E4%BE%9D%E8%B5%96%E6%9C%8D%E5%8A%A1%E6%88%96%E7%BB%84%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>com+错误代码8007042c-依赖服务或组无法启动</title>
+    <url>/2024/06/21/com+%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%818007042c-%E4%BE%9D%E8%B5%96%E6%9C%8D%E5%8A%A1%E6%88%96%E7%BB%84%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><em><strong>com+错误代码8007042c-依赖服务或组无法启动</strong></em></p>
+<p><a href="https://imgse.com/i/pkDwpDI"><img src="https://s21.ax1x.com/2024/06/21/pkDwpDI.png" alt="pkDwpDI.png"></a></p>
+<span id="more"></span>
+
+
+
+<p><em><strong>解决方法：</strong></em></p>
+<ol>
+<li><p>查看系统日志，发现与 COM+ System Application 服务相依的服务因下列错误system Event Notification Senice而无法启动:无法启动服务，原因可能是已被禁用或与其相关联的设备没有启动。</p>
+</li>
+<li><p>进入控制面板里的卸载或更改程序和功能，点击打开或关闭windows功能,勾选system Event Notification Senice，安装windows相关功能。</p>
+<p><a href="https://imgse.com/i/pkDwPVP"><img src="https://s21.ax1x.com/2024/06/21/pkDwPVP.png" alt="pkDwPVP.png"></a></p>
+<p><a href="https://imgse.com/i/pkDwSKA"><img src="https://s21.ax1x.com/2024/06/21/pkDwSKA.png" alt="pkDwSKA.png"></a></p>
+<p><a href="https://imgse.com/i/pkDw9bt"><img src="https://s21.ax1x.com/2024/06/21/pkDw9bt.png" alt="pkDw9bt.png"></a></p>
+</li>
+<li><p>打开com+和dtc相关的服务。</p>
+<p><a href="https://imgse.com/i/pkDBTDs"><img src="https://s21.ax1x.com/2024/06/21/pkDBTDs.png" alt="pkDBTDs.png"></a></p>
+<p><a href="https://imgse.com/i/pkDBouj"><img src="https://s21.ax1x.com/2024/06/21/pkDBouj.png" alt="pkDBouj.png"></a></p>
+</li>
+</ol>
+<hr>
+<p><strong>总结：widows系统报错，先查看系统日志，应用程序日志，查看错误原因，无法启动服务就安装相应的windows功能，启动相应的服务，并将有关联的服务改成自动启动。</strong></p>
+]]></content>
+      <categories>
+        <category>workNote</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>wrong</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>斑马Zebra条码打印机软件和驱动须知</title>
     <url>/2024/06/20/%E6%96%91%E9%A9%ACZebra%E6%9D%A1%E7%A0%81%E6%89%93%E5%8D%B0%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E9%A1%BB%E7%9F%A5/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>windows命令-route</title>
+    <url>/2024/06/23/windows%E5%91%BD%E4%BB%A4%E2%80%94route/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h4 id="route命令"><a href="#route命令" class="headerlink" title="route命令"></a><em><strong>route命令</strong></em></h4><p>  route命令用于显示和操作IP路由表。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。windows环境下route命令常用于多网卡终端，默认路由指向连接访问互联网的网卡，静态路由指向内网网卡。</p>
+<span id="more"></span>
+
+<h5 id="1、获取命令帮助"><a href="#1、获取命令帮助" class="headerlink" title="1、获取命令帮助"></a>1、获取命令帮助</h5><p>route –help或者route命令获取帮助 </p>
+<p><a href="https://imgse.com/i/pkr05VI"><img src="https://s21.ax1x.com/2024/06/23/pkr05VI.png" alt="pkr05VI.png"></a></p>
+<h5 id="2、查看路由表"><a href="#2、查看路由表" class="headerlink" title="2、查看路由表"></a>2、查看路由表</h5><p>route print命令查看主机路由表，可以使用route print -4查看ipv4 路由表。 </p>
+<p><a href="https://imgse.com/i/pkr0hqA"><img src="https://s21.ax1x.com/2024/06/23/pkr0hqA.png" alt="pkr0hqA.png"></a></p>
+<h5 id="3、显示某网段路由"><a href="#3、显示某网段路由" class="headerlink" title="3、显示某网段路由"></a>3、显示某网段路由</h5><p>route print 192.168.3*显示192.168.3开头的路由段 </p>
+<p><a href="https://imgse.com/i/pkr0frd"><img src="https://s21.ax1x.com/2024/06/23/pkr0frd.png" alt="pkr0frd.png"></a></p>
+<h5 id="4、添加一条静态路由"><a href="#4、添加一条静态路由" class="headerlink" title="4、添加一条静态路由"></a>4、添加一条静态路由</h5><p>route add添加一条路由，此操作需要使用administrator管理员权限。 </p>
+<p><a href="https://imgse.com/i/pkr02xe"><img src="https://s21.ax1x.com/2024/06/23/pkr02xe.png" alt="pkr02xe.png"></a></p>
+<h5 id="5、修改一条路由"><a href="#5、修改一条路由" class="headerlink" title="5、修改一条路由"></a>5、修改一条路由</h5><p>route change修改路由网关或者跃点数。 </p>
+<p><a href="https://imgse.com/i/pkr0WKH"><img src="https://s21.ax1x.com/2024/06/23/pkr0WKH.png" alt="pkr0WKH.png"></a></p>
+<h5 id="6、删除一条路由"><a href="#6、删除一条路由" class="headerlink" title="6、删除一条路由"></a>6、删除一条路由</h5><p>route delete删除一条路由 </p>
+<p><a href="https://imgse.com/i/pkr0Iat"><img src="https://s21.ax1x.com/2024/06/23/pkr0Iat.png" alt="pkr0Iat.png"></a></p>
+<h5 id="7、永久添加一条路由"><a href="#7、永久添加一条路由" class="headerlink" title="7、永久添加一条路由"></a>7、永久添加一条路由</h5><p>route add ipnet mask x.x.x.0 gateway -p添加永久路由 </p>
+<p><a href="https://imgse.com/i/pkr0oIP"><img src="https://s21.ax1x.com/2024/06/23/pkr0oIP.png" alt="pkr0oIP.png"></a></p>
+<p><em><strong>使用语法及参数说明</strong></em></p>
+<h5 id="1、使用语法"><a href="#1、使用语法" class="headerlink" title="1、使用语法"></a>1、使用语法</h5><blockquote>
+<p> 用法：ROUTE [-f] [-p] [-4|-6] command [destination] [MASK netmask] [gateway] [METRIC metric] [IF interface] </p>
+</blockquote>
+<h5 id="2、参数说明"><a href="#2、参数说明" class="headerlink" title="2、参数说明"></a>2、参数说明</h5><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-f</td>
+<td align="left">清除所有网关项的路由表。如果与某个命令结合使用，在运行该命令前，应清除路由表。</td>
+</tr>
+<tr>
+<td align="left">-p</td>
+<td align="left">与 ADD 命令结合使用时，将路由设置为在系统引导期间保持不变。默认情况下，重新启动系统时，不保存路由。忽略所有其他命令，这始终会影响相应的永久路由。Windows 95不支持此选项。</td>
+</tr>
+<tr>
+<td align="left">-4</td>
+<td align="left">强制使用 IPv4。</td>
+</tr>
+<tr>
+<td align="left">-6</td>
+<td align="left">强制使用 IPv6。</td>
+</tr>
+<tr>
+<td align="left">command</td>
+<td align="left">其中之一: PRINT 打印路由  ADD 添加路由  DELETE 删除路由  CHANGE 修改现有路由</td>
+</tr>
+<tr>
+<td align="left">destination</td>
+<td align="left">指定主机。</td>
+</tr>
+<tr>
+<td align="left">MASK</td>
+<td align="left">指定下一个参数为“网络掩码”值。</td>
+</tr>
+<tr>
+<td align="left">netmask</td>
+<td align="left">指定此路由项的子网掩码值。如果未指定，其默认设置为 255.255.255.255。</td>
+</tr>
+<tr>
+<td align="left">gateway</td>
+<td align="left">指定网关。</td>
+</tr>
+<tr>
+<td align="left">interface</td>
+<td align="left">指定路由的接口号码。</td>
+</tr>
+<tr>
+<td align="left">METRIC</td>
+<td align="left">指定跃点数，例如目标的成本。</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em><strong>实例</strong></em></p>
+<p>需求描述：<br>    1. Win10, 网卡1接外网，网卡2接内网，只能Ping通外网无法Ping通内网。<br>        如果禁用网卡1(外网)，即可Ping通网卡2（内网）</p>
+<ol start="2">
+<li>备注：<br>① 这里的网卡对有线网卡或无线网卡都适用；<br>②Win10版本 64位1909;<br>③WIN7可以在“网络和共享中心”——“更改适配器设置”——“网络设置中界面中，按ALT键”调出隐藏菜单栏——在选项“高级-高级设置”中，可以手动调整网卡优先级。<br>But，Win10不可以，取消了，只能通过修改接口跃点数实现（不建议）。</li>
+<li>解决方法：静态路由——只针对有限数量的IP<br>Eg. 网卡1网段192.168.20，网卡2网段10.19.20，只能Ping通网段1,需要和网段2的IP（11.20.203.5）建立通讯，那就在CMD命令中增加一个路由：<br>route -p add 11.20.203.5(目标IP) mask 255.255.255.0(子网掩码) 192.168.20.254（网关）<br>注意：以管理员运行CMD，运行完提示完成后，必须重启。</li>
+</ol>
+<p><a href="https://javaforall.cn/161116.html">https://javaforall.cn/161116.html</a></p>
+<p>原文链接：<a href="https://javaforall.cn/">https://javaforall.cn</a></p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>cmd</tag>
+        <tag>route</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务器安全批处理</title>
     <url>/2024/06/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E6%89%B9%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

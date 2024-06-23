@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-23T07:59:50.393Z</updated>
+  <updated>2024-06-23T09:01:57.385Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>社区型免费蜜罐-hfish</title>
+    <link href="http://example.com/2024/06/23/%E7%A4%BE%E5%8C%BA%E5%9E%8B%E5%85%8D%E8%B4%B9%E8%9C%9C%E7%BD%90-hfish/"/>
+    <id>http://example.com/2024/06/23/%E7%A4%BE%E5%8C%BA%E5%9E%8B%E5%85%8D%E8%B4%B9%E8%9C%9C%E7%BD%90-hfish/</id>
+    <published>2024-06-23T09:28:06.000Z</published>
+    <updated>2024-06-23T09:01:57.385Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h4 id="HFish"><a href="https://hfish.net/#/README?id=hfish%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5">HFish</a></h4><p>HFish是一款社区型免费蜜罐，侧重企业安全场景，从内网失陷检测、外网威胁感知、威胁情报生产三个场景出发，为用户提供可独立操作且实用的功能，通过安全、敏捷、可靠的中低交互蜜罐增加用户在失陷感知和威胁情报领域的能力。</p><p>HFish支持基本网络 服务、OA系统、CRM系统、NAS存储系统、Web服务器、运维平台、安全产品、无线AP、交换机/路由器、邮件系统、IoT设备等90多种蜜罐服务、支持用户制作自定义Web蜜罐、支持流量牵引到免费云蜜网、支持可开关的全端口扫描感知能力、支持可自定义的蜜饵配置、一键部署、跨平台多架构，支持Linux x32/x64/ARM、Windows x32/x64平台和多种国产操作系统、支持龙芯、海光、飞腾、鲲鹏、腾云、兆芯等国产CPU、极低的性能要求、邮件/syslog/webhook/企业微信/钉钉/飞书告警等多项特性，帮助用户降低运维成本，提升运营效率。</p><p>用户需要先部署管理端，再通过管理端内置蜜罐节点或部署新节点：</p><p><a href="https://hfish.net/#/2-2-linux">Linux管理端下载</a></p><p><a href="https://hfish.net/#/2-3-windows">Windows管理端下载</a></p><p><a href="https://hfish.net/#/2-1-docker">Docker镜像下载</a></p><span id="more"></span><p>如果有企业下载需求，您也可以前往<a href="https://hfish.net/#/docs">HFish文档区域</a>下载部署文档方案。</p><h4 id="为什么选择HFish"><a href="https://hfish.net/#/README?id=%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9hfish">为什么选择HFish</a></h4><blockquote><h5 id="免费、简单、安全的蜜罐产品"><a href="https://hfish.net/#/README?id=%E5%85%8D%E8%B4%B9%E3%80%81%E7%AE%80%E5%8D%95%E3%80%81%E5%AE%89%E5%85%A8%E7%9A%84%E8%9C%9C%E7%BD%90%E4%BA%A7%E5%93%81">免费、简单、安全的蜜罐产品</a></h5></blockquote><p>蜜罐通常被定义为具有轻量级检测能力、低误报率的检测产品，同时它也是企业生产本地威胁情报的优质来源之一。HFish可以帮助中小型企业用户在日常安全运营中进行避免告警洪水、低成本的增加威胁感知和情报生产能力。目前，社区的力量正在不断帮助HFish完善自身，共同探索欺骗防御的最佳实践。</p><blockquote><h5 id="安全、敏捷的威胁感知节点"><a href="https://hfish.net/#/README?id=%E5%AE%89%E5%85%A8%E3%80%81%E6%95%8F%E6%8D%B7%E7%9A%84%E5%A8%81%E8%83%81%E6%84%9F%E7%9F%A5%E8%8A%82%E7%82%B9">安全、敏捷的威胁感知节点</a></h5></blockquote><p>HFish被广泛应用于感知办公内网、生产环境、云内网及其他环境失陷主机横向移动、员工账号外泄、扫描和探测行为、私有情报生产甚至内部演练和安全意识培训，HFish的多种告警输出形式与态感、NDR、XDR或日志平台结合，极大拓展检测视野。</p><h4 id="HFish架构"><a href="https://hfish.net/#/README?id=hfish%E6%9E%B6%E6%9E%84">HFish架构</a></h4><p>HFish采用B/S架构，HFish由管理端（server）和节点端（client）组成，管理端用来生成和管理节点端，并接收、分析和展示节点端回传的数据，节点端接受管理端的控制并负责构建蜜罐服务。</p><p>在HFish中，<strong>管理端</strong>只用于<strong>数据的分析和展示</strong>，<strong>节点端</strong>进行<strong>虚拟蜜罐</strong>，最后由<strong>蜜罐来承受攻击</strong>。</p><p>HFish各模块关系图</p><p><img src="https://hfish.net/images/20210616174908.png" alt="image-20210611130621311"></p><h4 id="我们的故事"><a href="https://hfish.net/#/README?id=%E6%88%91%E4%BB%AC%E7%9A%84%E6%95%85%E4%BA%8B">我们的故事</a></h4><p>2019年的8月7日，我们发布了自己的第一款开源蜜罐HFish，在之后的16个月里，HFish在Github上获得2.6k个star，在Gitee上成为安全类目TOP5的GVP项目。</p><p>2021年2月9日，融合社区反馈和过去2年的思考，我们开启了全新概念的威胁捕捉和诱骗系统HFish v2版本，并宣布采用闭源共享方式向所有用户免费授权使用。</p><h4 id="联系我们"><a href="https://hfish.net/#/README?id=%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC">联系我们</a></h4><p>HFish是北京微步在线科技有限公司旗下社区型免费蜜罐产品</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">联系地址：北京市海淀区苏州街49号盈智大厦4层</span><br><span class="line">联系电话：400-030-1051复制失败成功</span><br></pre></td></tr></table></figure><p><img src="http://img.threatbook.cn/hfish/image-20220729162931543.png" alt="image-20220729162931543"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leiyu-code.github.io&quot;&gt;leiyu-code.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;HFish&quot;&gt;&lt;a href=&quot;https://hfish.net/#/README?id=hfish%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5&quot;&gt;HFish&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;HFish是一款社区型免费蜜罐，侧重企业安全场景，从内网失陷检测、外网威胁感知、威胁情报生产三个场景出发，为用户提供可独立操作且实用的功能，通过安全、敏捷、可靠的中低交互蜜罐增加用户在失陷感知和威胁情报领域的能力。&lt;/p&gt;
+&lt;p&gt;HFish支持基本网络 服务、OA系统、CRM系统、NAS存储系统、Web服务器、运维平台、安全产品、无线AP、交换机/路由器、邮件系统、IoT设备等90多种蜜罐服务、支持用户制作自定义Web蜜罐、支持流量牵引到免费云蜜网、支持可开关的全端口扫描感知能力、支持可自定义的蜜饵配置、一键部署、跨平台多架构，支持Linux x32/x64/ARM、Windows x32/x64平台和多种国产操作系统、支持龙芯、海光、飞腾、鲲鹏、腾云、兆芯等国产CPU、极低的性能要求、邮件/syslog/webhook/企业微信/钉钉/飞书告警等多项特性，帮助用户降低运维成本，提升运营效率。&lt;/p&gt;
+&lt;p&gt;用户需要先部署管理端，再通过管理端内置蜜罐节点或部署新节点：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hfish.net/#/2-2-linux&quot;&gt;Linux管理端下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hfish.net/#/2-3-windows&quot;&gt;Windows管理端下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hfish.net/#/2-1-docker&quot;&gt;Docker镜像下载&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="safe" scheme="http://example.com/categories/safe/"/>
+    
+    
+    <category term="hfish" scheme="http://example.com/tags/hfish/"/>
+    
+  </entry>
   
   <entry>
     <title>windows命令-route</title>
@@ -578,37 +608,6 @@
     <category term="tips" scheme="http://example.com/tags/tips/"/>
     
     <category term="CVS" scheme="http://example.com/tags/CVS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>workDaily_boot mgr is conmpressed</title>
-    <link href="http://example.com/2023/05/31/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/"/>
-    <id>http://example.com/2023/05/31/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97_boot%20mgr%20is%20conmpressed/</id>
-    <published>2023-05-31T06:50:06.000Z</published>
-    <updated>2023-05-31T06:50:44.703Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="workDaily-boot-mgr-is-conmpressed"><a href="#workDaily-boot-mgr-is-conmpressed" class="headerlink" title="workDaily_boot mgr is conmpressed"></a>workDaily_boot mgr is conmpressed</h2><p><strong>电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressed    press ctrl+alt+del reboot</strong></p><p>故障解决步骤：</p><p><em><strong>step:1、插入带PE的U盘，进入windows pe维护系统</strong></em></p><p>​         <em><strong>2、在PE中打开我的电脑，右键点击系统盘，一般是C盘</strong></em></p><p>​         <em><strong>3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间</strong></em></p><p>​        *<strong>4、点击确定后选择”仅将更改应用于驱动器 c:\*</strong></p><span id="more"></span><p>具体情况描述：</p><p>电脑开机后不能进入系统，提示按热键重启</p><p><a href="https://imgse.com/i/p9v5o90"><img src="https://s1.ax1x.com/2023/05/31/p9v5o90.jpg" alt="p9v5o90.jpg"></a></p><p>解决方法：</p><p>重启电脑，插入带PE的启动设备，在PE里右键打开C盘，勾选掉压缩驱动器以节约磁盘空间</p><p><a href="https://imgse.com/i/p9v55hq"><img src="https://s1.ax1x.com/2023/05/31/p9v55hq.jpg" alt="p9v55hq.jpg"></a></p><p><strong>NOTE:</strong></p><p><strong>此解决方案仅适用于windows开机后显示“boot mgr is conmpressed”，然后进入不了电脑系统的故障</strong></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;workDaily-boot-mgr-is-conmpressed&quot;&gt;&lt;a href=&quot;#workDaily-boot-mgr-is-conmpressed&quot; class=&quot;headerlink&quot; title=&quot;workDaily_boot mgr is conmpressed&quot;&gt;&lt;/a&gt;workDaily_boot mgr is conmpressed&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;电脑故障描述：电脑开机后屏幕显示：boot mgr is conmpressed    press ctrl+alt+del reboot&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;故障解决步骤：&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;step:1、插入带PE的U盘，进入windows pe维护系统&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;2、在PE中打开我的电脑，右键点击系统盘，一般是C盘&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​         &lt;em&gt;&lt;strong&gt;3、进入系统盘属性后，在常规选项卡下勾掉“压缩驱动器以节约磁盘空间&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​        *&lt;strong&gt;4、点击确定后选择”仅将更改应用于驱动器 c:\*&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="workdaily" scheme="http://example.com/categories/workdaily/"/>
-    
-    
-    <category term="windows" scheme="http://example.com/tags/windows/"/>
-    
-    <category term="Troubleshooting" scheme="http://example.com/tags/Troubleshooting/"/>
     
   </entry>
   

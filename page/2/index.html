@@ -273,6 +273,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/10/SQL%E8%AF%AD%E5%8F%A5%E5%A4%A7%E5%85%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/07/10/SQL%E8%AF%AD%E5%8F%A5%E5%A4%A7%E5%85%A8/" itemprop="url">SQL语句大全</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-10T11:06:06+08:00">
+                2023-07-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/database/" itemprop="url" rel="index">
+                    <span itemprop="name">database</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h1 id="SQL语句大全"><a href="#SQL语句大全" class="headerlink" title="SQL语句大全"></a>SQL语句大全</h1><h3 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h3><p>1、说明：创建数据库 CREATE DATABASE database-name </p>
+<p>2、说明：删除数据库 drop database dbname </p>
+<p>3、说明：备份sql server — 创建 备份数据的 device USE master EXEC sp_addumpdevice ‘disk’, ‘testBack’, ‘c:\mssql7backup\MyNwind_1.dat’ — 开始 备份 BACKUP DATABASE pubs TO testBack </p>
+<p>4、说明：创建新表 create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)</p>
+<p>根据已有的表创建新表： A：create table tab_new like tab_old (使用旧表创建新表) B：create table tab_new as select col1,col2… from tab_old definition only </p>
+<p>5、说明：删除新表 drop table tabname </p>
+<p>6、说明：增加一个列 Alter table tabname add column col type 注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。 </p>
+<p>7、说明：添加主键： Alter table tabname add primary key(col) 说明：删除主键： Alter table tabname drop primary key(col) </p>
+<p>8、说明：创建索引：create [unique] index idxname on tabname(col….) 删除索引：drop index idxname 注：索引是不可更改的，想更改必须删除重新建。 </p>
+<p>9、说明：创建视图：create view viewname as select statement 删除视图：drop view viewname </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2023/07/10/SQL%E8%AF%AD%E5%8F%A5%E5%A4%A7%E5%85%A8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/15/vlookup%E8%BF%9B%E9%98%B6_%E8%B7%A8%E6%96%87%E4%BB%B6%E5%8C%B9%E9%85%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1684,160 +1842,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/15/Norootinstallkalilinux-NetHunter-turmux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南月晨的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/03/15/Norootinstallkalilinux-NetHunter-turmux/" itemprop="url">NorootinstallkalilinuxNetHunterturmux</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-15T15:45:06+08:00">
-                2023-03-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/system/" itemprop="url" rel="index">
-                    <span itemprop="name">system</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p>leiyu-code.github.io</p>
-<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
-<h2 id="No-root-install-kalilinux-NetHunter-turmux"><a href="#No-root-install-kalilinux-NetHunter-turmux" class="headerlink" title="No root install kalilinux-NetHunter-turmux"></a>No root install kalilinux-NetHunter-turmux</h2><p><strong>How install kalilinux-NetHunter-turmux on Andriod system &amp; No root</strong></p>
-<p>video link’s here:</p>
-<p>【你的下一台Kali，何必是电脑（无Root）（小白教程）】<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64">https://www.bilibili.com/video/BV1fT411m7Vd?vd_source=76002958418cebc601a16afe2e2acd64</a></p>
-<p><em><strong>step:1、Get Termux program</strong></em></p>
-<p>​         <em><strong>2、upgrad termux</strong></em></p>
-<p>​         <em><strong>3、Get nethunter Store</strong></em></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2023/03/15/Norootinstallkalilinux-NetHunter-turmux/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1888,7 +1892,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

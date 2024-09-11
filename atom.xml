@@ -46,6 +46,37 @@
   </entry>
   
   <entry>
+    <title>数据库日志文件.ldf文件过大</title>
+    <link href="http://example.com/2024/09/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/"/>
+    <id>http://example.com/2024/09/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/</id>
+    <published>2024-09-04T08:28:06.000Z</published>
+    <updated>2024-09-11T01:21:50.648Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p><em><strong>数据库LDF日志文件存储的是数据库操作数据的信息，其中包含有(新增数据、修改数据、删除数据等）</strong></em></p><p>ldf文件日志过大会占满整个硬盘分区，导致数据库管理软件进不去或数据库报错</p><h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><p><strong>收缩SQL2008数据库</strong></p><p>1，点击电脑左下角开始-Microsoft SQL Server2008 R2-SSMS-Microsoft SQL Server Management Studio,进入SSMS页面后使用Windows身份验证连接上SQL Server。</p><p><a href="https://imgse.com/i/pAmqBh6"><img src="https://s21.ax1x.com/2024/09/11/pAmqBh6.md.png" alt="pAmqBh6.md.png"></a></p><p>2，进入SSMS后在左侧数据库目录中找到需要收缩ldf文件的数据库名称（例如：QFBJZT）然后右键选择“属性”快捷命令。在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择“简单”模式，设置好后单击“确定”按钮使设置生效。</p><span id="more"></span><p><a href="https://imgse.com/i/pAmqs1O"><img src="https://s21.ax1x.com/2024/09/11/pAmqs1O.png" alt="pAmqs1O.png"></a></p><p>3，返回SSMS窗口，右键单击目标数据库名称QFBJZT，右键选择任务-收缩-数据库。</p><p><a href="https://imgse.com/i/pAmqycD"><img src="https://s21.ax1x.com/2024/09/11/pAmqycD.png" alt="pAmqycD.png"></a></p><p>4，在收缩数据库页面中无须调整参数，直接单击“确定”按钮开始收缩数据库的操作。日志文件在一些异常情况下往往是恢复数据库的重要依据，收缩数据库操作主要作用是收缩日志大小。所以需要定期进行上述操作，以免数据库日志过大。</p><p><a href="https://imgse.com/i/pAmq0tx"><img src="https://s21.ax1x.com/2024/09/11/pAmq0tx.png" alt="pAmq0tx.png"></a></p><p>5，最后再次右键数据库QFBJZT选择“属性”，在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择回“完整”模式，设置好后单击“确定”按钮使设置生效即可完成收缩数据库日志文件工作。</p><p><a href="https://imgse.com/i/pAmqr9K"><img src="https://s21.ax1x.com/2024/09/11/pAmqr9K.png" alt="pAmqr9K.png"></a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;数据库LDF日志文件存储的是数据库操作数据的信息，其中包含有(新增数据、修改数据、删除数据等）&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;ldf文件日志过大会占满整个硬盘分区，导致数据库管理软件进不去或数据库报错&lt;/p&gt;
+&lt;h4 id=&quot;解决方法：&quot;&gt;&lt;a href=&quot;#解决方法：&quot; class=&quot;headerlink&quot; title=&quot;解决方法：&quot;&gt;&lt;/a&gt;解决方法：&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;收缩SQL2008数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1，点击电脑左下角开始-Microsoft SQL Server2008 R2-SSMS-Microsoft SQL Server Management Studio,进入SSMS页面后使用Windows身份验证连接上SQL Server。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/pAmqBh6&quot;&gt;&lt;img src=&quot;https://s21.ax1x.com/2024/09/11/pAmqBh6.md.png&quot; alt=&quot;pAmqBh6.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2，进入SSMS后在左侧数据库目录中找到需要收缩ldf文件的数据库名称（例如：QFBJZT）然后右键选择“属性”快捷命令。在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择“简单”模式，设置好后单击“确定”按钮使设置生效。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="workNote" scheme="http://example.com/categories/workNote/"/>
+    
+    
+    <category term="database" scheme="http://example.com/tags/database/"/>
+    
+    <category term="sqlserver" scheme="http://example.com/tags/sqlserver/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用命令行激活windows</title>
     <link href="http://example.com/2024/08/14/%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%BF%80%E6%B4%BBwindows/"/>
     <id>http://example.com/2024/08/14/%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%BF%80%E6%B4%BBwindows/</id>
@@ -560,33 +591,6 @@
     <updated>2023-06-04T09:25:39.111Z</updated>
     
     <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="vlookup函数的使用技巧及注意事项">vlookup函数的使用技巧及注意事项</h2><p><strong>怎样才能更好的掌握vlookup函数以及使用时应当注意的问题</strong></p><p><em><strong>vlookup函数必知必会</strong></em></p><p><em><strong>1、最好使用CVS文件对数据或数值进行操作，如果你想更好地使用vlookup函数</strong></em></p><p><em><strong>2、vlookup函数的格式</strong></em></p><p>​VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)</p><p><em><strong>3、vlookup函数的作用</strong></em></p><p>​从一个表的范围数据里第一列的数据或数值匹配当前表某个单元格数据或数值，并调用查找范围内这一行某一列的数据或数值到本表的这个单元格里，默认函数的的查找方式(range_lookup)为精确查找</p><p><em><strong>4、vlookup函数参数作用</strong></em></p><p>​lookup_value|查找的值</p><p>​table_array|查找数据的范围</p><p>​col_inex_num|返回查找范围内第几列的数据(查找到的当前列的数据为第一列)1…</p><p>​range_lookup|匹配数据的精确度(1,true为真，模糊查找  0,false为假，精确查找)</p><p><em><strong>5、vlookup使用过程中遇到的常见问题</strong></em></p><p>​5.1 找不到数据或数值</p><p>​<strong>查找的值不对或者查找数据的范围内没有该值或者查找的值查找范围的前几列</strong></p><p>​5.2 当你下拉公式时，里面的数值是不是发生了变化，导致查询出错</p><p>​<strong>当下拉公式时必须用 “$” 锁定公式里的数值</strong></p><p>​<strong>$A$2:$B$7</strong></p><p>​5.3 单元格里的数值的格式不一致</p><p>​<strong>保证单元格里的数据一致，格式也一致</strong></p><p>​查找的单元格里的数据的左上角有绿色三角时，在数值的前面加上个半角的逗号，数据就会正常</p><p>​<strong>,112223366</strong></p><p>​用分列工具，将有绿色三角的数据分列为正常的格式</p><p>​5.4 看不到的空格</p><p>​<strong>有时查不到数据时，有可能是单元格里的中g据的后面有看不见的空格，导致查找不到数据</strong></p><p>​<strong>1122336688  比如像这样，1122336688后面的空格</strong></p><p>​<em><strong>解决方法：</strong></em></p><p>​ctrl+h替换掉表里所有单元格数据里的空格</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://leiyu-code.</summary>
-      
-    
-    
-    
-    <category term="office" scheme="http://example.com/categories/office/"/>
-    
-    
-    <category term="tips" scheme="http://example.com/tags/tips/"/>
-    
-    <category term="function" scheme="http://example.com/tags/function/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vlookup function TIPS</title>
-    <link href="http://example.com/2023/06/02/vlookup%20fuction%20tips(E)/"/>
-    <id>http://example.com/2023/06/02/vlookup%20fuction%20tips(E)/</id>
-    <published>2023-06-02T02:06:06.000Z</published>
-    <updated>2023-06-02T09:17:38.917Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p><a href="http://leiyu-code.github.io">leiyu-code.github.io</a></p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h2 id="vlookup-function-TIPS">vlookup function TIPS</h2><p><strong>How to use vlookup function of Office’excel</strong></p><p><em><strong>Tisps:use vllokup functon and others must know:</strong></em></p><p><em><strong>1、best use CVS file go to date and number 's changs，if you want be good use</strong></em></p><p><em><strong>2、vlookup function ’ format:</strong></em></p><p>​VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)</p><p><em><strong>3、vlookup function 's effect</strong></em>:</p><p>​Search for the first column of the table region that meets the criteria, determine the row number of the cell to be retrieved in the region, and then further return the value of the selected cell. By default, tables are sorted in ascending order</p><p><em><strong>4、vlookup function parrameter specification</strong></em></p><p>​lookup_value|find the value of the first column</p><p>​table_array|find the range of that table</p><p>​col_inex_num|column of find’s table (1,…)</p><p>​range_lookup|exact match or fuzzy match(1,true or 0,false)</p><p><em><strong>5、common problem</strong></em></p><p>​5.1 Unmatched date</p><p>​<strong>table_array effect 's first column must is lookup_value</strong></p><p>​5.2 When you drop-downing formula, the formula was change</p><p>​<strong>drop-downing formula must use “$” lock value</strong></p><p>​<strong>$A$2:$B$7</strong></p><p>​5.3 the value’s format was diffrent</p><p>​<strong>keep the table value same and format same</strong></p><p>​<strong>when the value 's front have green mark, must use &quot;,&quot;add the value 's front, disspear the green mark</strong></p><p>​<strong>,112223366</strong></p><p>​5.4 didn’t see space</p><p>​<strong>when the value back have a space, we must clear that space</strong></p><p>​<strong>1122336688  this value have a space</strong></p>]]></content>
     
     
       

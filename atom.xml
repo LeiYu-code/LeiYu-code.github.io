@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-11T02:04:48.571Z</updated>
+  <updated>2024-09-11T02:15:39.618Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库日志文件.ldf文件过大</title>
+    <link href="http://example.com/2024/09/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/"/>
+    <id>http://example.com/2024/09/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/</id>
+    <published>2024-09-06T08:28:06.000Z</published>
+    <updated>2024-09-11T02:15:39.618Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p><em><strong>数据库LDF日志文件存储的是数据库操作数据的信息，其中包含有(新增数据、修改数据、删除数据等）</strong></em></p><p>ldf文件日志过大会占满整个硬盘分区，导致数据库管理软件进不去或数据库报错</p><h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><p><strong>收缩SQL2008数据库</strong></p><p>1，点击电脑左下角开始-Microsoft SQL Server2008 R2-SSMS-Microsoft SQL Server Management Studio,进入SSMS页面后使用Windows身份验证连接上SQL Server。</p><p><a href="https://imgse.com/i/pAmqBh6"><img src="https://s21.ax1x.com/2024/09/11/pAmqBh6.md.png" alt="pAmqBh6.md.png"></a></p><p>2，进入SSMS后在左侧数据库目录中找到需要收缩ldf文件的数据库名称（例如：QFBJZT）然后右键选择“属性”快捷命令。在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择“简单”模式，设置好后单击“确定”按钮使设置生效。</p><span id="more"></span><p><a href="https://imgse.com/i/pAmqs1O"><img src="https://s21.ax1x.com/2024/09/11/pAmqs1O.png" alt="pAmqs1O.png"></a></p><p>3，返回SSMS窗口，右键单击目标数据库名称QFBJZT，右键选择任务-收缩-数据库。</p><p><a href="https://imgse.com/i/pAmqycD"><img src="https://s21.ax1x.com/2024/09/11/pAmqycD.png" alt="pAmqycD.png"></a></p><p>4，在收缩数据库页面中无须调整参数，直接单击“确定”按钮开始收缩数据库的操作。日志文件在一些异常情况下往往是恢复数据库的重要依据，收缩数据库操作主要作用是收缩日志大小。所以需要定期进行上述操作，以免数据库日志过大。</p><p><a href="https://imgse.com/i/pAmq0tx"><img src="https://s21.ax1x.com/2024/09/11/pAmq0tx.png" alt="pAmq0tx.png"></a></p><p>5，最后再次右键数据库QFBJZT选择“属性”，在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择回“完整”模式，设置好后单击“确定”按钮使设置生效即可完成收缩数据库日志文件工作。</p><p><a href="https://imgse.com/i/pAmqr9K"><img src="https://s21.ax1x.com/2024/09/11/pAmqr9K.png" alt="pAmqr9K.png"></a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;数据库LDF日志文件存储的是数据库操作数据的信息，其中包含有(新增数据、修改数据、删除数据等）&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;ldf文件日志过大会占满整个硬盘分区，导致数据库管理软件进不去或数据库报错&lt;/p&gt;
+&lt;h4 id=&quot;解决方法：&quot;&gt;&lt;a href=&quot;#解决方法：&quot; class=&quot;headerlink&quot; title=&quot;解决方法：&quot;&gt;&lt;/a&gt;解决方法：&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;收缩SQL2008数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1，点击电脑左下角开始-Microsoft SQL Server2008 R2-SSMS-Microsoft SQL Server Management Studio,进入SSMS页面后使用Windows身份验证连接上SQL Server。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/pAmqBh6&quot;&gt;&lt;img src=&quot;https://s21.ax1x.com/2024/09/11/pAmqBh6.md.png&quot; alt=&quot;pAmqBh6.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2，进入SSMS后在左侧数据库目录中找到需要收缩ldf文件的数据库名称（例如：QFBJZT）然后右键选择“属性”快捷命令。在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择“简单”模式，设置好后单击“确定”按钮使设置生效。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="workNote" scheme="http://example.com/categories/workNote/"/>
+    
+    
+    <category term="database" scheme="http://example.com/tags/database/"/>
+    
+    <category term="sqlserver" scheme="http://example.com/tags/sqlserver/"/>
+    
+  </entry>
   
   <entry>
     <title>王熙凤毒设相思局　贾天祥正照风月鉴</title>
@@ -44,37 +75,6 @@
     <category term="原文" scheme="http://example.com/tags/%E5%8E%9F%E6%96%87/"/>
     
     <category term="宝物" scheme="http://example.com/tags/%E5%AE%9D%E7%89%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库日志文件.ldf文件过大</title>
-    <link href="http://example.com/2024/09/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/"/>
-    <id>http://example.com/2024/09/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/</id>
-    <published>2024-09-04T08:28:06.000Z</published>
-    <updated>2024-09-11T01:21:50.648Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p><p>leiyu-code.github.io</p><p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p><h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p><em><strong>数据库LDF日志文件存储的是数据库操作数据的信息，其中包含有(新增数据、修改数据、删除数据等）</strong></em></p><p>ldf文件日志过大会占满整个硬盘分区，导致数据库管理软件进不去或数据库报错</p><h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><p><strong>收缩SQL2008数据库</strong></p><p>1，点击电脑左下角开始-Microsoft SQL Server2008 R2-SSMS-Microsoft SQL Server Management Studio,进入SSMS页面后使用Windows身份验证连接上SQL Server。</p><p><a href="https://imgse.com/i/pAmqBh6"><img src="https://s21.ax1x.com/2024/09/11/pAmqBh6.md.png" alt="pAmqBh6.md.png"></a></p><p>2，进入SSMS后在左侧数据库目录中找到需要收缩ldf文件的数据库名称（例如：QFBJZT）然后右键选择“属性”快捷命令。在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择“简单”模式，设置好后单击“确定”按钮使设置生效。</p><span id="more"></span><p><a href="https://imgse.com/i/pAmqs1O"><img src="https://s21.ax1x.com/2024/09/11/pAmqs1O.png" alt="pAmqs1O.png"></a></p><p>3，返回SSMS窗口，右键单击目标数据库名称QFBJZT，右键选择任务-收缩-数据库。</p><p><a href="https://imgse.com/i/pAmqycD"><img src="https://s21.ax1x.com/2024/09/11/pAmqycD.png" alt="pAmqycD.png"></a></p><p>4，在收缩数据库页面中无须调整参数，直接单击“确定”按钮开始收缩数据库的操作。日志文件在一些异常情况下往往是恢复数据库的重要依据，收缩数据库操作主要作用是收缩日志大小。所以需要定期进行上述操作，以免数据库日志过大。</p><p><a href="https://imgse.com/i/pAmq0tx"><img src="https://s21.ax1x.com/2024/09/11/pAmq0tx.png" alt="pAmq0tx.png"></a></p><p>5，最后再次右键数据库QFBJZT选择“属性”，在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择回“完整”模式，设置好后单击“确定”按钮使设置生效即可完成收缩数据库日志文件工作。</p><p><a href="https://imgse.com/i/pAmqr9K"><img src="https://s21.ax1x.com/2024/09/11/pAmqr9K.png" alt="pAmqr9K.png"></a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;[南月晨的blog](&lt;a href=&quot;https://leiyu-code.github.io/&quot;&gt;南月晨的博客 (leiyu-code.github.io)&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;leiyu-code.github.io&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.linuxcool.com/&quot;&gt;Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;数据库LDF日志文件存储的是数据库操作数据的信息，其中包含有(新增数据、修改数据、删除数据等）&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;ldf文件日志过大会占满整个硬盘分区，导致数据库管理软件进不去或数据库报错&lt;/p&gt;
-&lt;h4 id=&quot;解决方法：&quot;&gt;&lt;a href=&quot;#解决方法：&quot; class=&quot;headerlink&quot; title=&quot;解决方法：&quot;&gt;&lt;/a&gt;解决方法：&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;收缩SQL2008数据库&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1，点击电脑左下角开始-Microsoft SQL Server2008 R2-SSMS-Microsoft SQL Server Management Studio,进入SSMS页面后使用Windows身份验证连接上SQL Server。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/pAmqBh6&quot;&gt;&lt;img src=&quot;https://s21.ax1x.com/2024/09/11/pAmqBh6.md.png&quot; alt=&quot;pAmqBh6.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2，进入SSMS后在左侧数据库目录中找到需要收缩ldf文件的数据库名称（例如：QFBJZT）然后右键选择“属性”快捷命令。在打开的QFBJZT数据库属性页面单击“选项”标签，恢复模式后下拉菜单中选择“简单”模式，设置好后单击“确定”按钮使设置生效。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="workNote" scheme="http://example.com/categories/workNote/"/>
-    
-    
-    <category term="database" scheme="http://example.com/tags/database/"/>
-    
-    <category term="sqlserver" scheme="http://example.com/tags/sqlserver/"/>
     
   </entry>
   

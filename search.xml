@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据库损坏或置疑中间件连接不了数据库</title>
+    <url>/2024/11/12/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%AE%E7%96%91/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p>数据库变为可疑状态通常是由于突然断电、服务器死机或强制关机等原因导致的。为了避免这种情况，建议定期备份数据库，确保有完整的备份文件。此外，确保服务器稳定运行，避免不必要的关机操作，可以减少数据库损坏的风险</p>
+<p><em><strong>1、最简单的解决方法是用备份的数据库文件恢复数据库</strong></em></p>
+<p><em><strong>2、用以下语句可以修复数据库</strong></em></p>
+<span id="more"></span>
+
+<p>先断开与网络的连接</p>
+<p>将可疑的数据库修改为紧急状态，以便进行修复操作。可以使用以下SQL语句实现：<br><code>ALTER DATABASE 数据库名 SET EMERGENCY</code><br>执行此操作后，数据库会变为红色紧急状态，此时可以看到数据库的结构和数据，但无法进行备份等操作</p>
+<p>接下来，将数据库设置为单用户模式，以便进行修复：<br><code>ALTER DATABASE 数据库名 SET SINGLE_USER</code><br>在单用户模式下，只有一个用户连接，这有助于避免并发问题，可以在后面加个WITH ROLLBACK IMMEDIATE从句立刻回滚未提交的修改</p>
+<p>使用DBCC CHECKDB命令检查并修复数据库。此命令可以检测数据库的结构错误，并尝试修复它们。使用以下语句：<br><code>DBCC CHECKDB(数据库名, REPAIR_ALLOW_DATA_LOSS)</code><br>注意，使用此参数可能会造成数据丢失</p>
+<p>将数据库恢复为多用户模式，允许正常访问：<br><code>ALTER DATABASE 数据库名 SET MULTI_USER</code></p>
+<p>确保数据库设置为在线状态，以便进行正常的读写操作：<br><code>ALTER DATABASE 数据库名 SET ONLINE</code></p>
+<p>退出数据库管理工具，重启sql服务<br>cmd命令   service.msc<br>停止MSSQLSERVER服务，再启动MSSQLSERVER服务</p>
+]]></content>
+      <categories>
+        <category>workNote</category>
+      </categories>
+      <tags>
+        <tag>database</tag>
+        <tag>sqlserver</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库日志文件.ldf文件过大</title>
     <url>/2024/09/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A5%E5%BF%97%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

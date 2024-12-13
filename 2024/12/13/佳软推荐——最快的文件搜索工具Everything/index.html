@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="everything,searth," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="南月晨的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="[南月晨的blog](南月晨的博客 (leiyu-code.github.io)) leiyu-code.github.io Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com) 实用场景（超市  网站前台） 在一般的超市网站上，动辄就要更新成千上万个图片，一般都是按照商品条码进行搜索，windows自带的搜索半天都不见得能找出来，但是用everyt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="佳软推荐——最快的文件搜索工具Everything">
+<meta property="og:url" content="http://example.com/2024/12/13/%E4%BD%B3%E8%BD%AF%E6%8E%A8%E8%8D%90%E2%80%94%E2%80%94%E6%9C%80%E5%BF%AB%E7%9A%84%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7Everything/index.html">
+<meta property="og:site_name" content="南月晨的博客">
+<meta property="og:description" content="[南月晨的blog](南月晨的博客 (leiyu-code.github.io)) leiyu-code.github.io Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com) 实用场景（超市  网站前台） 在一般的超市网站上，动辄就要更新成千上万个图片，一般都是按照商品条码进行搜索，windows自带的搜索半天都不见得能找出来，但是用everyt">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-12-13T03:28:06.000Z">
+<meta property="article:modified_time" content="2024-12-13T03:22:02.667Z">
+<meta property="article:author" content="yu skywalker">
+<meta property="article:tag" content="everything">
+<meta property="article:tag" content="searth">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2024/12/13/佳软推荐——最快的文件搜索工具Everything/"/>
+
+
+
+
+
+  <title>佳软推荐——最快的文件搜索工具Everything | 南月晨的博客</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">南月晨的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">南山下，月落时，必有晨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-rss">
+          <a href="/atom.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            RSS
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/13/%E4%BD%B3%E8%BD%AF%E6%8E%A8%E8%8D%90%E2%80%94%E2%80%94%E6%9C%80%E5%BF%AB%E7%9A%84%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7Everything/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">佳软推荐——最快的文件搜索工具Everything</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-12-13T11:28:06+08:00">
+                2024-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a target="_blank" rel="noopener" href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<p><em><strong>实用场景（超市  网站前台）</strong></em></p>
+<p><em><strong>在一般的超市网站上，动辄就要更新成千上万个图片，一般都是按照商品条码进行搜索，windows自带的搜索半天都不见得能找出来，但是用everything这个软件一瞬间就能把这个商品找出来，而且预览缩略图也能在右边的预览框里显示</strong></em></p>
+<ol>
+<li>
+<p>软件基本信息</p>
+<ul>
+<li>Everything 是一款由 VoidTools 开发的文件搜索工具，它适用于 Windows 操作系统。其特点是搜索速度极快，可以在短时间内索引和搜索本地硬盘、外置硬盘、USB 设备等存储介质中的文件和文件夹。</li>
+</ul>
+</li>
+<li>
+<p>工作原理</p>
+<ul>
+<li>它通过建立文件索引来实现快速搜索。当软件首次运行时，它会扫描指定的磁盘分区或者整个硬盘，记录下每个文件的名称、路径、大小、日期等信息，并将这些信息存储在一个数据库中。之后，当用户进行搜索时，它不是像 Windows 自带的搜索那样逐个文件夹去查找，而是直接在这个已经建立好的数据库中进行快速匹配，所以能够快速地返回搜索结果。</li>
+</ul>
+<span id="more"></span>
+</li>
+<li>
+<p>功能特点</p>
+<ul>
+<li><strong>快速搜索</strong>：例如，在一个拥有大量文件（如数百万个文件）的硬盘上，用户可以在输入文件名的几秒钟内就得到搜索结果。比如，要找一份名为 “项目报告.docx” 的文件，只需在搜索框中输入文件名的一部分，如 “项目”，它就能快速地将包含 “项目” 字样的所有文件列出来。</li>
+<li><strong>支持通配符搜索</strong>：可以使用通配符 “<em>” 和 “?” 来进行模糊搜索。“</em>” 代表任意多个字符，“?” 代表一个任意字符。例如，搜索 “*.jpg” 可以找到所有的 JPEG 图片文件；搜索 “te?t.txt” 可以找到类似 “test.txt”“text.txt” 等文件名符合条件的文件。</li>
+<li><strong>高级搜索功能</strong>：可以根据文件大小、日期、文件属性等条件进行搜索。如果想找一个在特定日期范围内修改过的文件，或者文件大小大于一定值的文件，都可以通过软件的高级搜索选项来实现。</li>
+<li><strong>实时更新索引</strong>：当文件系统发生变化，如新建文件、删除文件、重命名文件时，Everything 会自动更新索引，以确保搜索结果的准确性。不过，在某些情况下，如果索引更新不及时，可以手动刷新索引。</li>
+</ul>
+</li>
+<li>
+<p>软件使用场景</p>
+<ul>
+<li><strong>办公场景</strong>：对于办公人员来说，当电脑中有大量的文档、表格、演示文稿等文件时，能够快速找到所需文件可以大大提高工作效率。<em><strong>比如，在一个广告公司的设计师电脑上，有多年积累的各种设计素材、客户项目文件等，使用 Everything 可以快速定位到某个特定的设计源文件或者客户要求修改的文档。</strong></em></li>
+<li><strong>技术支持场景</strong>：对于计算机技术人员，在处理客户电脑问题或者进行系统维护时，需要快速查找系统文件、驱动程序文件等，Everything 就成为一个很有用的工具。<em><strong>例如，查找一个特定版本的设备驱动程序文件，通过快速搜索就可以定位其位置，方便进行更新或者故障排除。</strong></em></li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>总结：用Everything替代windows内置的搜索工具是最好的选择，可以更有效、更快速地定位想要找的项目或文件</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/everything/" rel="tag"># everything</a>
+          
+            <a href="/tags/searth/" rel="tag"># searth</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/11/12/%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%95%B0%E7%82%B9%E7%9A%84%E6%95%85%E4%BA%8B/" rel="next" title="一个小数点的故事">
+                <i class="fa fa-chevron-left"></i> 一个小数点的故事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yu skywalker</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

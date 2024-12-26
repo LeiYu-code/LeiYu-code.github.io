@@ -273,6 +273,335 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/26/%E8%A7%A3%E5%86%B3git22port%E9%94%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/12/26/%E8%A7%A3%E5%86%B3git22port%E9%94%99/" itemprop="url">解决git报错port 22</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-12-26T16:30:06+08:00">
+                2024-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a target="_blank" rel="noopener" href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h1>【git】解决git报错:ssh:connect to host <a target="_blank" rel="noopener" href="http://github.com">github.com</a> port 22: Connection timed out 亲测有效</h1>
+<p><strong>简介：</strong> 【git】解决git报错:ssh:connect to host <a target="_blank" rel="noopener" href="http://github.com">github.com</a> port 22: Connection timed out 亲测有效</p>
+<p>如题，git使用中突然报错</p>
+<p>ssh:connect to host <a target="_blank" rel="noopener" href="http://github.com">github.com</a> port 22: Connection timed out</p>
+<p>通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致ssh连接方式 端口22被封锁。</p>
+<h3 id="解决方法">解决方法</h3>
+<h3 id="一：抛弃ssh连接方式，使用http连接。">一：抛弃ssh连接方式，使用http连接。</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --local -e</span><br><span class="line">将配置文件的url = git@github.com:username/repo.git一行改为：url = https://github.com/username/repo.git</span><br></pre></td></tr></table></figure>
+<h3 id="方法二：如果22号端口不行，那就换一个端口">方法二：如果22号端口不行，那就换一个端口</h3>
+<h3 id="进入-ssh文件夹">进入.ssh文件夹</h3>
+<p><img src="https://ucc.alicdn.com/pic/developer-ecology/z7drxuznvgnea_e581f158a2904c7597a852544116edf9.png?x-oss-process=image%2Fresize%2Cw_1400%2Fformat%2Cwebp" alt="img"></p>
+<p>创建一个config文件</p>
+<p>将下面的内容复制进去</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"> </span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<p>保存退出</p>
+<p>检查是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com </span><br></pre></td></tr></table></figure>
+<p><img src="https://ucc.alicdn.com/pic/developer-ecology/z7drxuznvgnea_100fca1cccc640c5a97a74b802cf6594.png?x-oss-process=image%2Fresize%2Cw_1400%2Fformat%2Cwebp" alt="img"></p>
+<p>这里要根据它的提示操作，有个地方要输入yes</p>
+<p>此时大功告成啦</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/16/VS%20CODE%E9%85%8D%E7%BD%AEc++%E6%89%A9%E5%B1%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/12/16/VS%20CODE%E9%85%8D%E7%BD%AEc++%E6%89%A9%E5%B1%95/" itemprop="url">VS CODE配置c/c++扩展</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-12-16T11:15:06+08:00">
+                2024-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vs-code/" itemprop="url" rel="index">
+                    <span itemprop="name">vs code</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p><a target="_blank" rel="noopener" href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h1><strong>VS CODE配置c/c++扩展</strong></h1>
+<ol>
+<li>
+<p>安装扩展</p>
+<ul>
+<li>首先要安装 “C/C++” 扩展。打开 VS Code，点击左侧的 “扩展” 图标（看起来像方块的拼图），在搜索框中输入 “C/C++”，找到由 Microsoft 发布的 “C/C++” 扩展并安装。这个扩展提供了代码导航、语法检查、调试支持等功能，是调试 C 语言程序的基础。</li>
+</ul>
+</li>
+<li>
+<p>配置编译器</p>
+<ul>
+<li>
+<p>Windows 系统</p>
+<ul>
+<li>安装 MinGW - W64。可以从官方网站（<a target="_blank" rel="noopener" href="https://mingw">https://mingw</a> - <a target="_blank" rel="noopener" href="https://w64.org/doku.php">w64.org/doku.php</a>）下载安装程序。在安装过程中，注意选择合适的架构（如 x86_64 或 i686）和版本（如 SEH 或 DW2 异常处理）。</li>
+<li>将 MinGW - W64 的安装目录下的<code>bin</code>文件夹路径添加到系统环境变量。在 “控制面板” - &gt;“系统和安全” - &gt;“系统” - &gt;“高级系统设置” - &gt;“环境变量” 中，在 “系统变量” 部分找到 “Path” 变量，点击 “编辑”，然后添加 MinGW - W64 的<code>bin</code>路径，例如<code>C:\mingw - w64\mingw64\bin</code>。</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2024/12/16/VS%20CODE%E9%85%8D%E7%BD%AEc++%E6%89%A9%E5%B1%95/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/13/%E4%BD%B3%E8%BD%AF%E6%8E%A8%E8%8D%90%E2%80%94%E2%80%94%E6%9C%80%E5%BF%AB%E7%9A%84%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7Everything/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1501,303 +1830,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/23/windows%E5%91%BD%E4%BB%A4%E2%80%94route/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南月晨的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2024/06/23/windows%E5%91%BD%E4%BB%A4%E2%80%94route/" itemprop="url">windows命令-route</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-06-23T15:32:06+08:00">
-                2024-06-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p>leiyu-code.github.io</p>
-<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
-<h4 id="route命令"><a href="#route命令" class="headerlink" title="route命令"></a><em><strong>route命令</strong></em></h4><p>  route命令用于显示和操作IP路由表。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。windows环境下route命令常用于多网卡终端，默认路由指向连接访问互联网的网卡，静态路由指向内网网卡。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2024/06/23/windows%E5%91%BD%E4%BB%A4%E2%80%94route/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E6%89%B9%E5%A4%84%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南月晨的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2024/06/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E6%89%B9%E5%A4%84%E7%90%86/" itemprop="url">服务器安全批处理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-06-23T10:28:06+08:00">
-                2024-06-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/server/" itemprop="url" rel="index">
-                    <span itemprop="name">server</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p><a target="_blank" rel="noopener" href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
-<p><em><strong>用法：</strong></em></p>
-<p>桌面新建文本文件</p>
-<p>将下列代码粘贴到文件文件，并且改文件名称后缀txt为bat，双击运行</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@<span class="built_in">ECHO</span> OFF </span><br><span class="line"><span class="built_in">CLS</span> </span><br><span class="line"><span class="built_in">TITLE</span> SERVER SAFE SETUP PRO </span><br><span class="line"><span class="built_in">COLOR</span> <span class="number">0</span>A </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\ /p Administrators:f system:f &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe D:\ /p Administrators:f system:f servU:f &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe E:\ /p Administrators:f system:f servU:f &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe &quot;C:\Program Files&quot; /t /p Administrators:f system:f everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe &quot;C:\Program Files\Common Files&quot; /t /g Administrators:f system:f everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows /p Administrators:f system:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32 /p Administrators:f system:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\inetsrv /p Administrators:f system:f everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe &quot;C:\Documents and Settings&quot; /p Administrators:f system:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe &quot;C:\Documents and Settings\All Users&quot; /t /p Administrator:f system:f everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\temp /p everyone:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%systemroot%</span>\system32\shell32.dll /p Administrators:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%systemroot%</span>\system32\wshom.ocx /p Administrators:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\*.exe /p Administrators:f system:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe &quot;c:\Documents and Settings\All Users&quot; /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%systemroot%</span>\system32\svchost.exe /e /g &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%systemroot%</span>\system32\msdtc.exe /e /g &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\system32\mtxex.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\<span class="built_in">cmd</span>.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\<span class="built_in">net</span>.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\net1.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\sc.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\<span class="built_in">at</span>.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\system32\dllhost.exe /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\netsh.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\<span class="built_in">net</span>.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\<span class="built_in">cacls</span>.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\cmdkey.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\ftp.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\tftp.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\reg.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\regedt32.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe c:\windows\system32\regini.exe /p Administrator:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\assembly /e /t /g &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\Microsoft.<span class="built_in">NET</span> /e /t /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe &quot;<span class="variable">%windir%</span>\Microsoft.<span class="built_in">NET</span>\Framework\v1.<span class="number">1</span>.<span class="number">4322</span>\Temporary ASP.<span class="built_in">NET</span> Files&quot; /e /t /g everyone:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\system32\mscoree.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\system32\ws03res.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe <span class="variable">%windir%</span>\system32\msxml*.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\urlmon.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\mlang.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\TAPI32.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\WININET.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">cacls</span> c:\windows\assembly /e /t /p &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">cacls</span> c:\windows\Microsoft.<span class="built_in">NET</span> /e /t /p &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">cacls</span> &quot;C:\WINDOWS\Microsoft.<span class="built_in">NET</span>\Framework\v1.<span class="number">1</span>.<span class="number">4322</span>\Temporary ASP.<span class="built_in">NET</span> Files&quot; /e /t /p &quot;network service&quot;:f </span><br><span class="line"><span class="built_in">cacls</span> C:\WINDOWS\system32\mscoree.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">cacls</span> C:\WINDOWS\system32\ws03res.dll /e /g everyone:r </span><br><span class="line"><span class="built_in">cacls</span> c:\WINDOWS /e /g &quot;network service&quot;:r </span><br><span class="line"><span class="keyword">if</span> <span class="keyword">exist</span> c:\windows <span class="built_in">cacls</span> c:\windows /e /g &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">cacls</span> c:\windows\Microsoft.<span class="built_in">NET</span> /e /t /p &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">cacls</span> &quot;C:\WINDOWS\Microsoft.<span class="built_in">NET</span>\Framework\v1.<span class="number">1</span>.<span class="number">4322</span>\Temporary ASP.<span class="built_in">NET</span> Files&quot; /e /t /p &quot;network service&quot;:f </span><br><span class="line"><span class="built_in">cacls</span> &quot;C:\WINDOWS\Microsoft.<span class="built_in">NET</span>\Framework\v2.<span class="number">0</span>.<span class="number">50727</span>\Temporary ASP.<span class="built_in">NET</span> Files&quot; /e /t /p &quot;network service&quot;:f </span><br><span class="line"><span class="built_in">cacls</span> c:\windows\system32 /e /g &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">cacls</span> c:\windows\system32\rasapi32.dll /e /g &quot;network service&quot;:r </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\inetsrv\adsiis.dll /p Administrators:f autosystem:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\inetsrv\iisadmpwd /p Administrators:f autosystem:f </span><br><span class="line"><span class="built_in">echo</span> y|<span class="built_in">cacls</span>.exe C:\WINDOWS\system32\inetsrv\MetaBack /p Administrators:f autosystem:f </span><br><span class="line"><span class="built_in">cacls</span> C&quot;:\Program Files\Serv-U&quot; /e /g &quot;servu&quot;:f </span><br><span class="line"><span class="built_in">cacls</span> d:\wwwroot /e /g servU:f </span><br><span class="line"><span class="built_in">echo</span> 以上设置服务器目录权限 </span><br><span class="line"></span><br><span class="line"><span class="built_in">net</span> stop Browser </span><br><span class="line">sc config Browser <span class="built_in">start</span>= disabled </span><br><span class="line"><span class="built_in">net</span> stop lanmanserver </span><br><span class="line">sc config lanmanserver <span class="built_in">start</span>= disabled </span><br><span class="line"><span class="built_in">net</span> share c$ /delete </span><br><span class="line"><span class="built_in">net</span> share d$ /delete </span><br><span class="line"><span class="built_in">net</span> share e$ /delete </span><br><span class="line"><span class="built_in">net</span> share f$ /delete </span><br><span class="line"><span class="built_in">net</span> share admin$ /delete </span><br><span class="line"><span class="built_in">net</span> share ipc$ /delete </span><br><span class="line"><span class="built_in">echo</span> 以上删除默认共享，设置服务项 </span><br><span class="line"><span class="built_in">echo</span> .. delshare.reg ....... </span><br><span class="line"><span class="built_in">echo</span> Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span>&gt; c:\delshare.reg </span><br><span class="line"><span class="built_in">echo</span> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters]&gt;&gt; c:\delshare.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;AutoShareWks&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\delshare.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;AutoShareServer&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\delshare.reg </span><br><span class="line"><span class="built_in">echo</span> .. delshare.reg ..... </span><br><span class="line">regedit /s c:\delshare.reg </span><br><span class="line"><span class="built_in">echo</span> .. delshare.reg .... </span><br><span class="line"><span class="built_in">del</span> c:\delshare.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> ........ </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> ========================================================= </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .....................dos.... </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> ......... </span><br><span class="line"><span class="built_in">echo</span> Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span>&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;EnableICMPRedirect&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;DeadGWDetectDefault&quot;=dword:<span class="number">00000001</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;DontAddDefaultGatewayDefault&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;EnableSecurityFilters&quot;=dword:<span class="number">00000000</span>&quot;&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;AllowUnqualifiedQuery&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;PrioritizeRecordData&quot;=dword:<span class="number">00000001</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;ReservedPorts&quot;=hex(<span class="number">7</span>):<span class="number">31</span>,<span class="number">00</span>,<span class="number">34</span>,<span class="number">00</span>,<span class="number">33</span>,<span class="number">00</span>,<span class="number">33</span>,<span class="number">00</span>,<span class="number">2</span>d,<span class="number">00</span>,<span class="number">31</span>,<span class="number">00</span>,<span class="number">34</span>,<span class="number">00</span>,<span class="number">33</span>,<span class="number">00</span>,<span class="number">34</span>,<span class="number">00</span>,\&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> <span class="number">00</span>,<span class="number">00</span>,<span class="number">00</span>,<span class="number">00</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;SynAttackProtect&quot;=dword:<span class="number">00000002</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;EnablePMTUDiscovery&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;NoNameReleaseOnDemand&quot;=dword:<span class="number">00000001</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;EnableDeadGWDetect&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;KeepAliveTime&quot;=dword:<span class="number">00300000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;PerformRouterDiscovery&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;EnableICMPRedirects&quot;=dword:<span class="number">00000000</span>&gt;&gt; c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> ========================================================== </span><br><span class="line"><span class="built_in">echo</span> .. dosforwin.reg ..... </span><br><span class="line">regedit /s c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> .. dosforwin.reg .... </span><br><span class="line"><span class="built_in">del</span> c:\dosforwin.reg </span><br><span class="line"><span class="built_in">echo</span> ============================================================== </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> =============================================================== </span><br><span class="line"><span class="built_in">echo</span> ..Remote Registry Service........... </span><br><span class="line"><span class="built_in">echo</span> ......... </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span>&gt; c:\regedit.reg </span><br><span class="line"><span class="built_in">echo</span> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry]&gt;&gt; c:\regedit.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;<span class="built_in">Start</span>&quot;=dword:<span class="number">00000004</span>&gt;&gt; c:\regedit.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. regedit.reg ..... </span><br><span class="line">regedit /s c:\regedit.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> ...... </span><br><span class="line"><span class="built_in">del</span> c:\regedit.reg </span><br><span class="line"><span class="built_in">echo</span> =============================================================== </span><br><span class="line"><span class="built_in">echo</span> ..Messenger....... </span><br><span class="line"><span class="built_in">echo</span> ......... </span><br><span class="line"><span class="built_in">echo</span> Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span>&gt; c:\message.reg </span><br><span class="line"><span class="built_in">echo</span> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Messenger]&gt;&gt; c:\message.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;<span class="built_in">Start</span>&quot;=dword:<span class="number">00000004</span>&gt;&gt; c:\message.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. message.reg ..... </span><br><span class="line">regedit /s c:\message.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. message.reg </span><br><span class="line"><span class="built_in">del</span> c:\message.reg </span><br><span class="line"><span class="built_in">echo</span> =============================================================== </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> =============================================================== </span><br><span class="line"><span class="built_in">echo</span> ..lanmanserver....... </span><br><span class="line"><span class="built_in">echo</span> ......... </span><br><span class="line"><span class="built_in">echo</span> Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span>&gt; c:\lanmanserver.reg </span><br><span class="line"><span class="built_in">echo</span> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver]&gt;&gt; c:\lanmanserver.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;<span class="built_in">Start</span>&quot;=dword:<span class="number">00000004</span>&gt;&gt; c:\lanmanserver.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. lanmanserver.reg ..... </span><br><span class="line">regedit /s c:\lanmanserver.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. lanmanserver.reg </span><br><span class="line"><span class="built_in">del</span> c:\lanmanserver.reg </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> ============================================================== </span><br><span class="line"><span class="built_in">echo</span> ...TCP/IP NetBIOS Helper Service </span><br><span class="line"><span class="built_in">echo</span> ......... </span><br><span class="line"><span class="built_in">echo</span> Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span>&gt; c:\netbios.reg </span><br><span class="line"><span class="built_in">echo</span> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LmHosts]&gt;&gt; c:\netbios.reg </span><br><span class="line"><span class="built_in">echo</span> &quot;<span class="built_in">Start</span>&quot;=dword:<span class="number">00000004</span>&gt;&gt; c:\netbios.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. netbios.reg ..... </span><br><span class="line">regedit /s c:\netbios.reg </span><br><span class="line"><span class="built_in">echo</span> . </span><br><span class="line"><span class="built_in">echo</span> .. netbios.reg </span><br><span class="line"><span class="built_in">del</span> c:\netbios.reg </span><br><span class="line">regedit /s forddos.reg </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1848,7 +1880,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1859,7 +1891,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1870,7 +1902,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

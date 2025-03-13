@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="netsh,fireware," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="南月晨的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="[南月晨的blog](南月晨的博客 (leiyu-code.github.io)) leiyu-code.github.io Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com) ‌禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）‌ ‌一、Windows系统‌‌1. IPv4&#x2F;IPv6禁Ping（命令行）‌ ‌禁用IPv4 Pi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="禁用ping的详细操作指南">
+<meta property="og:url" content="http://example.com/2025/03/12/windows%E7%A6%81ping/index.html">
+<meta property="og:site_name" content="南月晨的博客">
+<meta property="og:description" content="[南月晨的blog](南月晨的博客 (leiyu-code.github.io)) leiyu-code.github.io Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com) ‌禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）‌ ‌一、Windows系统‌‌1. IPv4&#x2F;IPv6禁Ping（命令行）‌ ‌禁用IPv4 Pi">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-03-12T09:00:06.000Z">
+<meta property="article:modified_time" content="2025-03-13T01:12:14.848Z">
+<meta property="article:author" content="yu skywalker">
+<meta property="article:tag" content="netsh">
+<meta property="article:tag" content="fireware">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2025/03/12/windows禁ping/"/>
+
+
+
+
+
+  <title>禁用ping的详细操作指南 | 南月晨的博客</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">南月晨的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">南山下，月落时，必有晨</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-rss">
+          <a href="/atom.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            RSS
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/12/windows%E7%A6%81ping/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">禁用ping的详细操作指南</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2025-03-12T17:00:06+08:00">
+                2025-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/command/" itemprop="url" rel="index">
+                    <span itemprop="name">command</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h3 id="‌禁用Ping的详细操作指南（含IPv4-x2F-IPv6）‌"><a href="#‌禁用Ping的详细操作指南（含IPv4-x2F-IPv6）‌" class="headerlink" title="‌禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）‌"></a>‌<strong>禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）</strong>‌</h3><hr>
+<h4 id="‌一、Windows系统‌"><a href="#‌一、Windows系统‌" class="headerlink" title="‌一、Windows系统‌"></a>‌<strong>一、Windows系统</strong>‌</h4><h5 id="‌1-IPv4-x2F-IPv6禁Ping（命令行）‌"><a href="#‌1-IPv4-x2F-IPv6禁Ping（命令行）‌" class="headerlink" title="‌1. IPv4&#x2F;IPv6禁Ping（命令行）‌"></a>‌<strong>1. IPv4&#x2F;IPv6禁Ping（命令行）</strong>‌</h5><ul>
+<li><p>‌<strong>禁用IPv4 Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv4 Ping&quot; protocol=icmpv4:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
+
+<p>此命令阻止所有入站ICMPv4回显请求（即Ping）‌。</p>
+</li>
+<li><p>‌<strong>禁用IPv6 Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv6 Ping&quot; protocol=icmpv6:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
+
+<p>此命令阻止IPv6的ICMPv6回显请求‌。</p>
+</li>
+<li><p>‌<strong>恢复Ping功能</strong>‌：<br>删除对应规则：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall firewall delete rule name=&quot;Block IPv4 Ping&quot;</span><br><span class="line">netsh advfirewall firewall delete rule name=&quot;Block IPv6 Ping&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="‌2-图形界面配置‌"><a href="#‌2-图形界面配置‌" class="headerlink" title="‌2. 图形界面配置‌"></a>‌<strong>2. 图形界面配置</strong>‌</h5><ol>
+<li><p>打开 ‌<strong>控制面板 → 系统和安全 → Windows Defender 防火墙 → 高级设置</strong>‌。</p>
+</li>
+<li><p>‌<strong>IPv4禁Ping</strong>‌</p>
+<p>在 ‌<strong>入站规则</strong>‌ 中找到 ‌<strong>回显请求-ICMPv4-In</strong>‌，右键选择 ‌<strong>禁用规则</strong>‌ ‌。</p>
+</li>
+<li><p>‌<strong>IPv6禁Ping</strong>‌</p>
+<p>创建新规则：选择 ‌<strong>自定义规则 → 协议类型为ICMPv6 → 阻止连接</strong>‌，命名并保存‌。</p>
+</li>
+</ol>
+<hr>
+<h4 id="‌二、Linux系统‌"><a href="#‌二、Linux系统‌" class="headerlink" title="‌二、Linux系统‌"></a>‌<strong>二、Linux系统</strong>‌</h4><h5 id="‌1-通过内核参数禁用‌"><a href="#‌1-通过内核参数禁用‌" class="headerlink" title="‌1. 通过内核参数禁用‌"></a>‌<strong>1. 通过内核参数禁用</strong>‌</h5><ul>
+<li><p>‌<strong>IPv4禁Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all  # 临时生效</span><br><span class="line">echo &quot;net.ipv4.icmp_echo_ignore_all = 1&quot; &gt;&gt; /etc/sysctl.conf  # 永久生效</span><br><span class="line">sysctl -p  # 应用配置</span><br></pre></td></tr></table></figure>
+
+<p>此方法通过忽略所有ICMPv4请求实现禁Ping‌67。</p>
+</li>
+<li><p>‌<strong>IPv6禁Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv6/icmp/echo_ignore_all  # 临时生效</span><br><span class="line">echo &quot;net.ipv6.icmp.echo_ignore_all = 1&quot; &gt;&gt; /etc/sysctl.conf  # 永久生效</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+
+<p>需注意部分Linux发行版可能需手动添加IPv6内核参数‌。</p>
+</li>
+</ul>
+<h5 id="‌2-通过防火墙工具‌"><a href="#‌2-通过防火墙工具‌" class="headerlink" title="‌2. 通过防火墙工具‌"></a>‌<strong>2. 通过防火墙工具</strong>‌</h5><ul>
+<li><p>‌<strong>iptables（IPv4&#x2F;IPv6）</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 禁用IPv4 Ping</span><br><span class="line">iptables -A INPUT -p icmp --icmp-type echo-request -j DROP</span><br><span class="line"># 禁用IPv6 Ping</span><br><span class="line">ip6tables -A INPUT -p icmpv6 --icmpv6-type echo-request -j DROP</span><br></pre></td></tr></table></figure>
+
+<p>需确保iptables规则保存并持久化（如使用<code>iptables-save</code>）‌。</p>
+</li>
+<li><p>‌<strong>firewalld（推荐CentOS&#x2F;RHEL）</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 禁用IPv4 Ping</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=&#x27;rule family=&quot;ipv4&quot; protocol value=&quot;icmp&quot; reject&#x27;</span><br><span class="line"># 禁用IPv6 Ping</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=&#x27;rule family=&quot;ipv6&quot; protocol value=&quot;icmpv6&quot; reject&#x27;</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>通过富规则直接拒绝ICMP请求‌。</p>
+</li>
+</ul>
+<hr>
+<h4 id="‌三、注意事项‌"><a href="#‌三、注意事项‌" class="headerlink" title="‌三、注意事项‌"></a>‌<strong>三、注意事项</strong>‌</h4><ol>
+<li>‌<strong>禁用IPv6协议与禁Ping的区别</strong>‌<ul>
+<li>禁用IPv6协议需修改网络适配器设置（如取消勾选“Internet协议版本6”）‌。</li>
+<li>禁用IPv6 Ping仅阻止ICMPv6回显请求，不影响其他IPv6通信‌。</li>
+</ul>
+</li>
+<li>‌<strong>恢复操作</strong>‌<ul>
+<li>‌<strong>Windows</strong>‌：删除防火墙规则或重新启用对应ICMP规则‌。</li>
+<li>‌<strong>Linux</strong>‌：将内核参数设为<code>0</code>，或删除防火墙规则‌。</li>
+</ul>
+</li>
+<li>‌<strong>兼容性影响</strong>‌<ul>
+<li>禁用Ping可能导致网络监控工具失效，建议结合日志分析工具（如tcpdump）调试网络问题‌26。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>以上方法覆盖Windows和Linux主流系统，支持IPv4&#x2F;IPv6协议的独立配置，建议根据实际网络环境选择合适方案‌。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/netsh/" rel="tag"># netsh</a>
+          
+            <a href="/tags/fireware/" rel="tag"># fireware</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/12/26/%E8%A7%A3%E5%86%B3git22port%E9%94%99/" rel="next" title="解决git报错port 22">
+                <i class="fa fa-chevron-left"></i> 解决git报错port 22
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%8C%E7%A6%81%E7%94%A8Ping%E7%9A%84%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97%EF%BC%88%E5%90%ABIPv4-x2F-IPv6%EF%BC%89%E2%80%8C"><span class="nav-number">1.</span> <span class="nav-text">‌禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）‌</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%80%8C%E4%B8%80%E3%80%81Windows%E7%B3%BB%E7%BB%9F%E2%80%8C"><span class="nav-number">1.1.</span> <span class="nav-text">‌一、Windows系统‌</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%80%8C1-IPv4-x2F-IPv6%E7%A6%81Ping%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%89%E2%80%8C"><span class="nav-number">1.1.1.</span> <span class="nav-text">‌1. IPv4&#x2F;IPv6禁Ping（命令行）‌</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%80%8C2-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE%E2%80%8C"><span class="nav-number">1.1.2.</span> <span class="nav-text">‌2. 图形界面配置‌</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%80%8C%E4%BA%8C%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E2%80%8C"><span class="nav-number">1.2.</span> <span class="nav-text">‌二、Linux系统‌</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%80%8C1-%E9%80%9A%E8%BF%87%E5%86%85%E6%A0%B8%E5%8F%82%E6%95%B0%E7%A6%81%E7%94%A8%E2%80%8C"><span class="nav-number">1.2.1.</span> <span class="nav-text">‌1. 通过内核参数禁用‌</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%80%8C2-%E9%80%9A%E8%BF%87%E9%98%B2%E7%81%AB%E5%A2%99%E5%B7%A5%E5%85%B7%E2%80%8C"><span class="nav-number">1.2.2.</span> <span class="nav-text">‌2. 通过防火墙工具‌</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%80%8C%E4%B8%89%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E2%80%8C"><span class="nav-number">1.3.</span> <span class="nav-text">‌三、注意事项‌</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yu skywalker</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

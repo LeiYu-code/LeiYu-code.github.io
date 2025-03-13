@@ -273,6 +273,219 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/12/windows%E7%A6%81ping/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南月晨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2025/03/12/windows%E7%A6%81ping/" itemprop="url">禁用ping的详细操作指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2025-03-12T17:00:06+08:00">
+                2025-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/command/" itemprop="url" rel="index">
+                    <span itemprop="name">command</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h3 id="‌禁用Ping的详细操作指南（含IPv4-x2F-IPv6）‌"><a href="#‌禁用Ping的详细操作指南（含IPv4-x2F-IPv6）‌" class="headerlink" title="‌禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）‌"></a>‌<strong>禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）</strong>‌</h3><hr>
+<h4 id="‌一、Windows系统‌"><a href="#‌一、Windows系统‌" class="headerlink" title="‌一、Windows系统‌"></a>‌<strong>一、Windows系统</strong>‌</h4><h5 id="‌1-IPv4-x2F-IPv6禁Ping（命令行）‌"><a href="#‌1-IPv4-x2F-IPv6禁Ping（命令行）‌" class="headerlink" title="‌1. IPv4&#x2F;IPv6禁Ping（命令行）‌"></a>‌<strong>1. IPv4&#x2F;IPv6禁Ping（命令行）</strong>‌</h5><ul>
+<li><p>‌<strong>禁用IPv4 Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv4 Ping&quot; protocol=icmpv4:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
+
+<p>此命令阻止所有入站ICMPv4回显请求（即Ping）‌。</p>
+</li>
+<li><p>‌<strong>禁用IPv6 Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv6 Ping&quot; protocol=icmpv6:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
+
+<p>此命令阻止IPv6的ICMPv6回显请求‌。</p>
+</li>
+<li><p>‌<strong>恢复Ping功能</strong>‌：<br>删除对应规则：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall firewall delete rule name=&quot;Block IPv4 Ping&quot;</span><br><span class="line">netsh advfirewall firewall delete rule name=&quot;Block IPv6 Ping&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="‌2-图形界面配置‌"><a href="#‌2-图形界面配置‌" class="headerlink" title="‌2. 图形界面配置‌"></a>‌<strong>2. 图形界面配置</strong>‌</h5><ol>
+<li><p>打开 ‌<strong>控制面板 → 系统和安全 → Windows Defender 防火墙 → 高级设置</strong>‌。</p>
+</li>
+<li><p>‌<strong>IPv4禁Ping</strong>‌</p>
+<p>在 ‌<strong>入站规则</strong>‌ 中找到 ‌<strong>回显请求-ICMPv4-In</strong>‌，右键选择 ‌<strong>禁用规则</strong>‌ ‌。</p>
+</li>
+<li><p>‌<strong>IPv6禁Ping</strong>‌</p>
+<p>创建新规则：选择 ‌<strong>自定义规则 → 协议类型为ICMPv6 → 阻止连接</strong>‌，命名并保存‌。</p>
+</li>
+</ol>
+<hr>
+<h4 id="‌二、Linux系统‌"><a href="#‌二、Linux系统‌" class="headerlink" title="‌二、Linux系统‌"></a>‌<strong>二、Linux系统</strong>‌</h4><h5 id="‌1-通过内核参数禁用‌"><a href="#‌1-通过内核参数禁用‌" class="headerlink" title="‌1. 通过内核参数禁用‌"></a>‌<strong>1. 通过内核参数禁用</strong>‌</h5><ul>
+<li><p>‌<strong>IPv4禁Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all  # 临时生效</span><br><span class="line">echo &quot;net.ipv4.icmp_echo_ignore_all = 1&quot; &gt;&gt; /etc/sysctl.conf  # 永久生效</span><br><span class="line">sysctl -p  # 应用配置</span><br></pre></td></tr></table></figure>
+
+<p>此方法通过忽略所有ICMPv4请求实现禁Ping‌67。</p>
+</li>
+<li><p>‌<strong>IPv6禁Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv6/icmp/echo_ignore_all  # 临时生效</span><br><span class="line">echo &quot;net.ipv6.icmp.echo_ignore_all = 1&quot; &gt;&gt; /etc/sysctl.conf  # 永久生效</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+
+<p>需注意部分Linux发行版可能需手动添加IPv6内核参数‌。</p>
+</li>
+</ul>
+<h5 id="‌2-通过防火墙工具‌"><a href="#‌2-通过防火墙工具‌" class="headerlink" title="‌2. 通过防火墙工具‌"></a>‌<strong>2. 通过防火墙工具</strong>‌</h5><ul>
+<li><p>‌<strong>iptables（IPv4&#x2F;IPv6）</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 禁用IPv4 Ping</span><br><span class="line">iptables -A INPUT -p icmp --icmp-type echo-request -j DROP</span><br><span class="line"># 禁用IPv6 Ping</span><br><span class="line">ip6tables -A INPUT -p icmpv6 --icmpv6-type echo-request -j DROP</span><br></pre></td></tr></table></figure>
+
+<p>需确保iptables规则保存并持久化（如使用<code>iptables-save</code>）‌。</p>
+</li>
+<li><p>‌<strong>firewalld（推荐CentOS&#x2F;RHEL）</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 禁用IPv4 Ping</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=&#x27;rule family=&quot;ipv4&quot; protocol value=&quot;icmp&quot; reject&#x27;</span><br><span class="line"># 禁用IPv6 Ping</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=&#x27;rule family=&quot;ipv6&quot; protocol value=&quot;icmpv6&quot; reject&#x27;</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>通过富规则直接拒绝ICMP请求‌。</p>
+</li>
+</ul>
+<hr>
+<h4 id="‌三、注意事项‌"><a href="#‌三、注意事项‌" class="headerlink" title="‌三、注意事项‌"></a>‌<strong>三、注意事项</strong>‌</h4><ol>
+<li>‌<strong>禁用IPv6协议与禁Ping的区别</strong>‌<ul>
+<li>禁用IPv6协议需修改网络适配器设置（如取消勾选“Internet协议版本6”）‌。</li>
+<li>禁用IPv6 Ping仅阻止ICMPv6回显请求，不影响其他IPv6通信‌。</li>
+</ul>
+</li>
+<li>‌<strong>恢复操作</strong>‌<ul>
+<li>‌<strong>Windows</strong>‌：删除防火墙规则或重新启用对应ICMP规则‌。</li>
+<li>‌<strong>Linux</strong>‌：将内核参数设为<code>0</code>，或删除防火墙规则‌。</li>
+</ul>
+</li>
+<li>‌<strong>兼容性影响</strong>‌<ul>
+<li>禁用Ping可能导致网络监控工具失效，建议结合日志分析工具（如tcpdump）调试网络问题‌26。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>以上方法覆盖Windows和Linux主流系统，支持IPv4&#x2F;IPv6协议的独立配置，建议根据实际网络环境选择合适方案‌。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/26/%E8%A7%A3%E5%86%B3git22port%E9%94%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1675,161 +1888,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/23/%E7%A4%BE%E5%8C%BA%E5%9E%8B%E5%85%8D%E8%B4%B9%E8%9C%9C%E7%BD%90-hfish/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南月晨的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2024/06/23/%E7%A4%BE%E5%8C%BA%E5%9E%8B%E5%85%8D%E8%B4%B9%E8%9C%9C%E7%BD%90-hfish/" itemprop="url">社区型免费蜜罐-hfish</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-06-23T17:28:06+08:00">
-                2024-06-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/safe/" itemprop="url" rel="index">
-                    <span itemprop="name">safe</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>[南月晨的blog](<a target="_blank" rel="noopener" href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
-<p><a target="_blank" rel="noopener" href="http://leiyu-code.github.io">leiyu-code.github.io</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
-<h4 id="HFish"><a target="_blank" rel="noopener" href="https://hfish.net/#/README?id=hfish%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5">HFish</a></h4>
-<p>HFish是一款社区型免费蜜罐，侧重企业安全场景，从内网失陷检测、外网威胁感知、威胁情报生产三个场景出发，为用户提供可独立操作且实用的功能，通过安全、敏捷、可靠的中低交互蜜罐增加用户在失陷感知和威胁情报领域的能力。</p>
-<p>HFish支持基本网络 服务、OA系统、CRM系统、NAS存储系统、Web服务器、运维平台、安全产品、无线AP、交换机/路由器、邮件系统、IoT设备等90多种蜜罐服务、支持用户制作自定义Web蜜罐、支持流量牵引到免费云蜜网、支持可开关的全端口扫描感知能力、支持可自定义的蜜饵配置、一键部署、跨平台多架构，支持Linux x32/x64/ARM、Windows x32/x64平台和多种国产操作系统、支持龙芯、海光、飞腾、鲲鹏、腾云、兆芯等国产CPU、极低的性能要求、邮件/syslog/webhook/企业微信/钉钉/飞书告警等多项特性，帮助用户降低运维成本，提升运营效率。</p>
-<p>用户需要先部署管理端，再通过管理端内置蜜罐节点或部署新节点：</p>
-<p><a target="_blank" rel="noopener" href="https://hfish.net/#/2-2-linux">Linux管理端下载</a></p>
-<p><a target="_blank" rel="noopener" href="https://hfish.net/#/2-3-windows">Windows管理端下载</a></p>
-<p><a target="_blank" rel="noopener" href="https://hfish.net/#/2-1-docker">Docker镜像下载</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2024/06/23/%E7%A4%BE%E5%8C%BA%E5%9E%8B%E5%85%8D%E8%B4%B9%E8%9C%9C%E7%BD%90-hfish/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1880,7 +1938,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1891,7 +1949,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1902,7 +1960,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1946,7 +2004,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>禁用ping的详细操作指南</title>
+    <url>/2025/03/12/windows%E7%A6%81ping/</url>
+    <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>
+<p>leiyu-code.github.io</p>
+<p><a href="https://www.linuxcool.com/">Linux命令大全(手册) – 真正好用的Linux命令在线查询网站 (linuxcool.com)</a></p>
+<h3 id="‌禁用Ping的详细操作指南（含IPv4-x2F-IPv6）‌"><a href="#‌禁用Ping的详细操作指南（含IPv4-x2F-IPv6）‌" class="headerlink" title="‌禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）‌"></a>‌<strong>禁用Ping的详细操作指南（含IPv4&#x2F;IPv6）</strong>‌</h3><hr>
+<h4 id="‌一、Windows系统‌"><a href="#‌一、Windows系统‌" class="headerlink" title="‌一、Windows系统‌"></a>‌<strong>一、Windows系统</strong>‌</h4><h5 id="‌1-IPv4-x2F-IPv6禁Ping（命令行）‌"><a href="#‌1-IPv4-x2F-IPv6禁Ping（命令行）‌" class="headerlink" title="‌1. IPv4&#x2F;IPv6禁Ping（命令行）‌"></a>‌<strong>1. IPv4&#x2F;IPv6禁Ping（命令行）</strong>‌</h5><ul>
+<li><p>‌<strong>禁用IPv4 Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv4 Ping&quot; protocol=icmpv4:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
+
+<p>此命令阻止所有入站ICMPv4回显请求（即Ping）‌。</p>
+</li>
+<li><p>‌<strong>禁用IPv6 Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv6 Ping&quot; protocol=icmpv6:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
+
+<p>此命令阻止IPv6的ICMPv6回显请求‌。</p>
+</li>
+<li><p>‌<strong>恢复Ping功能</strong>‌：<br>删除对应规则：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netsh advfirewall firewall delete rule name=&quot;Block IPv4 Ping&quot;</span><br><span class="line">netsh advfirewall firewall delete rule name=&quot;Block IPv6 Ping&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="‌2-图形界面配置‌"><a href="#‌2-图形界面配置‌" class="headerlink" title="‌2. 图形界面配置‌"></a>‌<strong>2. 图形界面配置</strong>‌</h5><ol>
+<li><p>打开 ‌<strong>控制面板 → 系统和安全 → Windows Defender 防火墙 → 高级设置</strong>‌。</p>
+</li>
+<li><p>‌<strong>IPv4禁Ping</strong>‌</p>
+<p>在 ‌<strong>入站规则</strong>‌ 中找到 ‌<strong>回显请求-ICMPv4-In</strong>‌，右键选择 ‌<strong>禁用规则</strong>‌ ‌。</p>
+</li>
+<li><p>‌<strong>IPv6禁Ping</strong>‌</p>
+<p>创建新规则：选择 ‌<strong>自定义规则 → 协议类型为ICMPv6 → 阻止连接</strong>‌，命名并保存‌。</p>
+</li>
+</ol>
+<hr>
+<h4 id="‌二、Linux系统‌"><a href="#‌二、Linux系统‌" class="headerlink" title="‌二、Linux系统‌"></a>‌<strong>二、Linux系统</strong>‌</h4><h5 id="‌1-通过内核参数禁用‌"><a href="#‌1-通过内核参数禁用‌" class="headerlink" title="‌1. 通过内核参数禁用‌"></a>‌<strong>1. 通过内核参数禁用</strong>‌</h5><ul>
+<li><p>‌<strong>IPv4禁Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all  # 临时生效</span><br><span class="line">echo &quot;net.ipv4.icmp_echo_ignore_all = 1&quot; &gt;&gt; /etc/sysctl.conf  # 永久生效</span><br><span class="line">sysctl -p  # 应用配置</span><br></pre></td></tr></table></figure>
+
+<p>此方法通过忽略所有ICMPv4请求实现禁Ping‌67。</p>
+</li>
+<li><p>‌<strong>IPv6禁Ping</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv6/icmp/echo_ignore_all  # 临时生效</span><br><span class="line">echo &quot;net.ipv6.icmp.echo_ignore_all = 1&quot; &gt;&gt; /etc/sysctl.conf  # 永久生效</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+
+<p>需注意部分Linux发行版可能需手动添加IPv6内核参数‌。</p>
+</li>
+</ul>
+<h5 id="‌2-通过防火墙工具‌"><a href="#‌2-通过防火墙工具‌" class="headerlink" title="‌2. 通过防火墙工具‌"></a>‌<strong>2. 通过防火墙工具</strong>‌</h5><ul>
+<li><p>‌<strong>iptables（IPv4&#x2F;IPv6）</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 禁用IPv4 Ping</span><br><span class="line">iptables -A INPUT -p icmp --icmp-type echo-request -j DROP</span><br><span class="line"># 禁用IPv6 Ping</span><br><span class="line">ip6tables -A INPUT -p icmpv6 --icmpv6-type echo-request -j DROP</span><br></pre></td></tr></table></figure>
+
+<p>需确保iptables规则保存并持久化（如使用<code>iptables-save</code>）‌。</p>
+</li>
+<li><p>‌<strong>firewalld（推荐CentOS&#x2F;RHEL）</strong>‌：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 禁用IPv4 Ping</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=&#x27;rule family=&quot;ipv4&quot; protocol value=&quot;icmp&quot; reject&#x27;</span><br><span class="line"># 禁用IPv6 Ping</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=&#x27;rule family=&quot;ipv6&quot; protocol value=&quot;icmpv6&quot; reject&#x27;</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>通过富规则直接拒绝ICMP请求‌。</p>
+</li>
+</ul>
+<hr>
+<h4 id="‌三、注意事项‌"><a href="#‌三、注意事项‌" class="headerlink" title="‌三、注意事项‌"></a>‌<strong>三、注意事项</strong>‌</h4><ol>
+<li>‌<strong>禁用IPv6协议与禁Ping的区别</strong>‌<ul>
+<li>禁用IPv6协议需修改网络适配器设置（如取消勾选“Internet协议版本6”）‌。</li>
+<li>禁用IPv6 Ping仅阻止ICMPv6回显请求，不影响其他IPv6通信‌。</li>
+</ul>
+</li>
+<li>‌<strong>恢复操作</strong>‌<ul>
+<li>‌<strong>Windows</strong>‌：删除防火墙规则或重新启用对应ICMP规则‌。</li>
+<li>‌<strong>Linux</strong>‌：将内核参数设为<code>0</code>，或删除防火墙规则‌。</li>
+</ul>
+</li>
+<li>‌<strong>兼容性影响</strong>‌<ul>
+<li>禁用Ping可能导致网络监控工具失效，建议结合日志分析工具（如tcpdump）调试网络问题‌26。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>以上方法覆盖Windows和Linux主流系统，支持IPv4&#x2F;IPv6协议的独立配置，建议根据实际网络环境选择合适方案‌。</p>
+]]></content>
+      <categories>
+        <category>command</category>
+      </categories>
+      <tags>
+        <tag>netsh</tag>
+        <tag>fireware</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决git报错port 22</title>
     <url>/2024/12/26/%E8%A7%A3%E5%86%B3git22port%E9%94%99/</url>
     <content><![CDATA[<p><strong>[南月晨的blog](<a href="https://leiyu-code.github.io/">南月晨的博客 (leiyu-code.github.io)</a>)</strong></p>

@@ -13,6 +13,10 @@
 
 <p>此命令阻止所有入站ICMPv4回显请求（即Ping）‌。</p>
 </li>
+</ul>
+<span id="more"></span>
+
+<ul>
 <li><p>‌<strong>禁用IPv6 Ping</strong>‌：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netsh advfirewall firewall add rule name=&quot;Block IPv6 Ping&quot; protocol=icmpv6:8,any dir=in action=block</span><br></pre></td></tr></table></figure>
 
